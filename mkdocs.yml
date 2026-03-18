@@ -34,8 +34,9 @@ theme:
 nav:
   - Главная: index.md
   - RNS:
-      - Основы и понимание: rns/index.md
+      - Основы: rns/index.md
       - Утилиты:
+          - Обзор: rns/tools/index.md
           - rnsd (Демон): rns/tools/rnsd.md
           - rnstatus (Статус): rns/tools/rnstatus.md
           - rnid (Идентификаторы): rns/tools/rnid.md
@@ -45,10 +46,11 @@ nav:
           - rnx (Удаленное выполнение): rns/tools/rnx.md
           - rnodeconf (RNode): rns/tools/rnodeconf.md
   - LXMF:
-      - Обзор протокола: lxmf/index.md
+      - Основы: lxmf/index.md
       - Утилиты:
+          - Обзор: lxmf/tools/index.md
           - lxmd (Узел распространения): lxmf/tools/lxmd.md
-  - Nomad Network: lxmf/nomadnet/guide.md
+  - Nomad Network: nomadnet/index.md
 
 plugins:
   - search          # Обязательно возвращаем поиск при использовании своих плагинов
