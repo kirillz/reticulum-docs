@@ -1,0 +1,76 @@
+site_name: Документация Reticulum
+
+# Ссылка на репозиторий (добавляет иконку в шапку)
+repo_url: https://github.com/kirillz/reticulum-docs
+repo_name: kirillz/reticulum-docs
+
+theme:
+  name: material
+  language: ru
+  palette:
+    # Светлая тема
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на темную тему
+    # Темная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+  icon:
+    logo: material/book-open-page-variant
+    edit: material/pencil
+  features:
+    - content.action.edit
+
+# Структура меню
+nav:
+  - Главная: index.md
+  - RNS:
+      - Основы и понимание: rns/index.md
+      - Утилиты:
+          - rnsd (Демон): rns/tools/rnsd.md
+          - rnstatus (Статус): rns/tools/rnstatus.md
+          - rnid (Идентификаторы): rns/tools/rnid.md
+          - rnpath (Маршруты): rns/tools/rnpath.md
+          - rnprobe (Диагностика): rns/tools/rnprobe.md
+          - rncp (Копирование файлов): rns/tools/rncp.md
+          - rnx (Удаленное выполнение): rns/tools/rnx.md
+          - rnodeconf (RNode): rns/tools/rnodeconf.md
+  - LXMF:
+      - Обзор протокола: lxmf/index.md
+      - Утилиты:
+          - lxmd (Узел распространения): lxmf/tools/lxmd.md
+  - Nomad Network: lxmf/nomadnet/guide.md
+
+plugins:
+  - search          # Обязательно возвращаем поиск при использовании своих плагинов
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: datetime
+# Кастомные стили
+extra_css:
+  - css/custom.css
+
+# Настройки Markdown
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - attr_list       # Нужно для иконок и кнопок
+  - md_in_html      # Нужно для карточек (div)
+  - pymdownx.emoji: # Нужно для смайликов-иконок :material-...:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # Убираем надпись "Made with Material for MkDocs"
+
+extra:
+  generator: false

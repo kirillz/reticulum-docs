@@ -1,0 +1,5 @@
+#!/bin/sh
+if grep -q "Co-authored-by: Qwen-Coder" "$1"; then
+    echo "ERROR: Co-authored-by: Qwen-Coder запрещён!"
+    exit 1
+fi
