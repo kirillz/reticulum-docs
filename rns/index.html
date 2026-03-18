@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="tools/rnsd/">
+        <link rel="next" href="tools/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Основы и понимание - Документация Reticulum</title>
+        <title>Основы - Документация Reticulum</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Основы и понимание
+              Основы
             
           </span>
         </div>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Основы и понимание
+    Основы
   
 
     
@@ -368,7 +368,7 @@
   <span class="md-ellipsis">
     
   
-    Основы и понимание
+    Основы
   
 
     
@@ -509,6 +509,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -810,7 +838,7 @@
   <span class="md-ellipsis">
     
   
-    Обзор протокола
+    Основы
   
 
     
@@ -878,6 +906,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../lxmf/tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../lxmf/tools/lxmd/" class="md-nav__link">
         
   
@@ -921,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lxmf/nomadnet/guide/" class="md-nav__link">
+      <a href="../nomadnet/" class="md-nav__link">
         
   
   
@@ -1086,6 +1142,8 @@
 <hr />
 <h2 id="_2">Как это работает?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Reticulum создаёт <strong>оверлейную сеть</strong> поверх существующих физических каналов связи. Каждый узел в сети имеет уникальный криптографический идентификатор, а сообщения маршрутизируются между узлами с гарантией доставки и целостности данных.</p>
+<div class="diagram-center">
+
 <div class="codehilite"><pre><span></span><code>┌─────────────┐      ┌─────────────┐      ┌─────────────┐
 │   Узел A    │ ◄──► │   Узел B    │ ◄──► │   Узел C    │
 │  (LoRa)     │      │  (WiFi)     │      │ (Ethernet)  │
@@ -1095,6 +1153,8 @@
         └────────────────────────────────────────┘
 </code></pre></div>
 
+
+</div>
 <hr />
 <h2 id="rns_1">Инструменты RNS<a class="headerlink" href="#rns_1" title="Permanent link">&para;</a></h2>
 <p>После изучения основ перейдите к практическим утилитам:</p>
@@ -1140,12 +1200,12 @@
 </tr>
 </tbody>
 </table>
-<p><a class="md-button md-button--primary" href="tools/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Перейти к утилитам</a></p>
 <hr />
 <h2 id="_3">Дальнейшее чтение<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../lxmf/"><strong>LXMF</strong></a> — протокол обмена сообщениями поверх RNS</li>
-<li><a href="../lxmf/nomadnet/guide/"><strong>Nomad Network</strong></a> — децентрализованный клиент для общения</li>
+<li><a href="tools/"><strong>Утилиты RNS</strong></a> — обзор утилит</li>
+<li><a href="../nomadnet/"><strong>Nomad Network</strong></a> — децентрализованный клиент для общения</li>
 </ul>
 
 
@@ -1167,7 +1227,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 15:21:42 UTC">18 марта 2026 г. 15:21:42</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 16:34:40 UTC">18 марта 2026 г. 16:34:40</span>
   </span>
 
     

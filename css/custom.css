@@ -1,3 +1,13 @@
+/* Центрирование блок-схем */
+.diagram-center {
+  text-align: center;
+}
+
+.diagram-center pre {
+  display: inline-block;
+  text-align: left;
+}
+
 /* Маленькие кнопки */
 .md-button--small {
   padding: 0.2rem 0.5rem;
