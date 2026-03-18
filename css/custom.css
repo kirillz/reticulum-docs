@@ -1,0 +1,44 @@
+/* Маленькие кнопки */
+.md-button--small {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Убираем изменение цвета текста при наведении */
+.md-button--small:hover {
+  color: var(--md-primary-bg-color);
+}
+
+/* Дата изменения страницы и иконка внизу справа внутри статьи */
+.md-content {
+  position: relative;
+}
+
+.md-content__inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.md-source-file {
+  float: right;
+  margin: 1rem 0 !important;
+  padding: 0.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.75rem !important;
+  color: var(--md-default-fg-color--light) !important;
+  background-color: var(--md-default-bg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lightest) !important;
+  border-radius: 0.25rem !important;
+}
+
+.md-source-file .md-icon svg {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.md-source-file .git-revision-date-localized-plugin {
+  font-size: 0.75rem !important;
+}
