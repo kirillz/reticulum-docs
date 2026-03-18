@@ -1,6 +1,7 @@
 # Документация Reticulum
 
 Документация для Reticulum Network Stack, написанная на русском языке с использованием MkDocs и темы Material.
+Формат документации в основном [Markdown](https://www.markdownguide.org/getting-started/)
 
 ## Установка для разработки
 
