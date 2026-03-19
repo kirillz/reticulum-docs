@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -74,6 +74,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#rnstatus" class="md-skip">
+          Перейти к содержанию
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -506,6 +511,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rnstatus (Статус)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -523,6 +548,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примечание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -949,6 +1037,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примечание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -968,9 +1110,104 @@
   
 
 
-  <h1>rnstatus (Статус)</h1>
+<h1 id="rnstatus">rnstatus<a class="headerlink" href="#rnstatus" title="Permanent link">&para;</a></h1>
+<p><strong>rnstatus</strong> — утилита для просмотра статуса настроенных интерфейсов Reticulum. Аналогична программе <code>ifconfig</code> в традиционных сетях Linux систем.</p>
+<hr />
+<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Запуск rnstatus:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus
 
+Shared<span class="w"> </span>Instance<span class="o">[</span><span class="m">37428</span><span class="o">]</span>
+<span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
+<span class="w">   </span>Serving<span class="w"> </span>:<span class="w"> </span><span class="m">1</span><span class="w"> </span>program
+<span class="w">   </span>Rate<span class="w">    </span>:<span class="w"> </span><span class="m">1</span>.00<span class="w"> </span>Gbps
+<span class="w">   </span>Traffic<span class="w"> </span>:<span class="w"> </span><span class="m">83</span>.13<span class="w"> </span>KB↑
+<span class="w">             </span><span class="m">86</span>.10<span class="w"> </span>KB↓
 
+AutoInterface<span class="o">[</span>Local<span class="o">]</span>
+<span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
+<span class="w">   </span>Mode<span class="w">    </span>:<span class="w"> </span>Full
+<span class="w">   </span>Rate<span class="w">    </span>:<span class="w"> </span><span class="m">10</span>.00<span class="w"> </span>Mbps
+<span class="w">   </span>Peers<span class="w">   </span>:<span class="w"> </span><span class="m">1</span><span class="w"> </span>reachable
+<span class="w">   </span>Traffic<span class="w"> </span>:<span class="w"> </span><span class="m">63</span>.23<span class="w"> </span>KB↑
+<span class="w">             </span><span class="m">80</span>.17<span class="w"> </span>KB↓
+
+TCPInterface<span class="o">[</span>RNS<span class="w"> </span>Testnet<span class="w"> </span>Dublin/dublin.connect.reticulum.network:4965<span class="o">]</span>
+<span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
+<span class="w">   </span>Mode<span class="w">    </span>:<span class="w"> </span>Full
+<span class="w">   </span>Rate<span class="w">    </span>:<span class="w"> </span><span class="m">10</span>.00<span class="w"> </span>Mbps
+<span class="w">   </span>Traffic<span class="w"> </span>:<span class="w"> </span><span class="m">187</span>.27<span class="w"> </span>KB↑
+<span class="w">             </span><span class="m">74</span>.17<span class="w"> </span>KB↓
+
+RNodeInterface<span class="o">[</span>RNode<span class="w"> </span>UHF<span class="o">]</span>
+<span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
+<span class="w">   </span>Mode<span class="w">    </span>:<span class="w"> </span>Access<span class="w"> </span>Point
+<span class="w">   </span>Rate<span class="w">    </span>:<span class="w"> </span><span class="m">1</span>.30<span class="w"> </span>kbps
+<span class="w">   </span>Access<span class="w">  </span>:<span class="w"> </span><span class="m">64</span>-bit<span class="w"> </span>IFAC<span class="w"> </span>by<span class="w"> </span>&lt;…e702c42ba8&gt;
+<span class="w">   </span>Traffic<span class="w"> </span>:<span class="w"> </span><span class="m">8</span>.49<span class="w"> </span>KB↑
+<span class="w">             </span><span class="m">9</span>.23<span class="w"> </span>KB↓
+
+Reticulum<span class="w"> </span>Transport<span class="w"> </span>Instance<span class="w"> </span>&lt;5245a8efe1788c6a1cd36144a270e13b&gt;<span class="w"> </span>running
+</code></pre></div>
+
+<p><strong>Можно фильтровать вывод по имени интерфейса:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>rnode
+
+RNodeInterface<span class="o">[</span>RNode<span class="w"> </span>UHF<span class="o">]</span>
+<span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
+<span class="w">   </span>Mode<span class="w">    </span>:<span class="w"> </span>Access<span class="w"> </span>Point
+<span class="w">   </span>Rate<span class="w">    </span>:<span class="w"> </span><span class="m">1</span>.30<span class="w"> </span>kbps
+<span class="w">   </span>Access<span class="w">  </span>:<span class="w"> </span><span class="m">64</span>-bit<span class="w"> </span>IFAC<span class="w"> </span>by<span class="w"> </span>&lt;…e702c42ba8&gt;
+<span class="w">   </span>Traffic<span class="w"> </span>:<span class="w"> </span><span class="m">8</span>.49<span class="w"> </span>KB↑
+<span class="w">             </span><span class="m">9</span>.23<span class="w"> </span>KB↓
+
+Reticulum<span class="w"> </span>Transport<span class="w"> </span>Instance<span class="w"> </span>&lt;5245a8efe1788c6a1cd36144a270e13b&gt;<span class="w"> </span>running
+</code></pre></div>
+
+<hr />
+<h2 id="_2">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnstatus</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-A</span><span class="o">]</span>
+<span class="w">                </span><span class="o">[</span><span class="n">-l</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-t</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s SORT</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-r</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-j</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-R hash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i path</span><span class="o">]</span>
+<span class="w">                </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-d</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-D</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-m</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-I seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">filter</span><span class="o">]</span>
+
+<span class="n">Утилита</span><span class="w"> </span><span class="n">просмотра</span><span class="w"> </span><span class="n">статуса</span><span class="w"> </span><span class="n">Reticulum</span><span class="w"> </span><span class="n">Network</span><span class="w"> </span><span class="n">Stack</span>
+
+<span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span>
+<span class="w">  </span><span class="k">filter</span><span class="w">                </span><span class="n">показывать</span><span class="w"> </span><span class="n">только</span><span class="w"> </span><span class="n">интерфейсы</span><span class="p">,</span><span class="w"> </span><span class="n">содержащие</span><span class="w"> </span><span class="k">filter</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">имени</span>
+
+<span class="nl">options</span><span class="p">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
+<span class="w">  </span><span class="c1">--config CONFIG       путь к альтернативному каталогу конфигурации Reticulum</span>
+<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
+<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="c1">--all             показать все интерфейсы</span>
+<span class="w">  </span><span class="o">-</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="c1">--announce-stats  показать статистику объявлений (announces)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="c1">--link-stats      показать статистику соединений (links)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="c1">--totals          показать общий трафик</span>
+<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="c1">--sort SORT       сортировать интерфейсы по [rate, traffic, rx, tx, rxs, txs,</span>
+<span class="w">                                            </span><span class="n">announces</span><span class="p">,</span><span class="w"> </span><span class="n">arx</span><span class="p">,</span><span class="w"> </span><span class="n">atx</span><span class="p">,</span><span class="w"> </span><span class="n">held</span><span class="err">]</span>
+<span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="c1">--reverse         обратный порядок сортировки</span>
+<span class="w">  </span><span class="o">-</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="c1">--json            вывод в формате JSON</span>
+<span class="w">  </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="n">hash</span><span class="w">               </span><span class="n">хэш</span><span class="w"> </span><span class="n">транспортной</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">экземпляра</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">запроса</span><span class="w"> </span><span class="n">статуса</span>
+<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">path</span><span class="w">               </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">управления</span>
+<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">таймаут</span><span class="w"> </span><span class="n">ожидания</span><span class="w"> </span><span class="n">ответа</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="n">удалённых</span><span class="w"> </span><span class="n">запросов</span>
+<span class="w">  </span><span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="c1">--discovered      показать обнаруженные интерфейсы</span>
+<span class="w">  </span><span class="o">-</span><span class="n">D</span><span class="w">                    </span><span class="n">показать</span><span class="w"> </span><span class="n">детали</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">записи</span><span class="w"> </span><span class="n">конфигурации</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">обнаруженных</span><span class="w"> </span><span class="n">интерфейсов</span>
+<span class="w">  </span><span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="c1">--monitor         непрерывный мониторинг статуса</span>
+<span class="w">  </span><span class="o">-</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="c1">--monitor-interval seconds</span>
+<span class="w">                        </span><span class="n">интервал</span><span class="w"> </span><span class="n">обновления</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">режиме</span><span class="w"> </span><span class="n">мониторинга</span><span class="w"> </span><span class="p">(</span><span class="n">по</span><span class="w"> </span><span class="nl">умолчанию</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         подробный вывод</span>
+</code></pre></div>
+
+<hr />
+<h2 id="_3">Примечание<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>При использовании опции <code>-R</code> для запроса статуса удалённого транспортного экземпляра необходимо также указать <code>-i</code> с путём к файлу идентичности, авторизованному для удалённого управления на целевой системе.</p>
+<hr />
+<h2 id="_4">См. также<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
+<li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
+<li><a href="../rnsd/"><strong>rnsd</strong></a> — демон Reticulum</li>
+</ul>
 
 
 
@@ -991,7 +1228,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 14:03:18 UTC">18 марта 2026 г. 14:03:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 16:15:43 UTC">19 марта 2026 г. 16:15:43</span>
   </span>
 
     
