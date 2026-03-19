@@ -595,6 +595,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -637,6 +639,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -645,30 +649,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rnprobe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rnprobe
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="rnprobe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Использование
+        Примеры использования
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -676,7 +663,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примечание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
       
     </span>
   </a>
@@ -1028,6 +1037,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1036,30 +1047,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rnprobe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        rnprobe
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="rnprobe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Использование
+        Примеры использования
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1067,7 +1061,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Примеры
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примечание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
       
     </span>
   </a>
@@ -1094,26 +1110,88 @@
   
 
 
-  <h1>rnprobe (Диагностика)</h1>
+<h1 id="rnprobe">rnprobe<a class="headerlink" href="#rnprobe" title="Permanent link">&para;</a></h1>
+<p><strong>rnprobe</strong> — утилита для проверки доступности назначения (destination) в сети Reticulum. Аналогична программе <code>ping</code> в традиционных сетях.</p>
+<p>Обратите внимание: ответы на запросы при зондирвании будут приходить только в том случае, если указанное назначение настроено на отправку подтверждений (proofs) для полученных пакетов. Многие узлы назначения не имеют включённой эту опцию, поэтому большинство узлов назначения не будут отвечать на запросы зондирования.</p>
+<p>Вы можете включить ответ на запрос зондирования в транспортных экземплярах Reticulum, установив директиву конфигурации <code>respond_to_probes</code>. Reticulum в этом случае выведет назначение для запросов зондирования в лог при запуске транспортного экземпляра.</p>
+<hr />
+<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Проверка доступности узла назначения:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708
 
-<h3 id="rnprobe">rnprobe<a class="headerlink" href="#rnprobe" title="Permanent link">&para;</a></h3>
-<p><code>rnprobe</code> — утилита для проверки доступности и времени отклика узлов Reticulum (аналог ping в IP-сетях).</p>
-<h4 id="_1">Использование<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<p>rnprobe [опции] <destination_hash></p>
-<p>Основные аргументы
-<destination_hash> — Hex-хеш пункта назначения (32 байта), который вы хотите проверить.
--c, --config — Путь к директории конфигурации RNS (если нестандартный).
--t, --timeout — Таймаут ожидания ответа в секундах.</p>
-<h2 id="_2">Примеры<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Проверка доступности узла
-Чтобы проверить связь с узлом, выполните:</p>
-<p>rnprobe d2b8215e9d...
-Пример вывода</p>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">2023-10-27 12:00:00</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">VERBOSE</span><span class="o">]</span><span class="w"> </span><span class="n">Probe</span><span class="w"> </span><span class="n">sent</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">d2b8215e9d</span><span class="p">...</span><span class="o">[</span><span class="n">2023-10-27 12:00:00</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">Valid</span><span class="w"> </span><span class="n">reply</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">d2b8215e9d</span><span class="p">...</span><span class="nf">Round</span><span class="o">-</span><span class="n">trip</span><span class="w"> </span><span class="nc">time</span><span class="err">:</span><span class="w"> </span><span class="mi">145</span><span class="w"> </span><span class="n">msPath</span><span class="w"> </span><span class="nl">MTU</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w"> </span><span class="n">bytes</span>
+Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
+Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
+Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">38</span>.469<span class="w"> </span>milliseconds<span class="w"> </span>over<span class="w"> </span><span class="m">2</span><span class="w"> </span>hops
 </code></pre></div>
 
-<p>Советы
-Если rnprobe не получает ответа, это может означать...</p>
+<p><strong>Отправка запроса зондирования большего размера:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708<span class="w"> </span>-s<span class="w"> </span><span class="m">256</span>
+
+Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
+Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
+Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">38</span>.781<span class="w"> </span>milliseconds<span class="w"> </span>over<span class="w"> </span><span class="m">2</span><span class="w"> </span>hops
+</code></pre></div>
+
+<p><strong>Если интерфейс, который получает ответы на запрос зондирования, поддерживает отчет о параметрах радиосвязи, таких как RSSI и SNR, утилита rnprobe также отобразит их в результатах:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>e7536ee90bd4a440e130490b87a25124
+
+Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;e7536ee90bd4a440e130490b87a25124&gt;
+Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;e7536ee90bd4a440e130490b87a25124&gt;
+Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.809<span class="w"> </span>seconds<span class="w"> </span>over<span class="w"> </span><span class="m">1</span><span class="w"> </span>hop<span class="w"> </span><span class="o">[</span>RSSI<span class="w"> </span>-73<span class="w"> </span>dBm<span class="o">]</span><span class="w"> </span><span class="o">[</span>SNR<span class="w"> </span><span class="m">12</span>.0<span class="w"> </span>dB<span class="o">]</span>
+</code></pre></div>
+
+<p><strong>Расшифровка вывода:</strong></p>
+<ul>
+<li><strong>Sent X byte probe</strong> — отправлен запроса зондирования размером X байт</li>
+<li><strong>Valid reply received</strong> — получен действительный ответ</li>
+<li><strong>Round-trip time</strong> — время круговой задержки (RTT)</li>
+<li><strong>over N hops</strong> — через N узлов (хопов)</li>
+<li><strong>[RSSI -X dBm]</strong> — уровень приёма сигнала (Received Signal Strength Indicator)</li>
+<li><strong>[SNR X.X dB]</strong> — отношение сигнал/шум (Signal-to-Noise Ratio)</li>
+</ul>
+<hr />
+<h2 id="_2">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnprobe</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s SIZE</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n PROBES</span><span class="o">]</span>
+<span class="w">               </span><span class="o">[</span><span class="n">-t seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span>
+<span class="w">               </span><span class="o">[</span><span class="n">full_name</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination_hash</span><span class="o">]</span>
+
+<span class="n">Утилита</span><span class="w"> </span><span class="n">зондирования</span><span class="w"> </span><span class="n">Reticulum</span>
+
+<span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span>
+<span class="w">  </span><span class="n">full_name</span><span class="w">             </span><span class="n">полное</span><span class="w"> </span><span class="n">имя</span><span class="w"> </span><span class="n">назначения</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">точечной</span><span class="w"> </span><span class="n">нотации</span>
+<span class="w">  </span><span class="n">destination_hash</span><span class="w">      </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">назначения</span>
+
+<span class="nl">options</span><span class="p">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
+<span class="w">  </span><span class="c1">--config CONFIG       путь к альтернативному каталогу конфигурации Reticulum</span>
+<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="k">SIZE</span><span class="p">,</span><span class="w"> </span><span class="c1">--size SIZE  размер полезной нагрузки пакета запроса зондирования в байтах</span>
+<span class="w">  </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">PROBES</span><span class="p">,</span><span class="w"> </span><span class="c1">--probes PROBES</span>
+<span class="w">                        </span><span class="n">количество</span><span class="w"> </span><span class="n">отправляемых</span><span class="w"> </span><span class="n">запросов</span><span class="w"> </span><span class="n">зондирования</span>
+<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">seconds</span><span class="p">,</span><span class="w"> </span><span class="c1">--timeout seconds</span>
+<span class="w">                        </span><span class="n">таймаут</span><span class="w"> </span><span class="n">перед</span><span class="w"> </span><span class="n">отказом</span>
+<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="p">,</span><span class="w"> </span><span class="c1">--wait seconds</span>
+<span class="w">                        </span><span class="n">время</span><span class="w"> </span><span class="n">между</span><span class="w"> </span><span class="n">каждым</span><span class="w"> </span><span class="n">запросом</span><span class="w"> </span><span class="n">зондирования</span>
+<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
+<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         подробный вывод</span>
+</code></pre></div>
+
+<hr />
+<h2 id="_3">Примечание<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Для корректной работы должен быть активен хотя бы один интерфейс Reticulum</li>
+<li>Назначение должно быть настроено на отправку подтверждений (proofs), иначе запрос зондирования не получит ответа</li>
+<li>Опция <code>-s</code> позволяет увеличить размер зонда для тестирования пропускной способности канала</li>
+<li>Опция <code>-n</code> полезна для серии повторных измерений</li>
+<li>Параметры RSSI и SNR отображаются только для интерфейсов, поддерживающих радиометрию (например, RNode)</li>
+</ul>
+<hr />
+<h2 id="_4">См. также<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
+<li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
+<li><a href="../rnstatus/"><strong>rnstatus</strong></a> — просмотр статуса интерфейсов</li>
+<li><a href="../rnpath/"><strong>rnpath</strong></a> — диагностика маршрутов между узлами</li>
+</ul>
 
 
 
@@ -1134,7 +1212,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 14:03:18 UTC">18 марта 2026 г. 14:03:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 16:53:40 UTC">19 марта 2026 г. 16:53:40</span>
   </span>
 
     
