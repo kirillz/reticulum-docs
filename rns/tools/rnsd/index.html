@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rnsd" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -468,6 +473,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rnsd (Демон)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -485,6 +510,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведено для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -939,6 +1016,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведено для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -963,9 +1083,49 @@
   
 
 
-  <h1>rnsd (Демон)</h1>
+<h1 id="rnsd">rnsd<a class="headerlink" href="#rnsd" title="Permanent link">&para;</a></h1>
+<p><strong>rnsd</strong> — демон сетевого стека Reticulum. Фоновая служба, обеспечивающая работу сети Reticulum на вашем узле.</p>
+<p>Запуск Reticulum в качестве службы очень прост — достаточно выполнить входящую в комплект команду <code>rnsd</code>. Когда <code>rnsd</code> запущен, он поддерживает все настроенные интерфейсы активными, обрабатывает транспорт (если он включён) и позволяет любым другим программам немедленно использовать сеть Reticulum, для которой он настроен.</p>
+<p>На одном компьютере можно даже запустить несколько экземпляров <code>rnsd</code> с разными конфигурациями.</p>
+<hr />
+<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Запустить rnsd:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd
 
+<span class="o">[</span><span class="m">2023</span>-08-18<span class="w"> </span><span class="m">17</span>:59:56<span class="o">]</span><span class="w"> </span><span class="o">[</span>Notice<span class="o">]</span><span class="w"> </span>Started<span class="w"> </span>rnsd<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.1.4
+</code></pre></div>
 
+<p><strong>Запустить rnsd в режиме службы</strong>, чтобы весь вывод логов направлялся непосредственно в файл:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>-s
+</code></pre></div>
+
+<p><strong>Сгенерировать подробный пример конфигурации</strong> с описанием всех доступных опций и примерами настройки интерфейсов:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>--exampleconfig
+</code></pre></div>
+
+<hr />
+<h2 id="_2">Все опции командной строки (переведено для понимания)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">usage</span><span class="o">:</span><span class="w"> </span><span class="n">rnsd</span><span class="o">.</span><span class="na">py</span><span class="w"> </span><span class="o">[-</span><span class="n">h</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">config</span><span class="w"> </span><span class="n">CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">q</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">s</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">exampleconfig</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">version</span><span class="o">]</span>
+
+<span class="err">Демон</span><span class="w"> </span><span class="err">сетевого</span><span class="w"> </span><span class="err">стека</span><span class="w"> </span><span class="n">Reticulum</span>
+
+<span class="n">options</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">        </span><span class="err">показать</span><span class="w"> </span><span class="err">эту</span><span class="w"> </span><span class="err">справку</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
+<span class="w">  </span><span class="o">--</span><span class="n">config</span><span class="w"> </span><span class="n">CONFIG</span><span class="w">   </span><span class="err">путь</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">альтернативному</span><span class="w"> </span><span class="err">каталогу</span><span class="w"> </span><span class="err">конфигурации</span><span class="w"> </span><span class="n">Reticulum</span>
+<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">verbose</span><span class="w">     </span><span class="err">подробный</span><span class="w"> </span><span class="err">вывод</span>
+<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">quiet</span><span class="w">       </span><span class="err">тихий</span><span class="w"> </span><span class="err">режим</span><span class="w"> </span><span class="o">(</span><span class="err">минимум</span><span class="w"> </span><span class="err">сообщений</span><span class="o">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">service</span><span class="w">     </span><span class="n">rnsd</span><span class="w"> </span><span class="err">запущен</span><span class="w"> </span><span class="err">как</span><span class="w"> </span><span class="err">служба</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">должен</span><span class="w"> </span><span class="err">логировать</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">файл</span>
+<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">interactive</span><span class="w"> </span><span class="err">перейти</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">интерактивную</span><span class="w"> </span><span class="err">оболочку</span><span class="w"> </span><span class="err">после</span><span class="w"> </span><span class="err">инициализации</span>
+<span class="w">  </span><span class="o">--</span><span class="n">exampleconfig</span><span class="w">   </span><span class="err">вывести</span><span class="w"> </span><span class="err">подробный</span><span class="w"> </span><span class="err">пример</span><span class="w"> </span><span class="err">конфигурации</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="n">stdout</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
+<span class="w">  </span><span class="o">--</span><span class="n">version</span><span class="w">         </span><span class="err">показать</span><span class="w"> </span><span class="err">номер</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">программы</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
+</code></pre></div>
+
+<hr />
+<h2 id="_3">См. также<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
+<li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
+</ul>
 
 
 
@@ -986,7 +1146,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 14:03:18 UTC">18 марта 2026 г. 14:03:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 06:03:13 UTC">19 марта 2026 г. 06:03:13</span>
   </span>
 
     
