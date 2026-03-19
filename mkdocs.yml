@@ -7,28 +7,39 @@ repo_name: kirillz/reticulum-docs
 theme:
   name: material
   language: ru
+  include_homepage_in_sidebar: false
+  font:
+    code: Roboto Mono
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
   palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Автоматически как в Системе
     # Светлая тема
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep purple
-      accent: amber
+      accent: light blue
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Переключить на темную тему
     # Темная тема
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: amber
+      primary: indigo
+      accent: light blue
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Переключить на светлую тему
   icon:
     logo: material/book-open-page-variant
-    edit: material/pencil
-  features:
-    - content.action.edit
+
 
 # Структура меню
 nav:
