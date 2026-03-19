@@ -13,13 +13,16 @@
 ### 1. [RNS (Основы)](rns/index.md){ .md-button .md-button--small }
 Поймите принцип работы стека, адресации и транспортного слоя. Это фундамент всей сети.
 
-### 2. [Консольные утилиты](rns/tools/index.md){ .md-button .md-button--small }
+### 2. [Словарь терминов](rns/glossary.md){ .md-button .md-button--small }
+Изучите основные понятия и терминологию Reticulum для лучшего понимания материала.
+
+### 3. [Консольные утилиты](rns/tools/index.md){ .md-button .md-button--small }
 Научитесь пользоваться инструментами диагностики и передачи файлов: `rnprobe`, `rncp`, `rnx`.
 
-### 3. [LXMF](lxmf/index.md){ .md-button .md-button--small }
+### 4. [LXMF](lxmf/index.md){ .md-button .md-button--small }
 Изучите протокол обмена сообщениями, который работает поверх RNS.
 
-### 4. [Nomad Network](nomadnet/index.md){ .md-button .md-button--small }
+### 5. [Nomad Network](nomadnet/index.md){ .md-button .md-button--small }
 Установите клиент для общения в сети, настройте узлы и начинайте взаимодействие.
 
 ---

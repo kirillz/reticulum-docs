@@ -35,6 +35,7 @@ nav:
   - Главная: index.md
   - RNS:
       - Основы: rns/index.md
+      - Словарь терминов: rns/glossary.md
       - Утилиты:
           - Обзор: rns/tools/index.md
           - rnsd (Демон): rns/tools/rnsd.md
