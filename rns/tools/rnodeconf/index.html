@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rnodeconf" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -674,6 +679,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rnodeconf (RNode)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -691,6 +716,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -949,6 +1026,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -968,9 +1088,151 @@
   
 
 
-  <h1>rnodeconf (RNode)</h1>
+<h1 id="rnodeconf">rnodeconf<a class="headerlink" href="#rnodeconf" title="Permanent link">&para;</a></h1>
+<p><strong>rnodeconf</strong> — утилита для инспекции и настройки существующих RNodes, а также для создания и provisioning новых RNodes из любых поддерживаемых аппаратных устройств.</p>
+<hr />
+<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Показать информацию об устройстве:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-i<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
 
+<p><strong>Показать конфигурацию устройства:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-c<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
 
+<p><strong>Автоматическая установка прошивки:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-a<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Обновить прошивку до последней версии:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-u<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Обновить прошивку, даже если версия совпадает:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-U<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Использовать конкретную версию прошивки:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-u<span class="w"> </span>--fw-version<span class="w"> </span><span class="m">1</span>.2.3<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Извлечь прошивку из устройства:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-e<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Переключить устройство в режим TNC:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-T<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Настроить параметры TNC:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-T<span class="w"> </span>--freq<span class="w"> </span><span class="m">868000000</span><span class="w"> </span>--bw<span class="w"> </span><span class="m">125000</span><span class="w"> </span>--txp<span class="w"> </span><span class="m">14</span><span class="w"> </span>--sf<span class="w"> </span><span class="m">7</span><span class="w"> </span>--cr<span class="w"> </span><span class="m">5</span><span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Включить Bluetooth:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-b<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Перевести в режим сопряжения Bluetooth:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-p<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Настроить дисплей:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-D<span class="w"> </span><span class="m">128</span><span class="w"> </span>-t<span class="w"> </span><span class="m">30</span><span class="w"> </span>-R<span class="w"> </span><span class="m">1</span><span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Резервное копирование EEPROM:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>--eeprom-backup<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Очистить EEPROM:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>--eeprom-wipe<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<p><strong>Сгенерировать новый ключ подписи:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-k
+</code></pre></div>
+
+<p><strong>Прошить устройство с bootstrap:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnodeconf<span class="w"> </span>-f<span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+
+<hr />
+<h2 id="_2">Все опции командной строки<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnodeconf</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-u</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-U</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--fw-version version</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--fw-url url</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--nocheck</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-e</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-E</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-C</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--baud-flash baud_flash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-N</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-T</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-b</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-B</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-D i</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--display-addr byte</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--freq Hz</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--bw Hz</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--txp dBm</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--sf factor</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--cr rate</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--eeprom-backup</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--eeprom-dump</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--eeprom-wipe</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-P</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--trust-key hexbytes</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-f</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">-r</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-k</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-S</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-H FIRMWARE_HASH</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--platform platform</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">--product product</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--model model</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--hwrev revision</span><span class="o">]</span>
+<span class="w">                 </span><span class="o">[</span><span class="n">port</span><span class="o">]</span>
+
+<span class="n">Утилита</span><span class="w"> </span><span class="n">настройки</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">прошивки</span><span class="w"> </span><span class="n">RNode</span><span class="p">.</span><span class="w"> </span><span class="n">Эта</span><span class="w"> </span><span class="n">программа</span><span class="w"> </span><span class="n">позволяет</span><span class="w"> </span><span class="n">изменять</span>
+<span class="n">различные</span><span class="w"> </span><span class="n">настройки</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">режимы</span><span class="w"> </span><span class="n">запуска</span><span class="w"> </span><span class="n">RNode</span><span class="p">.</span><span class="w"> </span><span class="n">Она</span><span class="w"> </span><span class="n">также</span><span class="w"> </span><span class="n">может</span><span class="w"> </span><span class="n">устанавливать</span><span class="p">,</span>
+<span class="n">прошивать</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">обновлять</span><span class="w"> </span><span class="n">прошивку</span><span class="w"> </span><span class="n">на</span><span class="w"> </span><span class="n">поддерживаемых</span><span class="w"> </span><span class="n">устройствах</span><span class="p">.</span>
+
+<span class="n">Позиционные</span><span class="w"> </span><span class="nl">аргументы</span><span class="p">:</span>
+<span class="w">  </span><span class="n">port</span><span class="w">                  </span><span class="n">последовательный</span><span class="w"> </span><span class="n">порт</span><span class="p">,</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">которому</span><span class="w"> </span><span class="n">подключён</span><span class="w"> </span><span class="n">RNode</span>
+
+<span class="nl">Опции</span><span class="p">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
+<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="c1">--info            показать информацию об устройстве</span>
+<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="c1">--autoinstall     автоматическая установка на различные поддерживаемые устройства</span>
+<span class="w">  </span><span class="o">-</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="c1">--update          обновить прошивку до последней версии</span>
+<span class="w">  </span><span class="o">-</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="c1">--force-update    обновить до указанной прошивки, даже если версия совпадает или старше установленной</span>
+<span class="w">  </span><span class="c1">--fw-version version  использовать конкретную версию прошивки для обновления или автоустановки</span>
+<span class="w">  </span><span class="c1">--fw-url url          использовать альтернативный URL для загрузки прошивки</span>
+<span class="w">  </span><span class="c1">--nocheck             не проверять обновления прошивки онлайн</span>
+<span class="w">  </span><span class="o">-</span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="c1">--extract         извлечь прошивку из подключённого RNode для последующего использования</span>
+<span class="w">  </span><span class="o">-</span><span class="n">E</span><span class="p">,</span><span class="w"> </span><span class="c1">--use-extracted   использовать извлечённую прошивку для автоустановки или обновления</span>
+<span class="w">  </span><span class="o">-</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="c1">--clear-cache     очистить локально кэшированные файлы прошивки</span>
+<span class="w">  </span><span class="c1">--baud-flash baud_flash</span>
+<span class="w">                        </span><span class="n">установить</span><span class="w"> </span><span class="n">конкретную</span><span class="w"> </span><span class="n">скорость</span><span class="w"> </span><span class="n">передачи</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">прошивке</span><span class="w"> </span><span class="n">устройства</span><span class="p">.</span><span class="w"> </span><span class="n">По</span><span class="w"> </span><span class="n">умолчанию</span><span class="w"> </span><span class="mi">921600</span>
+<span class="w">  </span><span class="o">-</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="c1">--normal          переключить устройство в нормальный режим</span>
+<span class="w">  </span><span class="o">-</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="c1">--tnc             переключить устройство в режим TNC</span>
+<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="c1">--bluetooth-on    включить Bluetooth на устройстве</span>
+<span class="w">  </span><span class="o">-</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="c1">--bluetooth-off   выключить Bluetooth на устройстве</span>
+<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="c1">--bluetooth-pair  перевести устройство в режим сопряжения Bluetooth</span>
+<span class="w">  </span><span class="o">-</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="c1">--display i       установить интенсивность дисплея (0-255)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="c1">--timeout s       установить таймаут дисплея в секундах, 0 для отключения</span>
+<span class="w">  </span><span class="o">-</span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="c1">--rotation rotation</span>
+<span class="w">                        </span><span class="n">установить</span><span class="w"> </span><span class="n">поворот</span><span class="w"> </span><span class="n">дисплея</span><span class="p">,</span><span class="w"> </span><span class="n">допустимые</span><span class="w"> </span><span class="n">значения</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">до</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">  </span><span class="c1">--display-addr byte   установить адрес дисплея как hex байт (00 - FF)</span>
+<span class="w">  </span><span class="c1">--recondition-display запустить восстановление дисплея</span>
+<span class="w">  </span><span class="c1">--np i                установить интенсивность NeoPixel (0-255)</span>
+<span class="w">  </span><span class="c1">--freq Hz             частота в Гц для режима TNC</span>
+<span class="w">  </span><span class="c1">--bw Hz               полоса пропускания в Гц для режима TNC</span>
+<span class="w">  </span><span class="c1">--txp dBm             мощность передачи в дБм для режима TNC</span>
+<span class="w">  </span><span class="c1">--sf factor           фактор расширения для режима TNC (7 - 12)</span>
+<span class="w">  </span><span class="c1">--cr rate             кодовая скорость для режима TNC (5 - 8)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="c1">--ia-enable       включить избегание интерференции</span>
+<span class="w">  </span><span class="o">-</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="c1">--ia-disable      выключить избегание интерференции</span>
+<span class="w">  </span><span class="o">-</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="c1">--config          показать конфигурацию устройства</span>
+<span class="w">  </span><span class="c1">--eeprom-backup       резервное копирование EEPROM в файл</span>
+<span class="w">  </span><span class="c1">--eeprom-dump         вывод содержимого EEPROM в консоль</span>
+<span class="w">  </span><span class="c1">--eeprom-wipe         разблокировать и очистить EEPROM</span>
+<span class="w">  </span><span class="o">-</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="c1">--public          отобразить публичную часть ключа подписи</span>
+<span class="w">  </span><span class="c1">--trust-key hexbytes  публичный ключ для доверия при верификации устройства</span>
+<span class="w">  </span><span class="c1">--version             показать версию программы и выйти</span>
+<span class="w">  </span><span class="o">-</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="c1">--flash           прошить прошивку и bootstrap EEPROM</span>
+<span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="c1">--rom             bootstrap EEPROM без прошивки прошивки</span>
+<span class="w">  </span><span class="o">-</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="c1">--key             сгенерировать новый ключ подписи и выйти</span>
+<span class="w">  </span><span class="o">-</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="c1">--sign            отобразить публичную часть ключа подписи</span>
+<span class="w">  </span><span class="o">-</span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="c1">--firmware-hash FIRMWARE_HASH</span>
+<span class="w">                        </span><span class="n">установить</span><span class="w"> </span><span class="n">хэш</span><span class="w"> </span><span class="n">установленной</span><span class="w"> </span><span class="n">прошивки</span>
+<span class="w">  </span><span class="c1">--platform platform   спецификация платформы для bootstrap устройства</span>
+<span class="w">  </span><span class="c1">--product product     спецификация продукта для bootstrap устройства</span>
+<span class="w">  </span><span class="c1">--model model         код модели для bootstrap устройства</span>
+<span class="w">  </span><span class="c1">--hwrev revision      ревизия оборудования для bootstrap устройства</span>
+</code></pre></div>
+
+<hr />
+<h2 id="_3">См. также<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
+<li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
+</ul>
 
 
 
@@ -991,7 +1253,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 14:03:18 UTC">18 марта 2026 г. 14:03:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 17:11:29 UTC">19 марта 2026 г. 17:11:29</span>
   </span>
 
     
