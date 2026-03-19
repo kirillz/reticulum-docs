@@ -59,8 +59,7 @@ nav:
           - rnodeconf (RNode): rns/tools/rnodeconf.md
       - Обнаружение: rns/discovery.md
       - Управление: rns/management.md
-      - Blackhole: rns/blackhole.md
-      - Конфигурирование: rns/improoving.md
+      - Конфигурирование: rns/improving.md
   - LXMF:
       - Основы: lxmf/index.md
       - Утилиты:
@@ -83,6 +82,9 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - attr_list       # Нужно для иконок и кнопок
   - md_in_html      # Нужно для карточек (div)
   - pymdownx.emoji: # Нужно для смайликов-иконок :material-...:
