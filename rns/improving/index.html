@@ -1352,8 +1352,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#пример-приватный-шлюз" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример: Приватный шлюз
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#контроль-скорости-анонсов" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Контроль скорости анонсов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#лимитирование-новых-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Лимитирование новых destinations
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1432,6 +1465,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#важные-предупреждения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Важные предупреждения
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2238,8 +2282,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#пример-приватный-шлюз" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример: Приватный шлюз
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#контроль-скорости-анонсов" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Контроль скорости анонсов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#лимитирование-новых-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Лимитирование новых destinations
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2322,6 +2399,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#важные-предупреждения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Важные предупреждения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#см-также" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2386,7 +2474,7 @@
 <td>Имя виртуальной сети для подключения к конкретным пирам</td>
 </tr>
 <tr>
-<td><code>network_passphrase</code></td>
+<td><code>passphrase</code></td>
 <td>Пароль для аутентификации в сети</td>
 </tr>
 <tr>
@@ -2395,7 +2483,7 @@
 </tr>
 <tr>
 <td><code>announce_cap</code></td>
-<td>Лимит пропускной способности для announce (1-100%, по умолчанию 2%)</td>
+<td>Лимит пропускной способности для анонсов (1-100%, по умолчанию 2%)</td>
 </tr>
 <tr>
 <td><code>bitrate</code></td>
@@ -2758,7 +2846,7 @@
 </tr>
 <tr>
 <td><code>id_interval</code></td>
-<td>Интервал идентификации (минуты)</td>
+<td>Интервал идентификации (секунды)</td>
 </tr>
 <tr>
 <td><code>airtime_limit_long</code></td>
@@ -2913,7 +3001,7 @@
 </tr>
 <tr>
 <td><code>persistence</code></td>
-<td>Параметр CSMA persistence (0-255)</td>
+<td>Параметр CDMA persistence (0-255)</td>
 </tr>
 <tr>
 <td><code>slottime</code></td>
@@ -2925,7 +3013,7 @@
 </tr>
 <tr>
 <td><code>id_interval</code></td>
-<td>Интервал идентификации (минуты)</td>
+<td>Интервал идентификации (секунды)</td>
 </tr>
 <tr>
 <td><code>flow_control</code></td>
@@ -3011,7 +3099,7 @@
 </tr>
 <tr>
 <td><code>announce_interval</code></td>
-<td>Интервал announce (минуты)</td>
+<td>Интервал между анонсами (минуты)</td>
 <td>360</td>
 </tr>
 <tr>
@@ -3026,7 +3114,7 @@
 </tr>
 <tr>
 <td><code>discovery_encrypt</code></td>
-<td>Шифровать announce (<code>yes</code>/<code>no</code>)</td>
+<td>Шифровать анонсы (<code>yes</code>/<code>no</code>)</td>
 <td><code>no</code></td>
 </tr>
 <tr>
@@ -3072,6 +3160,107 @@
 <span class="na">longitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-0.74195</span>
 </code></pre></div>
 
+<h3 id="пример-приватный-шлюз">Пример: Приватный шлюз<a class="headerlink" href="#пример-приватный-шлюз" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<span class="k">[[My Private Gateway]]</span>
+<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BackboneInterface</span>
+<span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">gateway</span>
+<span class="na">listen_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.0.0</span>
+<span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5858</span>
+<span class="na">network_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">internal_1</span>
+<span class="na">passphrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Mevpekyafshak5Wr</span>
+<span class="na">discoverable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">discovery_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Region A Private Backbone</span>
+<span class="na">announce_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">720</span>
+<span class="na">reachable_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/local/bin/get_external_ip.sh</span>
+<span class="na">discovery_stamp_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
+<span class="na">discovery_encrypt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">publish_ifac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+</code></pre></div>
+
+<hr />
+<h2 id="контроль-скорости-анонсов">Контроль скорости анонсов<a class="headerlink" href="#контроль-скорости-анонсов" title="Permanent link">&para;</a></h2>
+<p>Для предотвращения перегрузки сети можно настроить частоту анонсов:</p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>announce_rate_target</code></td>
+<td>Минимальное время между анонсами (секунды)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>announce_rate_grace</code></td>
+<td>Количество нарушений перед применением лимита</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>announce_rate_penalty</code></td>
+<td>Дополнительное время штрафа после нарушения (секунды)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="лимитирование-новых-destinations">Лимитирование новых destinations<a class="headerlink" href="#лимитирование-новых-destinations" title="Permanent link">&para;</a></h2>
+<p>Входящий контроль (ingress control) предотвращает перегрузку от новых интерфейсов:</p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Описание</th>
+<th>Значение по умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ingress_control</code></td>
+<td>Включить контроль входящих анонсов</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>ic_new_time</code></td>
+<td>Время, в течение которого интерфейс считается новым (секунды)</td>
+<td>7200</td>
+</tr>
+<tr>
+<td><code>ic_burst_freq_new</code></td>
+<td>Макс. частота анонсов для новых интерфейсов (анонсов/сек)</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td><code>ic_burst_freq</code></td>
+<td>Макс. частота анонсов для остальных интерфейсов</td>
+<td>12</td>
+</tr>
+<tr>
+<td><code>ic_max_held_announces</code></td>
+<td>Максимальное количество анонсов в очереди</td>
+<td>256</td>
+</tr>
+<tr>
+<td><code>ic_burst_hold</code></td>
+<td>Время до сброса burst-счётчика (секунды)</td>
+<td>60</td>
+</tr>
+<tr>
+<td><code>ic_burst_penalty</code></td>
+<td>Штраф после сброса burst-счётчика (секунды)</td>
+<td>300</td>
+</tr>
+<tr>
+<td><code>ic_held_release_interval</code></td>
+<td>Интервал выпуска анонсов из очереди (секунды)</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="пользовательские-интерфейсы">Пользовательские интерфейсы<a class="headerlink" href="#пользовательские-интерфейсы" title="Permanent link">&para;</a></h2>
 <p>Reticulum поддерживает создание пользовательских интерфейсов через наследование от базового класса <code>Interface</code>. Это позволяет интегрировать любое оборудование или протокол.</p>
@@ -3112,6 +3301,15 @@
 </code></pre></div>
 
 <hr />
+<h2 id="важные-предупреждения">Важные предупреждения<a class="headerlink" href="#важные-предупреждения" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Firewall:</strong> AutoInterface требует UDP-порты <strong>29716</strong> и <strong>42671</strong> для работы обнаружения</li>
+<li><strong>Рабочий диапазон:</strong> Радиочастотный спектр регулируется законодательно в вашей стране</li>
+<li><strong>KISS framing:</strong> Параметр <code>kiss_framing</code> следует использовать только с внешними устройствами (модемами), не с TCPServerInterface</li>
+<li><strong>I2P:</strong> Требуется запущенный I2P-роутер (например, <code>i2pd</code>)</li>
+<li><strong>LXMF:</strong> Для обнаружения интерфейсов требуется модуль <code>lxmf</code> (<code>pip install lxmf</code>)</li>
+</ol>
+<hr />
 <h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../discovery/"><strong>Обнаружение интерфейсов</strong></a> — автоматическое обнаружение интерфейсов в сети</li>
@@ -3119,34 +3317,6 @@
 <li><a href="../tools/rnodeconf/"><strong>Утилита rnodeconf</strong></a> — настройка LoRa-трансиверов RNode</li>
 <li><a href="https://markqvist.github.io/Reticulum/manual/interfaces.html"><strong>Официальная документация</strong></a> — оригинальная документация на английском языке</li>
 </ul>
-<hr />
-<style>
-/* Стили для документа конфигурации интерфейсов */
-
-/* Заголовки разделов */
-.md-typeset h2 {
-  border-left: 3px solid var(--md-primary-fg-color);
-  padding-left: 0.5rem;
-  margin-top: 2rem;
-}
-
-/* Таблицы параметров */
-.md-typeset table:not([class]) {
-  font-size: 0.85rem;
-}
-
-/* Блоки кода */
-.md-typeset pre {
-  margin: 0.5rem 0;
-}
-
-/* Выделение важных параметров */
-.md-typeset code {
-  background-color: var(--md-default-bg-color--lightest);
-  padding: 0.1em 0.3em;
-  border-radius: 0.2em;
-}
-</style>
 
 
 
@@ -3167,7 +3337,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 18:05:37 UTC">19 марта 2026 г. 18:05:37</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 18:16:43 UTC">19 марта 2026 г. 18:16:43</span>
   </span>
 
     
