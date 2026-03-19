@@ -57,6 +57,10 @@ nav:
           - rncp (Копирование файлов): rns/tools/rncp.md
           - rnx (Удаленное выполнение): rns/tools/rnx.md
           - rnodeconf (RNode): rns/tools/rnodeconf.md
+      - Обнаружение: rns/discovery.md
+      - Управление: rns/management.md
+      - Blackhole: rns/blackhole.md
+      - Конфигурирование: rns/improoving.md
   - LXMF:
       - Основы: lxmf/index.md
       - Утилиты:
