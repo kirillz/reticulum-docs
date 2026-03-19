@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rnid" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -534,6 +539,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rnid (Идентификаторы)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -551,6 +576,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -949,6 +1026,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все опции командной строки (переведены для понимания)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        См. также
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -968,9 +1088,95 @@
   
 
 
-  <h1>rnid (Идентификаторы)</h1>
+<h1 id="rnid">rnid<a class="headerlink" href="#rnid" title="Permanent link">&para;</a></h1>
+<p><strong>rnid</strong> — утилита для генерации, управления и просмотра идентичностей (Identities) Reticulum. Программа также позволяет вычислять хэши назначений (Destination hashes) и выполнять шифрование и дешифрование файлов.</p>
+<p>С помощью <code>rnid</code> можно асимметрично шифровать файлы и информацию для любого хэша назначения Reticulum, а также создавать и проверять криптографические подписи.</p>
+<hr />
+<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Генерация новой идентичности:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnid<span class="w"> </span>-g<span class="w"> </span>./new_identity
+</code></pre></div>
 
+<p><strong>Отображение информации о ключах идентичности:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnid<span class="w"> </span>-i<span class="w"> </span>./new_identity<span class="w"> </span>-p
 
+Loaded<span class="w"> </span>Identity<span class="w"> </span>&lt;984b74a3f768bef236af4371e6f248cd&gt;<span class="w"> </span>from<span class="w"> </span>new_id
+Public<span class="w"> </span>Key<span class="w">  </span>:<span class="w"> </span>0f4259fef4521ab75a3409e353fe9073eb10783b4912a6a9937c57bf44a62c1e
+Private<span class="w"> </span>Key<span class="w"> </span>:<span class="w"> </span>Hidden
+</code></pre></div>
+
+<p><strong>Шифрование файла для пользователя LXMF:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnid<span class="w"> </span>-i<span class="w"> </span>8dd57a738226809646089335a6b03695<span class="w"> </span>-e<span class="w"> </span>my_file.txt
+
+Recalled<span class="w"> </span>Identity<span class="w"> </span>&lt;bc7291552be7a58f361522990465165c&gt;<span class="w"> </span><span class="k">for</span><span class="w"> </span>destination<span class="w"> </span>&lt;8dd57a738226809646089335a6b03695&gt;
+Encrypting<span class="w"> </span>my_file.txt
+File<span class="w"> </span>my_file.txt<span class="w"> </span>encrypted<span class="w"> </span><span class="k">for</span><span class="w"> </span>&lt;bc7291552be7a58f361522990465165c&gt;<span class="w"> </span>to<span class="w"> </span>my_file.txt.rfe
+</code></pre></div>
+
+<p><strong>Если идентичность для назначения ещё не известна, её можно получить из сети с помощью опции <code>-R</code>:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnid<span class="w"> </span>-R<span class="w"> </span>-i<span class="w"> </span>30602def3b3506a28ed33db6f60cc6c9<span class="w"> </span>-e<span class="w"> </span>my_file.txt
+
+Requesting<span class="w"> </span>unknown<span class="w"> </span>Identity<span class="w"> </span><span class="k">for</span><span class="w"> </span>&lt;30602def3b3506a28ed33db6f60cc6c9&gt;...
+Received<span class="w"> </span>Identity<span class="w"> </span>&lt;2b489d06eaf7c543808c76a5332a447d&gt;<span class="w"> </span><span class="k">for</span><span class="w"> </span>destination<span class="w"> </span>&lt;30602def3b3506a28ed33db6f60cc6c9&gt;<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>network
+Encrypting<span class="w"> </span>my_file.txt
+File<span class="w"> </span>my_file.txt<span class="w"> </span>encrypted<span class="w"> </span><span class="k">for</span><span class="w"> </span>&lt;2b489d06eaf7c543808c76a5332a447d&gt;<span class="w"> </span>to<span class="w"> </span>my_file.txt.rfe
+</code></pre></div>
+
+<p><strong>Дешифрование файла с использованием идентичности Reticulum, для которой он был зашифрован:</strong></p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnid<span class="w"> </span>-i<span class="w"> </span>./my_identity<span class="w"> </span>-d<span class="w"> </span>my_file.txt.rfe
+
+Loaded<span class="w"> </span>Identity<span class="w"> </span>&lt;2225fdeecaf6e2db4556c3c2d7637294&gt;<span class="w"> </span>from<span class="w"> </span>./my_identity
+Decrypting<span class="w"> </span>./my_file.txt.rfe...
+File<span class="w"> </span>./my_file.txt.rfe<span class="w"> </span>decrypted<span class="w"> </span>with<span class="w"> </span>&lt;2225fdeecaf6e2db4556c3c2d7637294&gt;<span class="w"> </span>to<span class="w"> </span>./my_file.txt
+</code></pre></div>
+
+<hr />
+<h2 id="_2">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">usage</span><span class="p">:</span> <span class="n">rnid</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">config</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">identity</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="n">aspects</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">H</span> <span class="n">aspects</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">V</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="n">path</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">w</span> <span class="n">path</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">R</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">seconds</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">P</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span>
+
+<span class="n">Утилита</span> <span class="n">идентичностей</span> <span class="n">и</span> <span class="n">шифрования</span> <span class="n">Reticulum</span>
+
+<span class="n">options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">показать</span> <span class="n">эту</span> <span class="n">справку</span> <span class="n">и</span> <span class="n">выйти</span>
+  <span class="o">--</span><span class="n">config</span> <span class="n">path</span>         <span class="n">путь</span> <span class="n">к</span> <span class="n">альтернативному</span> <span class="n">каталогу</span> <span class="n">конфигурации</span> <span class="n">Reticulum</span>
+  <span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="o">--</span><span class="n">identity</span> <span class="n">identity</span>
+                        <span class="n">шестнадцатеричная</span> <span class="n">идентичность</span> <span class="n">Reticulum</span> <span class="n">или</span> <span class="n">хэш</span> <span class="n">назначения</span><span class="p">,</span>
+                        <span class="n">или</span> <span class="n">путь</span> <span class="n">к</span> <span class="n">файлу</span> <span class="n">идентичности</span>
+  <span class="o">-</span><span class="n">g</span><span class="p">,</span> <span class="o">--</span><span class="n">generate</span> <span class="n">file</span>   <span class="n">сгенерировать</span> <span class="n">новую</span> <span class="n">идентичность</span>
+  <span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="o">--</span><span class="kn">import</span><span class="w"> </span><span class="nn">identity_data</span>
+                        <span class="n">импортировать</span> <span class="n">идентичность</span> <span class="n">Reticulum</span> <span class="n">в</span> <span class="n">формате</span> <span class="nb">hex</span><span class="p">,</span> <span class="n">base32</span> <span class="n">или</span> <span class="n">base64</span>
+  <span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">--</span><span class="n">export</span>          <span class="n">экспортировать</span> <span class="n">идентичность</span> <span class="n">в</span> <span class="n">формате</span> <span class="nb">hex</span><span class="p">,</span> <span class="n">base32</span> <span class="n">или</span> <span class="n">base64</span>
+  <span class="o">-</span><span class="n">v</span><span class="p">,</span> <span class="o">--</span><span class="n">verbose</span>         <span class="n">увеличить</span> <span class="n">подробность</span> <span class="n">вывода</span>
+  <span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>           <span class="n">уменьшить</span> <span class="n">подробность</span> <span class="n">вывода</span>
+  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">announce</span> <span class="n">aspects</span>
+                        <span class="n">объявить</span> <span class="n">назначение</span> <span class="n">на</span> <span class="n">основе</span> <span class="n">этой</span> <span class="n">идентичности</span>
+  <span class="o">-</span><span class="n">H</span><span class="p">,</span> <span class="o">--</span><span class="nb">hash</span> <span class="n">aspects</span>    <span class="n">показать</span> <span class="n">хэши</span> <span class="n">назначений</span> <span class="n">для</span> <span class="n">других</span> <span class="n">аспектов</span> <span class="n">этой</span> <span class="n">идентичности</span>
+  <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="o">--</span><span class="n">encrypt</span> <span class="n">file</span>    <span class="n">зашифровать</span> <span class="n">файл</span>
+  <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="o">--</span><span class="n">decrypt</span> <span class="n">file</span>    <span class="n">дешифровать</span> <span class="n">файл</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">sign</span> <span class="n">path</span>       <span class="n">подписать</span> <span class="n">файл</span>
+  <span class="o">-</span><span class="n">V</span><span class="p">,</span> <span class="o">--</span><span class="n">validate</span> <span class="n">path</span>   <span class="n">проверить</span> <span class="n">подпись</span>
+  <span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="o">--</span><span class="n">read</span> <span class="n">file</span>       <span class="n">путь</span> <span class="n">к</span> <span class="n">входному</span> <span class="n">файлу</span>
+  <span class="o">-</span><span class="n">w</span><span class="p">,</span> <span class="o">--</span><span class="n">write</span> <span class="n">file</span>      <span class="n">путь</span> <span class="n">к</span> <span class="n">выходному</span> <span class="n">файлу</span>
+  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">force</span>           <span class="n">записать</span> <span class="n">вывод</span><span class="p">,</span> <span class="n">даже</span> <span class="n">если</span> <span class="n">он</span> <span class="n">перезапишет</span> <span class="n">существующие</span> <span class="n">файлы</span>
+  <span class="o">-</span><span class="n">R</span><span class="p">,</span> <span class="o">--</span><span class="n">request</span>         <span class="n">запросить</span> <span class="n">неизвестные</span> <span class="n">идентичности</span> <span class="n">из</span> <span class="n">сети</span>
+  <span class="o">-</span><span class="n">t</span> <span class="n">seconds</span>            <span class="n">таймаут</span> <span class="n">запроса</span> <span class="n">идентичности</span> <span class="n">перед</span> <span class="n">отказом</span>
+  <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">identity</span>  <span class="n">вывести</span> <span class="n">информацию</span> <span class="n">об</span> <span class="n">идентичности</span> <span class="n">и</span> <span class="n">выйти</span>
+  <span class="o">-</span><span class="n">P</span><span class="p">,</span> <span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">private</span>   <span class="n">разрешить</span> <span class="n">отображение</span> <span class="n">приватных</span> <span class="n">ключей</span>
+  <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">--</span><span class="n">base64</span>          <span class="n">использовать</span> <span class="n">кодирование</span> <span class="n">base64</span> <span class="n">для</span> <span class="n">ввода</span> <span class="n">и</span> <span class="n">вывода</span>
+  <span class="o">-</span><span class="n">B</span><span class="p">,</span> <span class="o">--</span><span class="n">base32</span>          <span class="n">использовать</span> <span class="n">кодирование</span> <span class="n">base32</span> <span class="n">для</span> <span class="n">ввода</span> <span class="n">и</span> <span class="n">вывода</span>
+  <span class="o">--</span><span class="n">version</span>             <span class="n">показать</span> <span class="n">номер</span> <span class="n">версии</span> <span class="n">программы</span> <span class="n">и</span> <span class="n">выйти</span>
+</code></pre></div>
+
+<hr />
+<h2 id="_3">См. также<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
+<li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
+<li><a href="../rncp/"><strong>rncp</strong></a> — копирование файлов через сеть Reticulum</li>
+<li><a href="../rnx/"><strong>rnx</strong></a> — удалённое выполнение команд</li>
+</ul>
 
 
 
@@ -991,7 +1197,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 марта 2026 г. 14:03:18 UTC">18 марта 2026 г. 14:03:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 16:28:37 UTC">19 марта 2026 г. 16:28:37</span>
   </span>
 
     
