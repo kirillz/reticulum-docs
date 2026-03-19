@@ -649,7 +649,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#примеры-использования" class="md-nav__link">
     <span class="md-ellipsis">
       
         Примеры использования
@@ -660,7 +660,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#все-опции-командной-строки-переведены-для-понимания" class="md-nav__link">
     <span class="md-ellipsis">
       
         Все опции командной строки (переведены для понимания)
@@ -671,7 +671,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#примечание" class="md-nav__link">
     <span class="md-ellipsis">
       
         Примечание
@@ -682,7 +682,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#см-также" class="md-nav__link">
     <span class="md-ellipsis">
       
         См. также
@@ -856,35 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blackhole/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Blackhole
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../improoving/" class="md-nav__link">
+      <a href="../../improving.md" class="md-nav__link">
         
   
   
@@ -1159,7 +1131,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#примеры-использования" class="md-nav__link">
     <span class="md-ellipsis">
       
         Примеры использования
@@ -1170,7 +1142,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#все-опции-командной-строки-переведены-для-понимания" class="md-nav__link">
     <span class="md-ellipsis">
       
         Все опции командной строки (переведены для понимания)
@@ -1181,7 +1153,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#примечание" class="md-nav__link">
     <span class="md-ellipsis">
       
         Примечание
@@ -1192,7 +1164,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#см-также" class="md-nav__link">
     <span class="md-ellipsis">
       
         См. также
@@ -1227,7 +1199,7 @@
 <p>Обратите внимание: ответы на запросы при зондирвании будут приходить только в том случае, если указанное назначение настроено на отправку подтверждений (proofs) для полученных пакетов. Многие узлы назначения не имеют включённой эту опцию, поэтому большинство узлов назначения не будут отвечать на запросы зондирования.</p>
 <p>Вы можете включить ответ на запрос зондирования в транспортных экземплярах Reticulum, установив директиву конфигурации <code>respond_to_probes</code>. Reticulum в этом случае выведет назначение для запросов зондирования в лог при запуске транспортного экземпляра.</p>
 <hr />
-<h2 id="_1">Примеры использования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">&para;</a></h2>
 <p><strong>Проверка доступности узла назначения:</strong></p>
 <div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708
 
@@ -1262,7 +1234,7 @@ Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> <
 <li><strong>[SNR X.X dB]</strong> — отношение сигнал/шум (Signal-to-Noise Ratio)</li>
 </ul>
 <hr />
-<h2 id="_2">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnprobe</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s SIZE</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n PROBES</span><span class="o">]</span>
 <span class="w">               </span><span class="o">[</span><span class="n">-t seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span>
 <span class="w">               </span><span class="o">[</span><span class="n">full_name</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination_hash</span><span class="o">]</span>
@@ -1288,7 +1260,7 @@ Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> <
 </code></pre></div>
 
 <hr />
-<h2 id="_3">Примечание<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="примечание">Примечание<a class="headerlink" href="#примечание" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Для корректной работы должен быть активен хотя бы один интерфейс Reticulum</li>
 <li>Назначение должно быть настроено на отправку подтверждений (proofs), иначе запрос зондирования не получит ответа</li>
@@ -1297,7 +1269,7 @@ Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> <
 <li>Параметры RSSI и SNR отображаются только для интерфейсов, поддерживающих радиометрию (например, RNode)</li>
 </ul>
 <hr />
-<h2 id="_4">См. также<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../"><strong>Основы RNS</strong></a> — введение в протокол Reticulum</li>
 <li><a href="../"><strong>Утилиты RNS</strong></a> — обзор всех утилит командной строки</li>
