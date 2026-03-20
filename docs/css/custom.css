@@ -52,3 +52,93 @@
 .md-source-file .git-revision-date-localized-plugin {
   font-size: 0.75rem !important;
 }
+
+/* Стили для сетки карточек (grid cards) */
+.md-typeset .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.md-typeset .grid.cards .card {
+  display: flex;
+  flex-direction: column;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.md-typeset .grid.cards .card img {
+  max-width: 100%;
+  width: 100%;
+  height: 280px;
+  display: block;
+  margin: 0 auto 0.75rem;
+  border-radius: 0.25rem;
+  background: var(--md-default-fg-color--lightest);
+  padding: 0.5rem;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards .card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.md-typeset .grid.cards .card > p {
+  margin: 0.5rem 0;
+}
+
+.md-typeset .grid.cards .card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--md-primary-fg-color--dark);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.md-typeset .grid.cards .card ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.md-typeset .grid.cards .card ul li {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+  padding-left: 0;
+}
+
+.md-typeset .grid.cards .card ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  color: var(--md-default-fg-color);
+  font-size: 0.8rem;
+}
+
+/* Увеличенные изображения для оборудования WiFi */
+.md-typeset .grid.cards .card .radio-img {
+  height: 250px;
+}
+
+/* Сетка на полную ширину для страницы Оборудования */
+.md-typeset .grid.hardware-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Адаптивность для мобильных */
+@media screen and (max-width: 768px) {
+  .md-typeset .grid {
+    grid-template-columns: 1fr;
+  }
+}

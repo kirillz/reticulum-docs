@@ -60,6 +60,7 @@ nav:
       - Обнаружение: rns/discovery.md
       - Управление: rns/management.md
       - Конфигурирование: rns/improving.md
+      - Оборудование: rns/hardware.md
       - Blackhole: rns/blackhole.md
   - LXMF:
       - Основы: lxmf/index.md
@@ -73,6 +74,10 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: false
       type: datetime
+  - glightbox:
+      background: light
+      shadow: true
+      effect: zoom
 # Кастомные стили
 extra_css:
   - css/custom.css
