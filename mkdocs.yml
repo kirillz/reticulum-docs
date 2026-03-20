@@ -56,6 +56,7 @@ nav:
           - rnprobe (Диагностика): rns/tools/rnprobe.md
           - rncp (Копирование файлов): rns/tools/rncp.md
           - rnx (Удаленное выполнение): rns/tools/rnx.md
+          - rnsh (Оболочка): rns/tools/rnsh.md
           - rnodeconf (RNode): rns/tools/rnodeconf.md
       - Обнаружение: rns/discovery.md
       - Управление: rns/management.md
