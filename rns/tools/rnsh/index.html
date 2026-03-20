@@ -6,28 +6,28 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../rnx/">
       
       
-        <link rel="next" href="glossary/">
+        <link rel="next" href="../rnodeconf/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Основы - Документация Reticulum</title>
+        <title>rnsh (Оболочка) - Документация Reticulum</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,15 +46,15 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#основы-rns" class="md-skip">
+        <a href="#rnsh" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -99,7 +99,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="Документация Reticulum" class="md-header__button md-logo" aria-label="Документация Reticulum" data-md-component="logo">
+    <a href="../../.." title="Документация Reticulum" class="md-header__button md-logo" aria-label="Документация Reticulum" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"></path></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Основы
+              rnsh (Оболочка)
             
           </span>
         </div>
@@ -245,7 +245,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Документация Reticulum" class="md-nav__button md-logo" aria-label="Документация Reticulum" data-md-component="logo">
+    <a href="../../.." title="Документация Reticulum" class="md-nav__button md-logo" aria-label="Документация Reticulum" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"></path></svg>
@@ -275,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -348,37 +348,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Основы
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -394,87 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#что-такое-reticulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что такое Reticulum?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Что такое Reticulum?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ключевые-особенности" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ключевые особенности
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#как-это-работает" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как это работает?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#инструменты-rns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Инструменты RNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#дальнейшее-чтение" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Дальнейшее чтение
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -487,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   
@@ -512,18 +404,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -544,7 +438,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -562,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -590,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnsd/" class="md-nav__link">
+      <a href="../rnsd/" class="md-nav__link">
         
   
   
@@ -618,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnstatus/" class="md-nav__link">
+      <a href="../rnstatus/" class="md-nav__link">
         
   
   
@@ -646,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnid/" class="md-nav__link">
+      <a href="../rnid/" class="md-nav__link">
         
   
   
@@ -674,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnpath/" class="md-nav__link">
+      <a href="../rnpath/" class="md-nav__link">
         
   
   
@@ -702,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnprobe/" class="md-nav__link">
+      <a href="../rnprobe/" class="md-nav__link">
         
   
   
@@ -730,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rncp/" class="md-nav__link">
+      <a href="../rncp/" class="md-nav__link">
         
   
   
@@ -758,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnx/" class="md-nav__link">
+      <a href="../rnx/" class="md-nav__link">
         
   
   
@@ -783,10 +677,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="tools/rnsh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -802,6 +705,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -814,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/rnodeconf/" class="md-nav__link">
+      <a href="../rnodeconf/" class="md-nav__link">
         
   
   
@@ -850,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="discovery/" class="md-nav__link">
+      <a href="../../discovery/" class="md-nav__link">
         
   
   
@@ -878,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="management/" class="md-nav__link">
+      <a href="../../management/" class="md-nav__link">
         
   
   
@@ -906,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="improving/" class="md-nav__link">
+      <a href="../../improving/" class="md-nav__link">
         
   
   
@@ -934,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hardware/" class="md-nav__link">
+      <a href="../../hardware/" class="md-nav__link">
         
   
   
@@ -962,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blackhole/" class="md-nav__link">
+      <a href="../../blackhole/" class="md-nav__link">
         
   
   
@@ -1044,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lxmf/" class="md-nav__link">
+      <a href="../../../lxmf/" class="md-nav__link">
         
   
   
@@ -1119,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lxmf/tools/" class="md-nav__link">
+      <a href="../../../lxmf/tools/" class="md-nav__link">
         
   
   
@@ -1147,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lxmf/tools/lxmd/" class="md-nav__link">
+      <a href="../../../lxmf/tools/lxmd/" class="md-nav__link">
         
   
   
@@ -1190,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nomadnet/" class="md-nav__link">
+      <a href="../../../nomadnet/" class="md-nav__link">
         
   
   
@@ -1230,75 +1134,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#что-такое-reticulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что такое Reticulum?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Что такое Reticulum?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ключевые-особенности" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ключевые особенности
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#как-это-работает" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как это работает?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#инструменты-rns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Инструменты RNS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#дальнейшее-чтение" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Дальнейшее чтение
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1317,105 +1152,8 @@
   
 
 
-<h1 id="основы-rns">Основы RNS<a class="headerlink" href="#основы-rns" title="Permanent link">¶</a></h1>
-<h2 id="что-такое-reticulum">Что такое Reticulum?<a class="headerlink" href="#что-такое-reticulum" title="Permanent link">¶</a></h2>
-<p><strong>Reticulum (RNS)</strong> — это криптографически защищенный сетевой стек для построения оверлейных mesh-сетей любой топологии. Это не готовое приложение, а <strong>протокол</strong>, который можно использовать как фундамент для создания собственных решений.</p>
-<h3 id="ключевые-особенности">Ключевые особенности<a class="headerlink" href="#ключевые-особенности" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Особенность</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Независимость от транспорта</strong></td>
-<td>Работает поверх любого канала: TCP/IP, LoRa, WiFi, Serial, лазер, радиомодемы и даже экзотические транспорты</td>
-</tr>
-<tr>
-<td><strong>Сквозное шифрование</strong></td>
-<td>Все соединения защищены по умолчанию, без необходимости дополнительной настройки</td>
-</tr>
-<tr>
-<td><strong>Самоорганизация</strong></td>
-<td>Узлы автоматически обнаруживают друг друга и строят маршруты без центрального сервера</td>
-</tr>
-<tr>
-<td><strong>Универсальность</strong></td>
-<td>Поверх RNS можно запускать любые приложения: чаты, файлообменники, удалённые терминалы, веб-сервисы</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="как-это-работает">Как это работает?<a class="headerlink" href="#как-это-работает" title="Permanent link">¶</a></h2>
-<p>Reticulum создаёт <strong>оверлейную сеть</strong> поверх существующих физических каналов связи. Каждый узел в сети имеет уникальный криптографический идентификатор, а сообщения маршрутизируются между узлами с гарантией доставки и целостности данных.</p>
-<div class="diagram-center">
-
-<div class="codehilite"><pre><span></span><code>┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   Узел A    │ ◄──► │   Узел B    │ ◄──► │   Узел C    │
-│  (LoRa)     │      │  (WiFi)     │      │ (Ethernet)  │
-└─────────────┘      └─────────────┘      └─────────────┘
-        ▲                                        │
-        │            Reticulum Overlay           │
-        └────────────────────────────────────────┘
-</code></pre></div>
-
-
-</div>
-<hr>
-<h2 id="инструменты-rns">Инструменты RNS<a class="headerlink" href="#инструменты-rns" title="Permanent link">¶</a></h2>
-<p>После изучения основ перейдите к практическим утилитам:</p>
-<table>
-<thead>
-<tr>
-<th>Утилита</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="tools/rnsd/"><code>rnsd</code></a></td>
-<td>Демон Reticulum — фоновая служба для работы сети</td>
-</tr>
-<tr>
-<td><a href="tools/rnstatus/"><code>rnstatus</code></a></td>
-<td>Просмотр статуса сети и подключений</td>
-</tr>
-<tr>
-<td><a href="tools/rnid/"><code>rnid</code></a></td>
-<td>Генерация и управление идентификаторами</td>
-</tr>
-<tr>
-<td><a href="tools/rnpath/"><code>rnpath</code></a></td>
-<td>Диагностика маршрутов между узлами</td>
-</tr>
-<tr>
-<td><a href="tools/rnprobe/"><code>rnprobe</code></a></td>
-<td>Проверка доступности узлов и каналов</td>
-</tr>
-<tr>
-<td><a href="tools/rncp/"><code>rncp</code></a></td>
-<td>Копирование файлов через сеть Reticulum</td>
-</tr>
-<tr>
-<td><a href="tools/rnx/"><code>rnx</code></a></td>
-<td>Удалённое выполнение команд на других узлах</td>
-</tr>
-<tr>
-<td><a href="tools/rnodeconf/"><code>rnodeconf</code></a></td>
-<td>Настройка TNC и радиомодемов RNode</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="дальнейшее-чтение">Дальнейшее чтение<a class="headerlink" href="#дальнейшее-чтение" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="glossary/"><strong>Словарь терминов</strong></a> — справочник основных понятий RNS</li>
-<li><a href="../lxmf/"><strong>LXMF</strong></a> — протокол обмена сообщениями поверх RNS</li>
-<li><a href="tools/"><strong>Утилиты RNS</strong></a> — обзор утилит</li>
-<li><a href="../nomadnet/"><strong>Nomad Network</strong></a> — децентрализованный клиент для общения</li>
-</ul>
+<h1 id="rnsh">rnsh<a class="headerlink" href="#rnsh" title="Permanent link">¶</a></h1>
+<p>Documentation for rnsh is coming soon.</p>
 
 
 
@@ -1436,7 +1174,7 @@
     <span class="md-icon" title="Последнее обновление">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="19 марта 2026 г. 02:19:14 UTC">19 марта 2026 г. 02:19:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="20 марта 2026 г. 06:40:22 UTC">20 марта 2026 г. 06:40:22</span>
   </span>
 
     
@@ -1481,10 +1219,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
