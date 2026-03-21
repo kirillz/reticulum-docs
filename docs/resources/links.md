@@ -25,5 +25,6 @@
 [RNode TN](https://github.com/attermann/microReticulum_Firmware)  
 [RNS-Gate](https://github.com/strijar/RNS-Gate)  
 [RNode-HaLow](https://github.com/I-AM-ENGINEER/RNode_Halow_Firmware)  
+[RNode Flasher for DIY devices](https://rns.moscow/flasher/)  
 
-[Сравнение нод](https://docs.google.com/spreadsheets/d/1Wx1nAqK9-SL29L_OIpaH-1g1FSrVlBEYx3L0WuJVoZU/htmlview)  
+[Сравнение нод](https://docs.google.com/spreadsheets/d/1Wx1nAqK9-SL29L_OIpaH-1g1FSrVlBEYx3L0WuJVoZU/htmlview)
