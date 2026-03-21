@@ -2,8 +2,7 @@
 
 **Reticulum** — это криптографически защищённый сетевой стек для создания сетей любой топологии на любом физическом носителе.
 
-[:material-github: Репозиторий документации](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
-[:material-book: Официальная документация](https://reticulum.network/docs/){ .md-button }
+[:material-github: Git репозиторий документации](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
 
 ---
 
@@ -21,7 +20,7 @@
 
     :material-book-open-page-variant: **[Словарь терминов](rns/glossary.md)**
 
-    Ключевые понятия для понимания работы сети
+    Ключевые понятия для понимания работы сети Reticulum
 
 -   ![](diagrams/tools-diagram.svg){ loading=lazy width="280" }
 
@@ -60,7 +59,7 @@
 - :material-translate: Улучшить существующие материалы
 - :material-lightbulb: Предложить примеры использования
 
-[:material-github: Внести вклад на GitHub](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
+[:material-github: Внести свой вклад в документы](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
 
 ---
 
@@ -68,4 +67,3 @@
 
 - [Официальная документация Reticulum](https://reticulum.network/docs/)
 - [Исходный код Reticulum](https://github.com/markqvist/Reticulum)
-- [Проект Nomad Network](https://github.com/markqvist/NomadNet)
