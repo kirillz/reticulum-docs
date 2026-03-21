@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1290,7 +1290,7 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Запуск rnstatus:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus
 
 Shared<span class="w"> </span>Instance<span class="o">[</span><span class="m">37428</span><span class="o">]</span>
 <span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
@@ -1324,9 +1324,8 @@ RNodeInterface<span class="o">[</span>RNode<span class="w"> </span>UHF<span clas
 
 Reticulum<span class="w"> </span>Transport<span class="w"> </span>Instance<span class="w"> </span>&lt;5245a8efe1788c6a1cd36144a270e13b&gt;<span class="w"> </span>running
 </code></pre></div>
-
 <p><strong>Можно фильтровать вывод по имени интерфейса:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>rnode
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>rnode
 
 RNodeInterface<span class="o">[</span>RNode<span class="w"> </span>UHF<span class="o">]</span>
 <span class="w">   </span>Status<span class="w">  </span>:<span class="w"> </span>Up
@@ -1338,41 +1337,39 @@ RNodeInterface<span class="o">[</span>RNode<span class="w"> </span>UHF<span clas
 
 Reticulum<span class="w"> </span>Transport<span class="w"> </span>Instance<span class="w"> </span>&lt;5245a8efe1788c6a1cd36144a270e13b&gt;<span class="w"> </span>running
 </code></pre></div>
-
 <hr>
 <h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnstatus</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-A</span><span class="o">]</span>
-<span class="w">                </span><span class="o">[</span><span class="n">-l</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-t</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s SORT</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-r</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-j</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-R hash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i path</span><span class="o">]</span>
-<span class="w">                </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-d</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-D</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-m</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-I seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">filter</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnstatus [-h] [--config CONFIG] [--version] [-a] [-A]
+                [-l] [-t] [-s SORT] [-r] [-j] [-R hash] [-i path]
+                [-w seconds] [-d] [-D] [-m] [-I seconds] [-v] [filter]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">просмотра</span><span class="w"> </span><span class="n">статуса</span><span class="w"> </span><span class="n">Reticulum</span><span class="w"> </span><span class="n">Network</span><span class="w"> </span><span class="n">Stack</span>
+Утилита просмотра статуса Reticulum Network Stack
 
-<span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span>
-<span class="w">  </span><span class="k">filter</span><span class="w">                </span><span class="n">показывать</span><span class="w"> </span><span class="n">только</span><span class="w"> </span><span class="n">интерфейсы</span><span class="p">,</span><span class="w"> </span><span class="n">содержащие</span><span class="w"> </span><span class="k">filter</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">имени</span>
+positional arguments:
+  filter                показывать только интерфейсы, содержащие filter в имени
 
-<span class="nl">options</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
-<span class="w">  </span><span class="c1">--config CONFIG       путь к альтернативному каталогу конфигурации Reticulum</span>
-<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="c1">--all             показать все интерфейсы</span>
-<span class="w">  </span><span class="o">-</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="c1">--announce-stats  показать статистику объявлений (announces)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="c1">--link-stats      показать статистику соединений (links)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="c1">--totals          показать общий трафик</span>
-<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="c1">--sort SORT       сортировать интерфейсы по [rate, traffic, rx, tx, rxs, txs,</span>
-<span class="w">                                            </span><span class="n">announces</span><span class="p">,</span><span class="w"> </span><span class="n">arx</span><span class="p">,</span><span class="w"> </span><span class="n">atx</span><span class="p">,</span><span class="w"> </span><span class="n">held</span><span class="err">]</span>
-<span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="c1">--reverse         обратный порядок сортировки</span>
-<span class="w">  </span><span class="o">-</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="c1">--json            вывод в формате JSON</span>
-<span class="w">  </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="n">hash</span><span class="w">               </span><span class="n">хэш</span><span class="w"> </span><span class="n">транспортной</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">экземпляра</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">запроса</span><span class="w"> </span><span class="n">статуса</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">path</span><span class="w">               </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">управления</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">таймаут</span><span class="w"> </span><span class="n">ожидания</span><span class="w"> </span><span class="n">ответа</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="n">удалённых</span><span class="w"> </span><span class="n">запросов</span>
-<span class="w">  </span><span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="c1">--discovered      показать обнаруженные интерфейсы</span>
-<span class="w">  </span><span class="o">-</span><span class="n">D</span><span class="w">                    </span><span class="n">показать</span><span class="w"> </span><span class="n">детали</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">записи</span><span class="w"> </span><span class="n">конфигурации</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">обнаруженных</span><span class="w"> </span><span class="n">интерфейсов</span>
-<span class="w">  </span><span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="c1">--monitor         непрерывный мониторинг статуса</span>
-<span class="w">  </span><span class="o">-</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="c1">--monitor-interval seconds</span>
-<span class="w">                        </span><span class="n">интервал</span><span class="w"> </span><span class="n">обновления</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">режиме</span><span class="w"> </span><span class="n">мониторинга</span><span class="w"> </span><span class="p">(</span><span class="n">по</span><span class="w"> </span><span class="nl">умолчанию</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         подробный вывод</span>
+options:
+  -h, --help            показать эту справку и выйти
+  --config CONFIG       путь к альтернативному каталогу конфигурации Reticulum
+  --version             показать номер версии программы и выйти
+  -a, --all             показать все интерфейсы
+  -A, --announce-stats  показать статистику объявлений (announces)
+  -l, --link-stats      показать статистику соединений (links)
+  -t, --totals          показать общий трафик
+  -s, --sort SORT       сортировать интерфейсы по [rate, traffic, rx, tx, rxs, txs,
+                                            announces, arx, atx, held]
+  -r, --reverse         обратный порядок сортировки
+  -j, --json            вывод в формате JSON
+  -R hash               хэш транспортной идентичности удалённого экземпляра для запроса статуса
+  -i path               путь к файлу идентичности для удалённого управления
+  -w seconds            таймаут ожидания ответа от удалённых запросов
+  -d, --discovered      показать обнаруженные интерфейсы
+  -D                    показать детали и записи конфигурации для обнаруженных интерфейсов
+  -m, --monitor         непрерывный мониторинг статуса
+  -I, --monitor-interval seconds
+                        интервал обновления в режиме мониторинга (по умолчанию: 1)
+  -v, --verbose         подробный вывод
 </code></pre></div>
-
 <hr>
 <h2 id="примечание">Примечание<a class="headerlink" href="#примечание" title="Permanent link">¶</a></h2>
 <p>При использовании опции <code>-R</code> для запроса статуса удалённого транспортного экземпляра необходимо также указать <code>-i</code> с путём к файлу идентичности, авторизованному для удалённого управления на целевой системе.</p>

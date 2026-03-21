@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1750,25 +1750,23 @@
 <hr>
 <h2 id="базовая-настройка">Базовая настройка<a class="headerlink" href="#базовая-настройка" title="Permanent link">¶</a></h2>
 <p>В простейшей форме включение обнаружения интерфейсов сводится к установке <code>discover_interfaces = yes</code> в конфигурации Reticulum:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">...</span>
 <span class="na">discover_interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">...</span>
 </code></pre></div>
-
 <p>Как только эта опция включена, ваш экземпляр RNS начнёт прослушивать анонсы обнаружения интерфейсов и сохранять их для последующего использования или проверки.</p>
 <hr>
 <h2 id="просмотр-обнаруженных-интерфейсов">Просмотр обнаруженных интерфейсов<a class="headerlink" href="#просмотр-обнаруженных-интерфейсов" title="Permanent link">¶</a></h2>
 <p>Вы можете просмотреть список обнаруженных интерфейсов с помощью утилиты <code>rnstatus</code>:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-d
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-d
 
 <span class="c1">## Name           Type             Status    Last Heard    Value    Location</span>
 Sideband<span class="w"> </span>Hub<span class="w">     </span>BackboneInterface<span class="w"> </span>✓<span class="w">        </span>1h<span class="w"> </span>ago<span class="w">        </span><span class="m">16</span><span class="w">       </span><span class="m">46</span>.2316,<span class="w"> </span><span class="m">6</span>.0536
 RNS<span class="w"> </span>Amsterdam<span class="w">    </span>BackboneInterface<span class="w"> </span>✓<span class="w">        </span>32m<span class="w"> </span>ago<span class="w">       </span><span class="m">16</span><span class="w">       </span><span class="m">52</span>.3865,<span class="w"> </span><span class="m">4</span>.9037
 </code></pre></div>
-
 <p>Для просмотра более подробной информации об обнаруженных интерфейсах, включая фрагменты конфигурации для вставки непосредственно в секцию <code>[interfaces]</code>, используйте опцию <code>rnstatus -D</code>:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-D<span class="w"> </span>sideband
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-D<span class="w"> </span>sideband
 
 Transport<span class="w"> </span>ID<span class="w">      </span>:<span class="w"> </span>521c87a83afb8f29e4455e77930b973b
 Name<span class="w">              </span>:<span class="w"> </span>Sideband<span class="w"> </span>Hub
@@ -1790,12 +1788,10 @@ Configuration<span class="w"> </span>Entry:
 <span class="nv">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7822</span>
 <span class="nv">transport_identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>521c87a83afb8f29e4455e77930b973b
 </code></pre></div>
-
 <h3 id="экспорт-в-json">Экспорт в JSON<a class="headerlink" href="#экспорт-в-json" title="Permanent link">¶</a></h3>
 <p>В дополнение к локальному просмотру информации об обнаруженных интерфейсах, утилита <code>rnstatus</code> может экспортировать данные в машиночитаемом формате JSON с помощью опции <code>rnstatus -d --json</code>. Это может быть полезно для экспорта данных во внешние приложения, такие как страницы статуса, карты точек доступа и т.д.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-d<span class="w"> </span>--json
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus<span class="w"> </span>-d<span class="w"> </span>--json
 </code></pre></div>
-
 <hr>
 <h2 id="расширенная-конфигурация">Расширенная конфигурация<a class="headerlink" href="#расширенная-конфигурация" title="Permanent link">¶</a></h2>
 <p>Для управления тем, какие источники считаются допустимыми для обнаруженных интерфейсов, можно указать дополнительные параметры конфигурации для системы обнаружения интерфейсов.</p>
@@ -1827,7 +1823,7 @@ Configuration<span class="w"> </span>Entry:
 </tbody>
 </table>
 <h3 id="пример-конфигурации">Пример конфигурации<a class="headerlink" href="#пример-конфигурации" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">...</span>
 <span class="na">discover_interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">interface_discovery_sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">521c87a83afb8f29e4455e77930b973b</span>
@@ -1836,7 +1832,6 @@ Configuration<span class="w"> </span>Entry:
 <span class="na">network_identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.reticulum/storage/identities/my_network</span>
 <span class="na">...</span>
 </code></pre></div>
-
 <hr>
 <h2 id="обнаруживаемые-интерфейсы">Обнаруживаемые интерфейсы<a class="headerlink" href="#обнаруживаемые-интерфейсы" title="Permanent link">¶</a></h2>
 <p>Чтобы сделать ваш интерфейс обнаруживаемым другими узлами сети, необходимо настроить соответствующие параметры в конфигурации вашего экземпляра RNS.</p>
@@ -1848,7 +1843,7 @@ Configuration<span class="w"> </span>Entry:
 <li><strong>Разрешите анонсирование</strong> — интерфейс должен быть помечен как обнаруживаемый в конфигурации</li>
 </ol>
 <h3 id="пример-конфигурации-обнаруживаемого-интерфейса">Пример конфигурации обнаруживаемого интерфейса<a class="headerlink" href="#пример-конфигурации-обнаруживаемого-интерфейса" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[My Public Hub]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TCPInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -1858,7 +1853,6 @@ Configuration<span class="w"> </span>Entry:
 <span class="na">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">7822</span>
 <span class="na">network_identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.reticulum/storage/identities/my_network</span>
 </code></pre></div>
-
 <blockquote>
 <p><strong>Важно:</strong> Убедитесь, что ваш брандмауэр разрешает входящие подключения на указанный порт, если вы хотите сделать интерфейс общедоступным.</p>
 </blockquote>
@@ -1866,23 +1860,21 @@ Configuration<span class="w"> </span>Entry:
 <h2 id="сценарии-использования">Сценарии использования<a class="headerlink" href="#сценарии-использования" title="Permanent link">¶</a></h2>
 <h3 id="1-резервное-соединение">1. Резервное соединение<a class="headerlink" href="#1-резервное-соединение" title="Permanent link">¶</a></h3>
 <p>Настройте автоматическое подключение к общедоступным узлам при потере связи с основными интерфейсами:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">discover_interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">autoconnect_discovered_interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span>
 <span class="na">required_discovery_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span>
 </code></pre></div>
-
 <h3 id="2-частная-сеть">2. Частная сеть<a class="headerlink" href="#2-частная-сеть" title="Permanent link">¶</a></h3>
 <p>Ограничьте обнаружение интерфейсов только доверенными участниками сети:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">discover_interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">interface_discovery_sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">521c87a83afb8f29e4455e77930b973b,8f3e2a1c4b5d6e7f</span>
 <span class="na">network_identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.reticulum/storage/identities/private_net</span>
 </code></pre></div>
-
 <h3 id="3-мобильный-узел">3. Мобильный узел<a class="headerlink" href="#3-мобильный-узел" title="Permanent link">¶</a></h3>
 <p>Для мобильных узлов с динамически изменяющимся IP-адресом:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Mobile Node]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TCPInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -1890,7 +1882,6 @@ Configuration<span class="w"> </span>Entry:
 <span class="na">remote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.0.0</span>
 <span class="na">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">7822</span>
 </code></pre></div>
-
 <p>Мобильный узел будет автоматически анонсировать свой текущий адрес, и другие узлы смогут подключаться к нему независимо от изменения IP.</p>
 <hr>
 <h2 id="безопасность">Безопасность<a class="headerlink" href="#безопасность" title="Permanent link">¶</a></h2>
@@ -1965,10 +1956,9 @@ Configuration<span class="w"> </span>Entry:
 </table>
 <h3 id="логи-и-отладка">Логи и отладка<a class="headerlink" href="#логи-и-отладка" title="Permanent link">¶</a></h3>
 <p>Включите подробное логирование для диагностики проблем обнаружения:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">loglevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">debug</span>
 </code></pre></div>
-
 <p>В логах ищите сообщения, содержащие <code>Interface discovery</code> для отслеживания процесса обнаружения.</p>
 <hr>
 <h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">¶</a></h2>

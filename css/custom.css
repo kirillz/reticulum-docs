@@ -1,144 +1,50 @@
-/* Центрирование блок-схем */
-.diagram-center {
-  text-align: center;
-}
+/* Reticulum Docs — Custom Styles */
 
-.diagram-center pre {
-  display: inline-block;
-  text-align: left;
-}
+/* Diagram Center */
+.diagram-center { text-align: center; margin: 1.5rem 0; }
+.diagram-center pre { display: inline-block; text-align: left; }
+.diagram-center em { display: block; margin-top: 0.75rem; color: var(--md-default-fg-color--light); font-size: 0.85rem; font-style: italic; }
 
-/* Маленькие кнопки */
-.md-button--small {
-  padding: 0.2rem 0.5rem;
-  font-size: 0.85rem;
-}
+/* Source File Footer */
+.md-content { position: relative; }
+.md-content__inner::after { content: ""; display: block; clear: both; }
+.md-source-file { float: right; margin: 1rem 0 !important; padding: 0.5rem !important; display: flex !important; align-items: center !important; gap: 0.5rem !important; font-size: 0.75rem !important; color: var(--md-default-fg-color--light) !important; background: var(--md-default-bg-color) !important; border: 1px solid var(--md-default-fg-color--lightest) !important; border-radius: 0.25rem !important; }
+.md-source-file .md-icon svg, .md-source-file .git-revision-date-localized-plugin { font-size: 0.75rem !important; }
+.md-source-file .md-icon svg { width: 1rem !important; height: 1rem !important; }
 
-/* Убираем изменение цвета текста при наведении */
-.md-button--small:hover {
-  color: var(--md-primary-bg-color);
-}
+/* Grid Cards */
+.md-typeset .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+.md-typeset .grid.cards { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.md-typeset .grid.cards .card { display: flex; flex-direction: column; background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.5rem; padding: 1rem; margin: 0; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.md-typeset .grid.cards .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); transform: translateY(-2px); }
+.md-typeset .grid.cards .card img { max-width: 100%; width: 100%; height: 180px; display: block; margin: 0 auto 0.75rem; border-radius: 0.25rem; background: var(--md-default-fg-color--lightest); padding: 0.5rem; object-fit: contain; cursor: zoom-in; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.md-typeset .grid.cards .card img:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+.md-typeset .grid.cards .card > p { margin: 0.5rem 0; }
+.md-typeset .grid.cards .card strong { display: block; margin-bottom: 0.5rem; color: var(--md-primary-fg-color--dark); font-size: 1rem; text-align: center; }
 
-/* Дата изменения страницы и иконка внизу справа внутри статьи */
-.md-content {
-  position: relative;
-}
+/* SVG Diagrams Dark Theme */
+[data-md-color-scheme="slate"] .diagram-svg .svg-bg, [data-md-color-scheme="slate"] .diagram-svg .svg-feature-bg { fill: #37474f !important; }
+[data-md-color-scheme="slate"] .diagram-svg .svg-text { fill: #eceff1 !important; }
+[data-md-color-scheme="slate"] .diagram-svg .svg-feature-text { fill: #e0e0e0 !important; }
+[data-md-color-scheme="slate"] .diagram-svg .svg-label { fill: #b0bec5 !important; }
+[data-md-color-scheme="slate"] .diagram-svg .svg-screen { fill: #455a64 !important; }
+[data-md-color-scheme="slate"] .diagram-svg .svg-arrow, [data-md-color-scheme="slate"] .diagram-svg .svg-line { stroke: #90a4ae !important; }
 
-.md-content__inner::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+/* GLightbox */
+.glightbox-overlay { background: rgba(0,0,0,0.95); }
+.glightbox-container .gslide-description { background: rgba(0,0,0,0.8); color: #fff; }
+.glightbox-container .gslide-title { color: #fff; font-size: 0.9rem; margin: 0; }
+.glightbox-button-next, .glightbox-button-prev { background: rgba(255,255,255,0.1); border-radius: 50%; width: 40px; height: 40px; }
+.glightbox-button-next:hover, .glightbox-button-prev:hover { background: rgba(255,255,255,0.2); }
+.glightbox-container .gslide-image { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.glightbox-container .gslide-image img { max-width: 90vw !important; max-height: 90vh !important; object-fit: contain !important; }
+.glightbox-container .gslide-image picture { display: none; }
+.glightbox-container .gslide-inner { display: flex; align-items: center; justify-content: center; }
+.glightbox-container .gslide-inner > img:only-child { margin: auto; }
 
-.md-source-file {
-  float: right;
-  margin: 1rem 0 !important;
-  padding: 0.5rem !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  font-size: 0.75rem !important;
-  color: var(--md-default-fg-color--light) !important;
-  background-color: var(--md-default-bg-color) !important;
-  border: 1px solid var(--md-default-fg-color--lightest) !important;
-  border-radius: 0.25rem !important;
-}
-
-.md-source-file .md-icon svg {
-  width: 1rem !important;
-  height: 1rem !important;
-}
-
-.md-source-file .git-revision-date-localized-plugin {
-  font-size: 0.75rem !important;
-}
-
-/* Стили для сетки карточек (grid cards) */
-.md-typeset .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0;
-}
-
-.md-typeset .grid.cards {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.md-typeset .grid.cards .card {
-  display: flex;
-  flex-direction: column;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 0;
-}
-
-.md-typeset .grid.cards .card img {
-  max-width: 100%;
-  width: 100%;
-  height: 280px;
-  display: block;
-  margin: 0 auto 0.75rem;
-  border-radius: 0.25rem;
-  background: var(--md-default-fg-color--lightest);
-  padding: 0.5rem;
-  object-fit: contain;
-  cursor: zoom-in;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.md-typeset .grid.cards .card img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.md-typeset .grid.cards .card > p {
-  margin: 0.5rem 0;
-}
-
-.md-typeset .grid.cards .card strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--md-primary-fg-color--dark);
-  font-size: 1rem;
-  text-align: center;
-}
-
-.md-typeset .grid.cards .card ul {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.md-typeset .grid.cards .card ul li {
-  font-size: 0.8rem;
-  line-height: 1.5;
-  margin-bottom: 0.35rem;
-  padding-left: 0;
-}
-
-.md-typeset .grid.cards .card ul li strong {
-  display: inline;
-  margin-bottom: 0;
-  color: var(--md-default-fg-color);
-  font-size: 0.8rem;
-}
-
-/* Увеличенные изображения для оборудования WiFi */
-.md-typeset .grid.cards .card .radio-img {
-  height: 250px;
-}
-
-/* Сетка на полную ширину для страницы Оборудования */
-.md-typeset .grid.hardware-grid {
-  grid-template-columns: 1fr;
-}
-
-/* Адаптивность для мобильных */
-@media screen and (max-width: 768px) {
-  .md-typeset .grid {
-    grid-template-columns: 1fr;
-  }
+/* Responsive */
+@media screen and (max-width: 768px) { .md-typeset .grid { grid-template-columns: 1fr; } }
+@media screen and (min-width: 1920px) {
+  .md-grid { max-width: 1680px; }
+  .md-typeset .grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
 }

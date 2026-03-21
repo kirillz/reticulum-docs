@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1270,36 +1270,32 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Запустить rnsd:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsd
 
 <span class="o">[</span><span class="m">2023</span>-08-18<span class="w"> </span><span class="m">17</span>:59:56<span class="o">]</span><span class="w"> </span><span class="o">[</span>Notice<span class="o">]</span><span class="w"> </span>Started<span class="w"> </span>rnsd<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.1.4
 </code></pre></div>
-
 <p><strong>Запустить rnsd в режиме службы</strong>, чтобы весь вывод логов направлялся непосредственно в файл:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>-s
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>-s
 </code></pre></div>
-
 <p><strong>Сгенерировать подробный пример конфигурации</strong> с описанием всех доступных опций и примерами настройки интерфейсов:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>--exampleconfig
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>--exampleconfig
 </code></pre></div>
-
 <hr>
 <h2 id="все-опции-командной-строки-переведено-для-понимания">Все опции командной строки (переведено для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведено-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">usage</span><span class="o">:</span><span class="w"> </span><span class="n">rnsd</span><span class="o">.</span><span class="na">py</span><span class="w"> </span><span class="o">[-</span><span class="n">h</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">config</span><span class="w"> </span><span class="n">CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">q</span><span class="o">]</span><span class="w"> </span><span class="o">[-</span><span class="n">s</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">exampleconfig</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">version</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnsd.py [-h] [--config CONFIG] [-v] [-q] [-s] [--exampleconfig] [--version]
 
-<span class="err">Демон</span><span class="w"> </span><span class="err">сетевого</span><span class="w"> </span><span class="err">стека</span><span class="w"> </span><span class="n">Reticulum</span>
+Демон сетевого стека Reticulum
 
-<span class="n">options</span><span class="o">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">        </span><span class="err">показать</span><span class="w"> </span><span class="err">эту</span><span class="w"> </span><span class="err">справку</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
-<span class="w">  </span><span class="o">--</span><span class="n">config</span><span class="w"> </span><span class="n">CONFIG</span><span class="w">   </span><span class="err">путь</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">альтернативному</span><span class="w"> </span><span class="err">каталогу</span><span class="w"> </span><span class="err">конфигурации</span><span class="w"> </span><span class="n">Reticulum</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">verbose</span><span class="w">     </span><span class="err">подробный</span><span class="w"> </span><span class="err">вывод</span>
-<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">quiet</span><span class="w">       </span><span class="err">тихий</span><span class="w"> </span><span class="err">режим</span><span class="w"> </span><span class="o">(</span><span class="err">минимум</span><span class="w"> </span><span class="err">сообщений</span><span class="o">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">service</span><span class="w">     </span><span class="n">rnsd</span><span class="w"> </span><span class="err">запущен</span><span class="w"> </span><span class="err">как</span><span class="w"> </span><span class="err">служба</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">должен</span><span class="w"> </span><span class="err">логировать</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">файл</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">interactive</span><span class="w"> </span><span class="err">перейти</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">интерактивную</span><span class="w"> </span><span class="err">оболочку</span><span class="w"> </span><span class="err">после</span><span class="w"> </span><span class="err">инициализации</span>
-<span class="w">  </span><span class="o">--</span><span class="n">exampleconfig</span><span class="w">   </span><span class="err">вывести</span><span class="w"> </span><span class="err">подробный</span><span class="w"> </span><span class="err">пример</span><span class="w"> </span><span class="err">конфигурации</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="n">stdout</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
-<span class="w">  </span><span class="o">--</span><span class="n">version</span><span class="w">         </span><span class="err">показать</span><span class="w"> </span><span class="err">номер</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">программы</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">выйти</span>
+options:
+  -h, --help        показать эту справку и выйти
+  --config CONFIG   путь к альтернативному каталогу конфигурации Reticulum
+  -v, --verbose     подробный вывод
+  -q, --quiet       тихий режим (минимум сообщений)
+  -s, --service     rnsd запущен как служба и должен логировать в файл
+  -i, --interactive перейти в интерактивную оболочку после инициализации
+  --exampleconfig   вывести подробный пример конфигурации в stdout и выйти
+  --version         показать номер версии программы и выйти
 </code></pre></div>
-
 <hr>
 <h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">¶</a></h2>
 <ul>

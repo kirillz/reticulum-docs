@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1624,67 +1624,62 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Получение информации об Identity перед настройкой:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># На слушателе (сервере)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># На слушателе (сервере)</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-p
 
 <span class="c1"># На инициаторе (клиенте)</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-p
 </code></pre></div>
-
 <p><strong>Запуск слушателя с разрешённой Identity:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-a<span class="w"> </span>6d47805065fa470852cf1b1ef417a1ac<span class="w"> </span>--<span class="w"> </span>/bin/zsh
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-a<span class="w"> </span>6d47805065fa470852cf1b1ef417a1ac<span class="w"> </span>--<span class="w"> </span>/bin/zsh
 </code></pre></div>
-
 <p><strong>Подключение к слушателю:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsh<span class="w"> </span>a5f72aefc2cb3cdba648f73f77c4e887
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsh<span class="w"> </span>a5f72aefc2cb3cdba648f73f77c4e887
 </code></pre></div>
-
 <p><strong>Запуск слушателя с анонсированием:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Анонсировать при запуске и каждые 60 секунд</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Анонсировать при запуске и каждые 60 секунд</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span><span class="m">60</span><span class="w"> </span>-a<span class="w"> </span>&lt;identity_hash&gt;
 </code></pre></div>
-
 <hr>
 <h2 id="все-опции-командной-строки">Все опции командной строки<a class="headerlink" href="#все-опции-командной-строки" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnsh</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config DIR</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i FILE</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s NAME</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-q</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-l</span><span class="o">]</span>
-<span class="w">            </span><span class="o">[</span><span class="n">-b PERIOD</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a HASH</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-N</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-A</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-C</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-m</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w TIME</span><span class="o">]</span>
-<span class="w">            </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">program</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">arg ...</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnsh [-h] [--config DIR] [-i FILE] [-s NAME] [-v] [-q] [-p] [-l]
+            [-b PERIOD] [-a HASH] [-n] [-N] [-A] [-C] [-m] [-w TIME]
+            [--version] [destination] [--] [program] [arg ...]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">удалённой</span><span class="w"> </span><span class="n">оболочки</span><span class="w"> </span><span class="n">Reticulum</span>
+Утилита удалённой оболочки Reticulum
 
-<span class="n">Позиционные</span><span class="w"> </span><span class="nl">аргументы</span><span class="p">:</span>
-<span class="w">  </span><span class="n">destination</span><span class="w">         </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">назначения</span><span class="w"> </span><span class="n">слушателя</span>
-<span class="w">  </span><span class="n">program</span><span class="w">             </span><span class="n">программа</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">запуска</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">подключении</span>
-<span class="w">  </span><span class="n">arg</span><span class="w">                 </span><span class="n">аргументы</span><span class="w"> </span><span class="n">программы</span>
+Позиционные аргументы:
+  destination         шестнадцатеричный хеш назначения слушателя
+  program             программа для запуска при подключении
+  arg                 аргументы программы
 
-<span class="nl">Опции</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help          показать это сообщение и выйти</span>
-<span class="w">  </span><span class="c1">--config DIR        альтернативная директория конфигурации Reticulum</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">FILE</span><span class="p">,</span><span class="w"> </span><span class="c1">--identity FILE</span>
-<span class="w">                      </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">использования</span>
-<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">NAME</span><span class="p">,</span><span class="w"> </span><span class="c1">--service NAME</span>
-<span class="w">                      </span><span class="n">имя</span><span class="w"> </span><span class="n">службы</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">файла</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="p">(</span><span class="n">если</span><span class="w"> </span><span class="n">не</span><span class="w"> </span><span class="k">default</span><span class="p">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="c1">--print-identity</span>
-<span class="w">                      </span><span class="n">вывести</span><span class="w"> </span><span class="n">информацию</span><span class="w"> </span><span class="n">об</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="c1">--listen        режим слушателя (сервера)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">PERIOD</span><span class="p">,</span><span class="w"> </span><span class="c1">--announce PERIOD</span>
-<span class="w">                      </span><span class="n">интервал</span><span class="w"> </span><span class="n">анонсов</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">секундах</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">только</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">запуске</span><span class="p">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="n">HASH</span><span class="p">,</span><span class="w"> </span><span class="c1">--allowed HASH</span>
-<span class="w">                      </span><span class="n">разрешить</span><span class="w"> </span><span class="n">подключение</span><span class="w"> </span><span class="n">указанной</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="p">(</span><span class="n">можно</span><span class="w"> </span><span class="n">несколько</span><span class="p">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-auth       отключить аутентификацию</span>
-<span class="w">  </span><span class="o">-</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-id         не идентифицироваться при подключении</span>
-<span class="w">  </span><span class="o">-</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="c1">--remote-command-as-args</span>
-<span class="w">                      </span><span class="n">добавить</span><span class="w"> </span><span class="n">удалённую</span><span class="w"> </span><span class="n">команду</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">аргументам</span><span class="w"> </span><span class="n">программы</span>
-<span class="w">  </span><span class="o">-</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-remote-command</span>
-<span class="w">                      </span><span class="n">отключить</span><span class="w"> </span><span class="n">выполнение</span><span class="w"> </span><span class="n">команд</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="n">удалённой</span><span class="w"> </span><span class="n">стороны</span>
-<span class="w">  </span><span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="c1">--mirror        вернуть код выхода удалённого процесса</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="nc">TIME</span><span class="p">,</span><span class="w"> </span><span class="c1">--timeout TIME</span>
-<span class="w">                      </span><span class="n">таймаут</span><span class="w"> </span><span class="n">подключения</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">запроса</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">секундах</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose       увеличить подробность вывода (можно несколько раз)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="c1">--quiet         уменьшить подробность вывода (можно несколько раз)</span>
-<span class="w">  </span><span class="c1">--version           показать номер версии программы и выйти</span>
+Опции:
+  -h, --help          показать это сообщение и выйти
+  --config DIR        альтернативная директория конфигурации Reticulum
+  -i FILE, --identity FILE
+                      путь к файлу Identity для использования
+  -s NAME, --service NAME
+                      имя службы для файла Identity (если не default)
+  -p, --print-identity
+                      вывести информацию об Identity и выйти
+  -l, --listen        режим слушателя (сервера)
+  -b PERIOD, --announce PERIOD
+                      интервал анонсов в секундах (0 = только при запуске)
+  -a HASH, --allowed HASH
+                      разрешить подключение указанной Identity (можно несколько)
+  -n, --no-auth       отключить аутентификацию
+  -N, --no-id         не идентифицироваться при подключении
+  -A, --remote-command-as-args
+                      добавить удалённую команду к аргументам программы
+  -C, --no-remote-command
+                      отключить выполнение команд от удалённой стороны
+  -m, --mirror        вернуть код выхода удалённого процесса
+  -w TIME, --timeout TIME
+                      таймаут подключения и запроса в секундах
+  -v, --verbose       увеличить подробность вывода (можно несколько раз)
+  -q, --quiet         уменьшить подробность вывода (можно несколько раз)
+  --version           показать номер версии программы и выйти
 </code></pre></div>
-
 <h3 id="уровни-логирования">Уровни логирования<a class="headerlink" href="#уровни-логирования" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -1725,42 +1720,37 @@ $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-
 <hr>
 <h2 id="типичные-сценарии-использования">Типичные сценарии использования<a class="headerlink" href="#типичные-сценарии-использования" title="Permanent link">¶</a></h2>
 <h3 id="1-настройка-сервера-для-приёма-подключений">1. Настройка сервера для приёма подключений<a class="headerlink" href="#1-настройка-сервера-для-приёма-подключений" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Запуск слушателя с разрешением конкретной Identity</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Запуск слушателя с разрешением конкретной Identity</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-a<span class="w"> </span>&lt;trusted_identity_hash&gt;
 
 <span class="c1"># Запуск с указанием конкретной оболочки</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-a<span class="w"> </span>&lt;trusted_identity_hash&gt;<span class="w"> </span>--<span class="w"> </span>/bin/zsh
 </code></pre></div>
-
 <h3 id="2-подключение-к-удалённому-терминалу">2. Подключение к удалённому терминалу<a class="headerlink" href="#2-подключение-к-удалённому-терминалу" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Базовое подключение</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Базовое подключение</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>&lt;destination_hash&gt;
 
 <span class="c1"># Подключение с использованием альтернативной Identity</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span>-i<span class="w"> </span>/path/to/identity
 </code></pre></div>
-
 <h3 id="3-запуск-без-аутентификации-не-рекомендуется-для-продакшена">3. Запуск без аутентификации (не рекомендуется для продакшена)<a class="headerlink" href="#3-запуск-без-аутентификации-не-рекомендуется-для-продакшена" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># На стороне слушателя</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># На стороне слушателя</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-n
 
 <span class="c1"># На стороне клиента</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span>-N
 </code></pre></div>
-
 <h3 id="4-запуск-с-анонсированием-службы">4. Запуск с анонсированием службы<a class="headerlink" href="#4-запуск-с-анонсированием-службы" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Анонсировать при запуске и каждые 300 секунд</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Анонсировать при запуске и каждые 300 секунд</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span><span class="m">300</span><span class="w"> </span>-a<span class="w"> </span>&lt;identity_hash&gt;
 </code></pre></div>
-
 <h3 id="5-ограничение-выполнения-удалённых-команд">5. Ограничение выполнения удалённых команд<a class="headerlink" href="#5-ограничение-выполнения-удалённых-команд" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Запретить выполнение команд от клиента</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Запретить выполнение команд от клиента</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-C<span class="w"> </span>-a<span class="w"> </span>&lt;identity_hash&gt;
 
 <span class="c1"># Или наоборот: команда клиента добавляется к аргументам программы</span>
 $<span class="w"> </span>rnsh<span class="w"> </span>-l<span class="w"> </span>-A<span class="w"> </span>-a<span class="w"> </span>&lt;identity_hash&gt;<span class="w"> </span>--<span class="w"> </span>/usr/local/bin/myapp
 </code></pre></div>
-
 <hr>
 <h2 id="как-это-работает">Как это работает<a class="headerlink" href="#как-это-работает" title="Permanent link">¶</a></h2>
 <h3 id="слушатели-серверы">Слушатели (серверы)<a class="headerlink" href="#слушатели-серверы" title="Permanent link">¶</a></h3>

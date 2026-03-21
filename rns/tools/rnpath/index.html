@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1478,11 +1478,10 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Поиск пути к назначению:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
 
 Path<span class="w"> </span>found,<span class="w"> </span>destination<span class="w"> </span>&lt;c89b4da064bf66d280f0e4d8abfd9806&gt;<span class="w"> </span>is<span class="w"> </span><span class="m">4</span><span class="w"> </span>hops<span class="w"> </span>away<span class="w"> </span>via<span class="w"> </span>&lt;f53a1c4278e0726bb73fcc623d6ce763&gt;<span class="w"> </span>on<span class="w"> </span>TCPInterface<span class="o">[</span>Testnet/dublin.connect.reticulum.network:4965<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Расшифровка вывода:</strong></p>
 <ul>
 <li><strong>Path found</strong> — путь найден</li>
@@ -1492,72 +1491,64 @@ Path<span class="w"> </span>found,<span class="w"> </span>destination<span class
 </ul>
 <hr>
 <h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnpath</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-t</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-m hops</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-r</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-d</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-D</span><span class="o">]</span>
-<span class="w">              </span><span class="o">[</span><span class="n">-x</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-R hash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i path</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-W seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-b</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-B</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-U</span><span class="o">]</span>
-<span class="w">              </span><span class="o">[</span><span class="n">--duration DURATION</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--reason REASON</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-j</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span>
-<span class="w">              </span><span class="o">[</span><span class="n">destination</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">list_filter</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnpath [-h] [--config CONFIG] [--version] [-t] [-m hops] [-r] [-d] [-D]
+              [-x] [-w seconds] [-R hash] [-i path] [-W seconds] [-b] [-B] [-U]
+              [--duration DURATION] [--reason REASON] [-p] [-j] [-v]
+              [destination] [list_filter]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">управления</span><span class="w"> </span><span class="n">путями</span><span class="w"> </span><span class="n">Reticulum</span>
+Утилита управления путями Reticulum
 
-<span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span>
-<span class="w">  </span><span class="n">destination</span><span class="w">           </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">назначения</span><span class="w"> </span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
-<span class="w">  </span><span class="n">list_filter</span><span class="w">           </span><span class="n">фильтр</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">просмотра</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">чёрного</span><span class="w"> </span><span class="n">списка</span>
+positional arguments:
+  destination           шестнадцатеричный хеш назначения (destination)
+  list_filter           фильтр для просмотра удалённого чёрного списка
 
-<span class="nl">options</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
-<span class="w">  </span><span class="c1">--config CONFIG       путь к альтернативному каталогу конфигурации Reticulum</span>
-<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="c1">--table           показать все известные пути</span>
-<span class="w">  </span><span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="c1">--max hops        максимальное количество хопов для фильтрации таблицы путей</span>
-<span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="c1">--rates           показать информацию о частоте объявлений (announce rate)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="c1">--drop            удалить путь к назначению</span>
-<span class="w">  </span><span class="o">-</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="c1">--drop-announces  удалить все queued-объявления</span>
-<span class="w">  </span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="c1">--drop-via        удалить все пути через указанный транспортный интерфейс</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">таймаут</span><span class="w"> </span><span class="n">ожидания</span><span class="w"> </span><span class="n">перед</span><span class="w"> </span><span class="n">отказом</span>
-<span class="w">  </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="n">hash</span><span class="w">               </span><span class="n">хеш</span><span class="w"> </span><span class="n">транспортной</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">экземпляра</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">управления</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">path</span><span class="w">               </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="n">идентичности</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">управления</span>
-<span class="w">  </span><span class="o">-</span><span class="n">W</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">таймаут</span><span class="w"> </span><span class="n">ожидания</span><span class="w"> </span><span class="n">ответа</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="n">удалённых</span><span class="w"> </span><span class="n">запросов</span>
-<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="c1">--blackholed      показать список заблокированных идентичностей (blackholed)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="c1">--blackhole       добавить идентичность в чёрный список (blackhole)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="c1">--unblackhole     удалить идентичность из чёрного списка</span>
-<span class="w">  </span><span class="c1">--duration DURATION   длительность блокировки в часах</span>
-<span class="w">  </span><span class="c1">--reason REASON       причина добавления в чёрный список</span>
-<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="c1">--blackholed-list</span>
-<span class="w">                        </span><span class="n">показать</span><span class="w"> </span><span class="n">опубликованный</span><span class="w"> </span><span class="n">список</span><span class="w"> </span><span class="n">чёрных</span><span class="w"> </span><span class="n">списков</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">транспорта</span>
-<span class="w">  </span><span class="o">-</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="c1">--json            вывод в формате JSON</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         подробный вывод</span>
+options:
+  -h, --help            показать эту справку и выйти
+  --config CONFIG       путь к альтернативному каталогу конфигурации Reticulum
+  --version             показать номер версии программы и выйти
+  -t, --table           показать все известные пути
+  -m, --max hops        максимальное количество хопов для фильтрации таблицы путей
+  -r, --rates           показать информацию о частоте объявлений (announce rate)
+  -d, --drop            удалить путь к назначению
+  -D, --drop-announces  удалить все queued-объявления
+  -x, --drop-via        удалить все пути через указанный транспортный интерфейс
+  -w seconds            таймаут ожидания перед отказом
+  -R hash               хеш транспортной идентичности удалённого экземпляра для управления
+  -i path               путь к файлу идентичности для удалённого управления
+  -W seconds            таймаут ожидания ответа от удалённых запросов
+  -b, --blackholed      показать список заблокированных идентичностей (blackholed)
+  -B, --blackhole       добавить идентичность в чёрный список (blackhole)
+  -U, --unblackhole     удалить идентичность из чёрного списка
+  --duration DURATION   длительность блокировки в часах
+  --reason REASON       причина добавления в чёрный список
+  -p, --blackholed-list
+                        показать опубликованный список чёрных списков для удалённого транспорта
+  -j, --json            вывод в формате JSON
+  -v, --verbose         подробный вывод
 </code></pre></div>
-
 <hr>
 <h2 id="дополнительные-примеры">Дополнительные примеры<a class="headerlink" href="#дополнительные-примеры" title="Permanent link">¶</a></h2>
 <h3 id="показать-все-известные-пути">Показать все известные пути<a class="headerlink" href="#показать-все-известные-пути" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-t
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-t
 </code></pre></div>
-
 <h3 id="показать-пути-с-ограничением-по-хопам">Показать пути с ограничением по хопам<a class="headerlink" href="#показать-пути-с-ограничением-по-хопам" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-t<span class="w"> </span>-m<span class="w"> </span><span class="m">3</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-t<span class="w"> </span>-m<span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-
 <h3 id="показать-статистику-частоты-объявлений">Показать статистику частоты объявлений<a class="headerlink" href="#показать-статистику-частоты-объявлений" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-r
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-r
 </code></pre></div>
-
 <h3 id="удалить-путь-к-назначению">Удалить путь к назначению<a class="headerlink" href="#удалить-путь-к-назначению" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-d<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-d<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
 </code></pre></div>
-
 <h3 id="добавить-идентичность-в-чёрный-список">Добавить идентичность в чёрный список<a class="headerlink" href="#добавить-идентичность-в-чёрный-список" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-B<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806<span class="w"> </span>--duration<span class="w"> </span><span class="m">24</span><span class="w"> </span>--reason<span class="w"> </span><span class="s2">"spam"</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-B<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806<span class="w"> </span>--duration<span class="w"> </span><span class="m">24</span><span class="w"> </span>--reason<span class="w"> </span><span class="s2">"spam"</span>
 </code></pre></div>
-
 <h3 id="удалить-идентичность-из-чёрного-списка">Удалить идентичность из чёрного списка<a class="headerlink" href="#удалить-идентичность-из-чёрного-списка" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-U<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-U<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
 </code></pre></div>
-
 <h3 id="вывод-в-формате-json">Вывод в формате JSON<a class="headerlink" href="#вывод-в-формате-json" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-j<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnpath<span class="w"> </span>-j<span class="w"> </span>c89b4da064bf66d280f0e4d8abfd9806
 </code></pre></div>
-
 <hr>
 <h2 id="примечание">Примечание<a class="headerlink" href="#примечание" title="Permanent link">¶</a></h2>
 <ul>

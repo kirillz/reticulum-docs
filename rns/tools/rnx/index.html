@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1434,58 +1434,53 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Запуск rnx в режиме прослушивания с указанием разрешённых Identity:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>941bed5e228775e5a8079fc38b1ccf3f<span class="w"> </span>-a<span class="w"> </span>1b03013c25f1c2ca068a4f080b844a10
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>941bed5e228775e5a8079fc38b1ccf3f<span class="w"> </span>-a<span class="w"> </span>1b03013c25f1c2ca068a4f080b844a10
 </code></pre></div>
-
 <p><strong>Выполнение команды на удалённой системе:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span><span class="s2">"cat /proc/cpuinfo"</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span><span class="s2">"cat /proc/cpuinfo"</span>
 </code></pre></div>
-
 <p><strong>Вход в интерактивный режим (псевдо-оболочка):</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span>-x
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span>-x
 </code></pre></div>
-
 <p><strong>Использование альтернативного файла Identity:</strong></p>
 <p>По умолчанию файл Identity хранится в <code>~/.reticulum/identities/rnx</code>. Если файл не существует, он будет создан:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span>-i<span class="w"> </span>/path/to/identity<span class="w"> </span>-x
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>7a55144adf826958a9529a3bcf08b149<span class="w"> </span>-i<span class="w"> </span>/path/to/identity<span class="w"> </span>-x
 </code></pre></div>
-
 <hr>
 <h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnx</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config path</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-q</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-l</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-i identity</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-x</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-b</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-N</span><span class="o">]</span>
-<span class="w">           </span><span class="o">[</span><span class="n">-d</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-m</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a allowed_hash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-W seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--stdin STDIN</span><span class="o">]</span>
-<span class="w">           </span><span class="o">[</span><span class="n">--stdout STDOUT</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--stderr STDERR</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">command</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnx [-h] [--config path] [-v] [-q] [-p] [-l] [-i identity] [-x] [-b] [-n] [-N]
+           [-d] [-m] [-a allowed_hash] [-w seconds] [-W seconds] [--stdin STDIN]
+           [--stdout STDOUT] [--stderr STDERR] [--version] [destination] [command]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">удалённого</span><span class="w"> </span><span class="n">выполнения</span><span class="w"> </span><span class="n">команд</span><span class="w"> </span><span class="n">Reticulum</span>
+Утилита удалённого выполнения команд Reticulum
 
-<span class="n">Позиционные</span><span class="w"> </span><span class="nl">аргументы</span><span class="p">:</span>
-<span class="w">  </span><span class="n">destination</span><span class="w">        </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">слушателя</span>
-<span class="w">  </span><span class="n">command</span><span class="w">            </span><span class="n">команда</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">выполнения</span>
+Позиционные аргументы:
+  destination        шестнадцатеричный хеш слушателя
+  command            команда для выполнения
 
-<span class="nl">Опции</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help         показать это сообщение и выйти</span>
-<span class="w">  </span><span class="c1">--config path      путь к альтернативной директории конфигурации Reticulum</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose      увеличить подробность вывода</span>
-<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="c1">--quiet        уменьшить подробность вывода</span>
-<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="c1">--print-identity</span>
-<span class="w">                     </span><span class="n">вывести</span><span class="w"> </span><span class="n">информацию</span><span class="w"> </span><span class="n">об</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">назначении</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="c1">--listen       прослушивать входящие команды</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">identity</span><span class="w">        </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">использования</span>
-<span class="w">  </span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="c1">--interactive  войти в интерактивный режим</span>
-<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-announce  не объявлять службу при запуске программы</span>
-<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="n">allowed_hash</span><span class="w">    </span><span class="n">разрешить</span><span class="w"> </span><span class="n">выполнение</span><span class="w"> </span><span class="n">команд</span><span class="w"> </span><span class="n">от</span><span class="w"> </span><span class="n">этой</span><span class="w"> </span><span class="k">Identity</span>
-<span class="w">  </span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="c1">--noauth       принимать команды от кого угодно (без аутентификации)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="c1">--noid         не идентифицироваться перед слушателем</span>
-<span class="w">  </span><span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="c1">--detailed     показать подробный вывод результата</span>
-<span class="w">  </span><span class="o">-</span><span class="n">m</span><span class="w">                 </span><span class="n">зеркально</span><span class="w"> </span><span class="n">отразить</span><span class="w"> </span><span class="n">код</span><span class="w"> </span><span class="n">выхода</span><span class="w"> </span><span class="n">удалённой</span><span class="w"> </span><span class="n">команды</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="w">         </span><span class="n">таймаут</span><span class="w"> </span><span class="n">подключения</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">запроса</span><span class="w"> </span><span class="n">перед</span><span class="w"> </span><span class="n">отказом</span>
-<span class="w">  </span><span class="o">-</span><span class="n">W</span><span class="w"> </span><span class="n">seconds</span><span class="w">         </span><span class="n">максимальное</span><span class="w"> </span><span class="n">время</span><span class="w"> </span><span class="n">загрузки</span><span class="w"> </span><span class="n">результата</span>
-<span class="w">  </span><span class="c1">--stdin STDIN      передать входные данные в stdin</span>
-<span class="w">  </span><span class="c1">--stdout STDOUT    максимальный размер возвращаемого stdout в байтах</span>
-<span class="w">  </span><span class="c1">--stderr STDERR    максимальный размер возвращаемого stderr в байтах</span>
-<span class="w">  </span><span class="c1">--version          показать номер версии программы и выйти</span>
+Опции:
+  -h, --help         показать это сообщение и выйти
+  --config path      путь к альтернативной директории конфигурации Reticulum
+  -v, --verbose      увеличить подробность вывода
+  -q, --quiet        уменьшить подробность вывода
+  -p, --print-identity
+                     вывести информацию об Identity и назначении и выйти
+  -l, --listen       прослушивать входящие команды
+  -i identity        путь к файлу Identity для использования
+  -x, --interactive  войти в интерактивный режим
+  -b, --no-announce  не объявлять службу при запуске программы
+  -a allowed_hash    разрешить выполнение команд от этой Identity
+  -n, --noauth       принимать команды от кого угодно (без аутентификации)
+  -N, --noid         не идентифицироваться перед слушателем
+  -d, --detailed     показать подробный вывод результата
+  -m                 зеркально отразить код выхода удалённой команды
+  -w seconds         таймаут подключения и запроса перед отказом
+  -W seconds         максимальное время загрузки результата
+  --stdin STDIN      передать входные данные в stdin
+  --stdout STDOUT    максимальный размер возвращаемого stdout в байтах
+  --stderr STDERR    максимальный размер возвращаемого stderr в байтах
+  --version          показать номер версии программы и выйти
 </code></pre></div>
-
 <hr>
 <h2 id="расположение-файлов">Расположение файлов<a class="headerlink" href="#расположение-файлов" title="Permanent link">¶</a></h2>
 <ul>
@@ -1495,30 +1490,25 @@
 <hr>
 <h2 id="типичные-сценарии-использования">Типичные сценарии использования<a class="headerlink" href="#типичные-сценарии-использования" title="Permanent link">¶</a></h2>
 <h3 id="1-настройка-сервера-для-приёма-команд">1. Настройка сервера для приёма команд<a class="headerlink" href="#1-настройка-сервера-для-приёма-команд" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Запуск в режиме прослушивания с разрешением конкретных Identity</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Запуск в режиме прослушивания с разрешением конкретных Identity</span>
 $<span class="w"> </span>rnx<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>&lt;hash1&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;hash2&gt;
 </code></pre></div>
-
 <h3 id="2-выполнение-разовой-команды">2. Выполнение разовой команды<a class="headerlink" href="#2-выполнение-разовой-команды" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span><span class="s2">"команда"</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span><span class="s2">"команда"</span>
 </code></pre></div>
-
 <h3 id="3-интерактивный-удалённый-терминал">3. Интерактивный удалённый терминал<a class="headerlink" href="#3-интерактивный-удалённый-терминал" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span>-x
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span>-x
 </code></pre></div>
-
 <h3 id="4-безопасное-выполнение-с-ограничением-доступа">4. Безопасное выполнение с ограничением доступа<a class="headerlink" href="#4-безопасное-выполнение-с-ограничением-доступа" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># На принимающей стороне:</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># На принимающей стороне:</span>
 $<span class="w"> </span>rnx<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>&lt;trusted_identity_hash&gt;
 
 <span class="c1"># На отправляющей стороне:</span>
 $<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span><span class="s2">"команда"</span><span class="w"> </span>-i<span class="w"> </span>/path/to/trusted_identity
 </code></pre></div>
-
 <h3 id="5-выполнение-команды-с-передачей-входных-данных">5. Выполнение команды с передачей входных данных<a class="headerlink" href="#5-выполнение-команды-с-передачей-входных-данных" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span><span class="s2">"команда"</span><span class="w"> </span>--stdin<span class="w"> </span>&lt;input_file&gt;
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnx<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span><span class="s2">"команда"</span><span class="w"> </span>--stdin<span class="w"> </span>&lt;input_file&gt;
 </code></pre></div>
-
 <hr>
 <h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">¶</a></h2>
 <ul>

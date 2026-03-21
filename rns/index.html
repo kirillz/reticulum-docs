@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1351,8 +1351,7 @@
 <h2 id="как-это-работает">Как это работает?<a class="headerlink" href="#как-это-работает" title="Permanent link">¶</a></h2>
 <p>Reticulum создаёт <strong>оверлейную сеть</strong> поверх существующих физических каналов связи. Каждый узел в сети имеет уникальный криптографический идентификатор, а сообщения маршрутизируются между узлами с гарантией доставки и целостности данных.</p>
 <div class="diagram-center">
-
-<div class="codehilite"><pre><span></span><code>┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+<div class="highlight"><pre><span></span><code>┌─────────────┐      ┌─────────────┐      ┌─────────────┐
 │   Узел A    │ ◄──► │   Узел B    │ ◄──► │   Узел C    │
 │  (LoRa)     │      │  (WiFi)     │      │ (Ethernet)  │
 └─────────────┘      └─────────────┘      └─────────────┘
@@ -1360,8 +1359,6 @@
         │            Reticulum Overlay           │
         └────────────────────────────────────────┘
 </code></pre></div>
-
-
 </div>
 <hr>
 <h2 id="инструменты-rns">Инструменты RNS<a class="headerlink" href="#инструменты-rns" title="Permanent link">¶</a></h2>

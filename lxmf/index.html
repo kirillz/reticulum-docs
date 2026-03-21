@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1352,8 +1352,7 @@
 <p>LXMF строится поверх RNS, добавляя уровень структурированных сообщений. Каждое сообщение имеет заголовок с метаданными (отправитель, получатель, timestamp, тип контента) и тело с полезной нагрузкой.</p>
 <div class="diagram-center">
 
-
-<div class="codehilite"><pre><span></span><code>┌─────────────┐      ┌─────────────────┐      ┌─────────────┐
+<div class="highlight"><pre><span></span><code>┌─────────────┐      ┌─────────────────┐      ┌─────────────┐
 │  Отправитель│ ──►  │ Propagation     │ ──► │  Получатель │
 │  (Sideband) │      │ Server          │      │  (Columba)  │
 └─────────────┘      └─────────────────┘      └─────────────┘
@@ -1361,8 +1360,6 @@
         │         LXMF Message │                      │
         └──────────────────────┴──────────────────────┘
 </code></pre></div>
-
-
 
 </div>
 

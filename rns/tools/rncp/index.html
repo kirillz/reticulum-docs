@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1412,62 +1412,56 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Запуск в режиме прослушивания с указанием разрешённых Identity:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>1726dbad538775b5bf9b0ea25a4079c8<span class="w"> </span>-a<span class="w"> </span>c50cc4e4f7838b6c31f60ab9032cbc62
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>1726dbad538775b5bf9b0ea25a4079c8<span class="w"> </span>-a<span class="w"> </span>c50cc4e4f7838b6c31f60ab9032cbc62
 </code></pre></div>
-
 <p><strong>Запуск в режиме прослушивания с использованием файла разрешённых Identity:</strong></p>
 <p>Файл <code>~/.rncp/allowed_identities</code> должен содержать хеши Identity (по одному на строку):</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--listen
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--listen
 </code></pre></div>
-
 <p><strong>Отправка файла на удалённую систему:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e
 </code></pre></div>
-
 <p><strong>Получение файла с удалённой системы:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--fetch<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--fetch<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e
 </code></pre></div>
-
 <p><strong>Использование альтернативного файла Identity:</strong></p>
 <p>По умолчанию файл Identity хранится в <code>~/.reticulum/identities/rncp</code>:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e<span class="w"> </span>-i<span class="w"> </span>/path/to/identity
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>~/path/to/file.tgz<span class="w"> </span>73cbd378bb0286ed11a707c13447bb1e<span class="w"> </span>-i<span class="w"> </span>/path/to/identity
 </code></pre></div>
-
 <hr>
 <h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rncp</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config path</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-q</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-S</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-l</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-F</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-f</span><span class="o">]</span>
-<span class="w">            </span><span class="o">[</span><span class="n">-j path</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-b seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-a allowed_hash</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p</span><span class="o">]</span>
-<span class="w">            </span><span class="o">[</span><span class="n">-i identity</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rncp [-h] [--config path] [-v] [-q] [-S] [-l] [-F] [-f]
+            [-j path] [-b seconds] [-a allowed_hash] [-n] [-p]
+            [-i identity] [-w seconds] [--version] [file] [destination]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">передачи</span><span class="w"> </span><span class="n">файлов</span><span class="w"> </span><span class="n">Reticulum</span>
+Утилита передачи файлов Reticulum
 
-<span class="n">Позиционные</span><span class="w"> </span><span class="nl">аргументы</span><span class="p">:</span>
-<span class="w">  </span><span class="k">file</span><span class="w">                  </span><span class="n">файл</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">передачи</span>
-<span class="w">  </span><span class="n">destination</span><span class="w">           </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">получателя</span>
+Позиционные аргументы:
+  file                  файл для передачи
+  destination           шестнадцатеричный хеш получателя
 
-<span class="nl">Опции</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать это сообщение и выйти</span>
-<span class="w">  </span><span class="c1">--config path         путь к альтернативной директории конфигурации Reticulum</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         увеличить подробность вывода</span>
-<span class="w">  </span><span class="o">-</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="c1">--quiet           уменьшить подробность вывода</span>
-<span class="w">  </span><span class="o">-</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="c1">--silent          отключить вывод прогресса передачи</span>
-<span class="w">  </span><span class="o">-</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="c1">--listen          прослушивать входящие запросы на передачу</span>
-<span class="w">  </span><span class="o">-</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-compress     отключить автоматическое сжатие</span>
-<span class="w">  </span><span class="o">-</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="c1">--allow-fetch     разрешить аутентифицированным клиентам получать файлы</span>
-<span class="w">  </span><span class="o">-</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="c1">--fetch           получить файл от удалённого слушателя вместо отправки</span>
-<span class="w">  </span><span class="o">-</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="c1">--jail path       ограничить запросы на получение указанным путём</span>
-<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="c1">--save path       сохранять полученные файлы в указанной директории</span>
-<span class="w">  </span><span class="o">-</span><span class="n">O</span><span class="p">,</span><span class="w"> </span><span class="c1">--overwrite       разрешить перезапись полученных файлов вместо добавления постфикса</span>
-<span class="w">  </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">интервал</span><span class="w"> </span><span class="n">анонсов</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">только</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">анонса</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">запуске</span>
-<span class="w">  </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="n">allowed_hash</span><span class="w">       </span><span class="n">разрешить</span><span class="w"> </span><span class="n">эту</span><span class="w"> </span><span class="k">Identity</span><span class="w"> </span><span class="p">(</span><span class="n">или</span><span class="w"> </span><span class="n">добавить</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">rncp</span><span class="o">/</span><span class="n">allowed_identities</span><span class="p">)</span>
-<span class="w">  </span><span class="o">-</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="c1">--no-auth         принимать запросы от кого угодно</span>
-<span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="c1">--print-identity  вывести информацию об Identity и назначении и выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="k">identity</span><span class="w">           </span><span class="n">путь</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">используемому</span><span class="w"> </span><span class="n">файлу</span><span class="w"> </span><span class="k">Identity</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="w">            </span><span class="n">таймаут</span><span class="w"> </span><span class="n">отправителя</span><span class="w"> </span><span class="n">перед</span><span class="w"> </span><span class="n">отказом</span>
-<span class="w">  </span><span class="o">-</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="c1">--phy-rates       отображать скорости передачи физического уровня</span>
-<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
+Опции:
+  -h, --help            показать это сообщение и выйти
+  --config path         путь к альтернативной директории конфигурации Reticulum
+  -v, --verbose         увеличить подробность вывода
+  -q, --quiet           уменьшить подробность вывода
+  -S, --silent          отключить вывод прогресса передачи
+  -l, --listen          прослушивать входящие запросы на передачу
+  -C, --no-compress     отключить автоматическое сжатие
+  -F, --allow-fetch     разрешить аутентифицированным клиентам получать файлы
+  -f, --fetch           получить файл от удалённого слушателя вместо отправки
+  -j, --jail path       ограничить запросы на получение указанным путём
+  -s, --save path       сохранять полученные файлы в указанной директории
+  -O, --overwrite       разрешить перезапись полученных файлов вместо добавления постфикса
+  -b seconds            интервал анонсов, 0 только для анонса при запуске
+  -a allowed_hash       разрешить эту Identity (или добавить в ~/.rncp/allowed_identities)
+  -n, --no-auth         принимать запросы от кого угодно
+  -p, --print-identity  вывести информацию об Identity и назначении и выйти
+  -i identity           путь к используемому файлу Identity
+  -w seconds            таймаут отправителя перед отказом
+  -P, --phy-rates       отображать скорости передачи физического уровня
+  --version             показать номер версии программы и выйти
 </code></pre></div>
-
 <hr>
 <h2 id="расположение-файлов">Расположение файлов<a class="headerlink" href="#расположение-файлов" title="Permanent link">¶</a></h2>
 <ul>
@@ -1478,29 +1472,25 @@
 <hr>
 <h2 id="типичные-сценарии-использования">Типичные сценарии использования<a class="headerlink" href="#типичные-сценарии-использования" title="Permanent link">¶</a></h2>
 <h3 id="1-настройка-сервера-для-приёма-файлов">1. Настройка сервера для приёма файлов<a class="headerlink" href="#1-настройка-сервера-для-приёма-файлов" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Запуск в режиме прослушивания с разрешением конкретных Identity</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Запуск в режиме прослушивания с разрешением конкретных Identity</span>
 $<span class="w"> </span>rncp<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>&lt;hash1&gt;<span class="w"> </span>-a<span class="w"> </span>&lt;hash2&gt;
 
 <span class="c1"># Или с файлом разрешённых Identity</span>
 $<span class="w"> </span>rncp<span class="w"> </span>--listen
 </code></pre></div>
-
 <h3 id="2-отправка-файла">2. Отправка файла<a class="headerlink" href="#2-отправка-файла" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>/path/to/file<span class="w"> </span>&lt;destination_hash&gt;
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>/path/to/file<span class="w"> </span>&lt;destination_hash&gt;
 </code></pre></div>
-
 <h3 id="3-получение-файла-с-удалённой-системы">3. Получение файла с удалённой системы<a class="headerlink" href="#3-получение-файла-с-удалённой-системы" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--fetch<span class="w"> </span>/remote/path/file<span class="w"> </span>&lt;destination_hash&gt;
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rncp<span class="w"> </span>--fetch<span class="w"> </span>/remote/path/file<span class="w"> </span>&lt;destination_hash&gt;
 </code></pre></div>
-
 <h3 id="4-безопасная-передача-с-ограничением-доступа">4. Безопасная передача с ограничением доступа<a class="headerlink" href="#4-безопасная-передача-с-ограничением-доступа" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># На принимающей стороне:</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># На принимающей стороне:</span>
 $<span class="w"> </span>rncp<span class="w"> </span>--listen<span class="w"> </span>-a<span class="w"> </span>&lt;trusted_identity_hash&gt;
 
 <span class="c1"># На отправляющей стороне:</span>
 $<span class="w"> </span>rncp<span class="w"> </span>file.tgz<span class="w"> </span>&lt;destination_hash&gt;<span class="w"> </span>-i<span class="w"> </span>/path/to/trusted_identity
 </code></pre></div>
-
 <hr>
 <h2 id="см-также">См. также<a class="headerlink" href="#см-также" title="Permanent link">¶</a></h2>
 <ul>

@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1644,13 +1644,11 @@
 </div>
 <h3 id="установка">Установка<a class="headerlink" href="#установка" title="Permanent link">¶</a></h3>
 <p>После получения совместимых плат можно установить прошивку RNode с помощью <strong>RNode Configuration Utility</strong>. Если вы установили Reticulum в свою систему, программа <code>rnodeconf</code> уже будет доступна. Если нет, убедитесь, что Python3 и pip установлены в вашей системе, затем установите Reticulum через pip:</p>
-<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>rns
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>rns
 </code></pre></div>
-
 <p>После завершения установки можно приступать к установке прошивки на устройства. Запустите <code>rnodeconf</code> в режиме автоустановки:</p>
-<div class="codehilite"><pre><span></span><code>rnodeconf<span class="w"> </span>--autoinstall
+<div class="highlight"><pre><span></span><code>rnodeconf<span class="w"> </span>--autoinstall
 </code></pre></div>
-
 <p>Утилита проведёт вас через процесс установки, задав ряд вопросов о вашем оборудовании. Просто следуйте инструкциям, и утилита автоматически установит и настроит ваши устройства.</p>
 <h3 id="использование-с-reticulum">Использование с Reticulum<a class="headerlink" href="#использование-с-reticulum" title="Permanent link">¶</a></h3>
 <p>Когда устройства установлены и настроены, их можно использовать с Reticulum, добавив соответствующую секцию интерфейса в конфигурационный файл Reticulum. В конфигурации можно указать все параметры интерфейса, такие как последовательный порт и параметры эфира.</p>

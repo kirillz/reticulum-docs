@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1292,29 +1292,26 @@
 <hr>
 <h2 id="примеры-использования">Примеры использования<a class="headerlink" href="#примеры-использования" title="Permanent link">¶</a></h2>
 <p><strong>Проверка доступности узла назначения:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708
 
 Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
 Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
 Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">38</span>.469<span class="w"> </span>milliseconds<span class="w"> </span>over<span class="w"> </span><span class="m">2</span><span class="w"> </span>hops
 </code></pre></div>
-
 <p><strong>Отправка запроса зондирования большего размера:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708<span class="w"> </span>-s<span class="w"> </span><span class="m">256</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>2d03725b327348980d570f739a3a5708<span class="w"> </span>-s<span class="w"> </span><span class="m">256</span>
 
 Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
 Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;2d03725b327348980d570f739a3a5708&gt;
 Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">38</span>.781<span class="w"> </span>milliseconds<span class="w"> </span>over<span class="w"> </span><span class="m">2</span><span class="w"> </span>hops
 </code></pre></div>
-
 <p><strong>Если интерфейс, который получает ответы на запрос зондирования, поддерживает отчет о параметрах радиосвязи, таких как RSSI и SNR, утилита rnprobe также отобразит их в результатах:</strong></p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>e7536ee90bd4a440e130490b87a25124
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnprobe<span class="w"> </span>rnstransport.probe<span class="w"> </span>e7536ee90bd4a440e130490b87a25124
 
 Sent<span class="w"> </span><span class="m">16</span><span class="w"> </span>byte<span class="w"> </span>probe<span class="w"> </span>to<span class="w"> </span>&lt;e7536ee90bd4a440e130490b87a25124&gt;
 Valid<span class="w"> </span>reply<span class="w"> </span>received<span class="w"> </span>from<span class="w"> </span>&lt;e7536ee90bd4a440e130490b87a25124&gt;
 Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.809<span class="w"> </span>seconds<span class="w"> </span>over<span class="w"> </span><span class="m">1</span><span class="w"> </span>hop<span class="w"> </span><span class="o">[</span>RSSI<span class="w"> </span>-73<span class="w"> </span>dBm<span class="o">]</span><span class="w"> </span><span class="o">[</span>SNR<span class="w"> </span><span class="m">12</span>.0<span class="w"> </span>dB<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Расшифровка вывода:</strong></p>
 <ul>
 <li><strong>Sent X byte probe</strong> — отправлен запроса зондирования размером X байт</li>
@@ -1326,30 +1323,29 @@ Round-trip<span class="w"> </span><span class="nb">time</span><span class="w"> <
 </ul>
 <hr>
 <h2 id="все-опции-командной-строки-переведены-для-понимания">Все опции командной строки (переведены для понимания)<a class="headerlink" href="#все-опции-командной-строки-переведены-для-понимания" title="Permanent link">¶</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">rnprobe</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--config CONFIG</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-s SIZE</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n PROBES</span><span class="o">]</span>
-<span class="w">               </span><span class="o">[</span><span class="n">-t seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-w seconds</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-v</span><span class="o">]</span>
-<span class="w">               </span><span class="o">[</span><span class="n">full_name</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">destination_hash</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code>usage: rnprobe [-h] [--config CONFIG] [-s SIZE] [-n PROBES]
+               [-t seconds] [-w seconds] [--version] [-v]
+               [full_name] [destination_hash]
 
-<span class="n">Утилита</span><span class="w"> </span><span class="n">зондирования</span><span class="w"> </span><span class="n">Reticulum</span>
+Утилита зондирования Reticulum
 
-<span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span>
-<span class="w">  </span><span class="n">full_name</span><span class="w">             </span><span class="n">полное</span><span class="w"> </span><span class="n">имя</span><span class="w"> </span><span class="n">назначения</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">точечной</span><span class="w"> </span><span class="n">нотации</span>
-<span class="w">  </span><span class="n">destination_hash</span><span class="w">      </span><span class="n">шестнадцатеричный</span><span class="w"> </span><span class="n">хеш</span><span class="w"> </span><span class="n">назначения</span>
+positional arguments:
+  full_name             полное имя назначения в точечной нотации
+  destination_hash      шестнадцатеричный хеш назначения
 
-<span class="nl">options</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="c1">--help            показать эту справку и выйти</span>
-<span class="w">  </span><span class="c1">--config CONFIG       путь к альтернативному каталогу конфигурации Reticulum</span>
-<span class="w">  </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="k">SIZE</span><span class="p">,</span><span class="w"> </span><span class="c1">--size SIZE  размер полезной нагрузки пакета запроса зондирования в байтах</span>
-<span class="w">  </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">PROBES</span><span class="p">,</span><span class="w"> </span><span class="c1">--probes PROBES</span>
-<span class="w">                        </span><span class="n">количество</span><span class="w"> </span><span class="n">отправляемых</span><span class="w"> </span><span class="n">запросов</span><span class="w"> </span><span class="n">зондирования</span>
-<span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">seconds</span><span class="p">,</span><span class="w"> </span><span class="c1">--timeout seconds</span>
-<span class="w">                        </span><span class="n">таймаут</span><span class="w"> </span><span class="n">перед</span><span class="w"> </span><span class="n">отказом</span>
-<span class="w">  </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">seconds</span><span class="p">,</span><span class="w"> </span><span class="c1">--wait seconds</span>
-<span class="w">                        </span><span class="n">время</span><span class="w"> </span><span class="n">между</span><span class="w"> </span><span class="n">каждым</span><span class="w"> </span><span class="n">запросом</span><span class="w"> </span><span class="n">зондирования</span>
-<span class="w">  </span><span class="c1">--version             показать номер версии программы и выйти</span>
-<span class="w">  </span><span class="o">-</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="c1">--verbose         подробный вывод</span>
+options:
+  -h, --help            показать эту справку и выйти
+  --config CONFIG       путь к альтернативному каталогу конфигурации Reticulum
+  -s SIZE, --size SIZE  размер полезной нагрузки пакета запроса зондирования в байтах
+  -n PROBES, --probes PROBES
+                        количество отправляемых запросов зондирования
+  -t seconds, --timeout seconds
+                        таймаут перед отказом
+  -w seconds, --wait seconds
+                        время между каждым запросом зондирования
+  --version             показать номер версии программы и выйти
+  -v, --verbose         подробный вывод
 </code></pre></div>
-
 <hr>
 <h2 id="примечание">Примечание<a class="headerlink" href="#примечание" title="Permanent link">¶</a></h2>
 <ul>

@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -2668,7 +2668,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации">Пример конфигурации<a class="headerlink" href="#пример-конфигурации" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Default Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AutoInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -2676,7 +2676,6 @@
 <span class="na">devices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">wlan0,eth1</span>
 <span class="na">discovery_scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">link</span>
 </code></pre></div>
-
 <hr>
 <h2 id="backboneinterface">BackboneInterface<a class="headerlink" href="#backboneinterface" title="Permanent link">¶</a></h2>
 <p><strong>BackboneInterface</strong> — высокопроизводительный интерфейс для соединения экземпляров Reticulum через TCP/IPv4/IPv6. Доступен на Linux и Android.</p>
@@ -2716,23 +2715,21 @@
 </tbody>
 </table>
 <h3 id="пример-слушатель">Пример: Слушатель<a class="headerlink" href="#пример-слушатель" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Backbone Listener]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BackboneInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">listen_on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.0.0</span>
 <span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4242</span>
 </code></pre></div>
-
 <h3 id="пример-подключение-к-удалённому-узлу">Пример: Подключение к удалённому узлу<a class="headerlink" href="#пример-подключение-к-удалённому-узлу" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Backbone Remote]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BackboneInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">remote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">amsterdam.connect.reticulum.network</span>
 <span class="na">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4251</span>
 </code></pre></div>
-
 <hr>
 <h2 id="tcpserverinterface">TCPServerInterface<a class="headerlink" href="#tcpserverinterface" title="Permanent link">¶</a></h2>
 <p><strong>TCPServerInterface</strong> создаёт TCP-сервер для подключения других пиров через IPv4/IPv6.</p>
@@ -2768,14 +2765,13 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_1">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_1" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[TCP Server Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TCPServerInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">listen_ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.0.0</span>
 <span class="na">listen_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4242</span>
 </code></pre></div>
-
 <hr>
 <h2 id="tcpclientinterface">TCPClientInterface<a class="headerlink" href="#tcpclientinterface" title="Permanent link">¶</a></h2>
 <p><strong>TCPClientInterface</strong> подключается к удалённому TCP-серверу.</p>
@@ -2811,14 +2807,13 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_2">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_2" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[TCP Client Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TCPClientInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">target_host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">127.0.0.1</span>
 <span class="na">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4242</span>
 </code></pre></div>
-
 <hr>
 <h2 id="udpinterface">UDPInterface<a class="headerlink" href="#udpinterface" title="Permanent link">¶</a></h2>
 <p><strong>UDPInterface</strong> обеспечивает общение через UDP с поддержкой broadcast.</p>
@@ -2854,7 +2849,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_3">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_3" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[UDP Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">UDPInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -2863,7 +2858,6 @@
 <span class="na">forward_ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">255.255.255.255</span>
 <span class="na">forward_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4242</span>
 </code></pre></div>
-
 <hr>
 <h2 id="i2pinterface">I2PInterface<a class="headerlink" href="#i2pinterface" title="Permanent link">¶</a></h2>
 <p><strong>I2PInterface</strong> подключается через анонимную сеть I2P.</p>
@@ -2887,14 +2881,13 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_4">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_4" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[I2P]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">I2PInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">connectable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">peers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5urvjicpzi7q3ybztsef4i5ow2aq4soktfj7zedz53s47r54jnqq.b32.i2p</span>
 </code></pre></div>
-
 <hr>
 <h2 id="rnodeinterface">RNodeInterface<a class="headerlink" href="#rnodeinterface" title="Permanent link">¶</a></h2>
 <p><strong>RNodeInterface</strong> для работы с LoRa-трансиверами RNode.</p>
@@ -2950,7 +2943,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_5">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_5" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[RNode LoRa Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RNodeInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -2963,12 +2956,11 @@
 <span class="na">id_callsign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RNODE01</span>
 <span class="na">id_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10</span>
 </code></pre></div>
-
 <hr>
 <h2 id="rnodemultiinterface">RNodeMultiInterface<a class="headerlink" href="#rnodemultiinterface" title="Permanent link">¶</a></h2>
 <p><strong>RNodeMultiInterface</strong> для RNode с несколькими LoRa-трансиверами.</p>
 <h3 id="пример-конфигурации_6">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_6" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[RNode Multi Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RNodeMultiInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -2988,7 +2980,6 @@
 <span class="na">vport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span>
 <span class="na">spreadingfactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10</span>
 </code></pre></div>
-
 <hr>
 <h2 id="serialinterface">SerialInterface<a class="headerlink" href="#serialinterface" title="Permanent link">¶</a></h2>
 <p><strong>SerialInterface</strong> для прямого соединения через последовательный порт.</p>
@@ -3024,7 +3015,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_7">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_7" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Serial Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SerialInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -3034,7 +3025,6 @@
 <span class="na">parity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">NONE</span>
 <span class="na">stopbits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
 </code></pre></div>
-
 <hr>
 <h2 id="pipeinterface">PipeInterface<a class="headerlink" href="#pipeinterface" title="Permanent link">¶</a></h2>
 <p><strong>PipeInterface</strong> использует внешнюю программу через stdin/stdout как интерфейс.</p>
@@ -3058,14 +3048,13 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_8">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_8" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[Pipe Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PipeInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">netcat -l 5757</span>
 <span class="na">respawn_delay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span>
 </code></pre></div>
-
 <hr>
 <h2 id="kissinterface">KISSInterface<a class="headerlink" href="#kissinterface" title="Permanent link">¶</a></h2>
 <p><strong>KISSInterface</strong> для пакетных радиомодемов и TNC, поддерживающих KISS-протокол.</p>
@@ -3113,7 +3102,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_9">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_9" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[KISS Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KISSInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -3127,7 +3116,6 @@
 <span class="na">id_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">15</span>
 <span class="na">flow_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FLOWCONTROL</span>
 </code></pre></div>
-
 <hr>
 <h2 id="ax25kissinterface">AX25KISSInterface<a class="headerlink" href="#ax25kissinterface" title="Permanent link">¶</a></h2>
 <p><strong>AX25KISSInterface</strong> — KISS-интерфейс с инкапсуляцией AX.25 для любительского радио.</p>
@@ -3155,7 +3143,7 @@
 </tbody>
 </table>
 <h3 id="пример-конфигурации_10">Пример конфигурации<a class="headerlink" href="#пример-конфигурации_10" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[AX.25 KISS Interface]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AX25KISSInterface</span>
 <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
@@ -3164,7 +3152,6 @@
 <span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/ttyUSB0</span>
 <span class="na">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">9600</span>
 </code></pre></div>
-
 <hr>
 <h2 id="обнаруживаемые-интерфейсы">Обнаруживаемые интерфейсы<a class="headerlink" href="#обнаруживаемые-интерфейсы" title="Permanent link">¶</a></h2>
 <p>Чтобы сделать интерфейс обнаруживаемым другими узлами сети, добавьте следующие параметры:</p>
@@ -3236,7 +3223,7 @@
 </tbody>
 </table>
 <h3 id="пример-публичный-шлюз">Пример: Публичный шлюз<a class="headerlink" href="#пример-публичный-шлюз" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[My Public Gateway]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BackboneInterface</span>
 <span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">gateway</span>
@@ -3250,9 +3237,8 @@
 <span class="na">latitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">51.99714</span>
 <span class="na">longitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">-0.74195</span>
 </code></pre></div>
-
 <h3 id="пример-приватный-шлюз">Пример: Приватный шлюз<a class="headerlink" href="#пример-приватный-шлюз" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[interfaces]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[interfaces]</span>
 <span class="k">[[My Private Gateway]]</span>
 <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BackboneInterface</span>
 <span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">gateway</span>
@@ -3268,7 +3254,6 @@
 <span class="na">discovery_encrypt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 <span class="na">publish_ifac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
 </code></pre></div>
-
 <hr>
 <h2 id="контроль-скорости-анонсов">Контроль скорости анонсов<a class="headerlink" href="#контроль-скорости-анонсов" title="Permanent link">¶</a></h2>
 <p>Для предотвращения перегрузки сети можно настроить частоту анонсов:</p>
@@ -3356,7 +3341,7 @@
 <h2 id="пользовательские-интерфейсы">Пользовательские интерфейсы<a class="headerlink" href="#пользовательские-интерфейсы" title="Permanent link">¶</a></h2>
 <p>Reticulum поддерживает создание пользовательских интерфейсов через наследование от базового класса <code>Interface</code>. Это позволяет интегрировать любое оборудование или протокол.</p>
 <h3 id="пример-пользовательского-интерфейса">Пример пользовательского интерфейса<a class="headerlink" href="#пример-пользовательского-интерфейса" title="Permanent link">¶</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">RNS.Interface</span><span class="w"> </span><span class="kn">import</span> <span class="n">Interface</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">RNS.Interface</span><span class="w"> </span><span class="kn">import</span> <span class="n">Interface</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyCustomInterface</span><span class="p">(</span><span class="n">Interface</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
@@ -3372,25 +3357,21 @@
         <span class="c1"># Обработка входящих данных</span>
         <span class="k">pass</span>
 </code></pre></div>
-
 <hr>
 <h2 id="диагностика-и-отладка">Диагностика и отладка<a class="headerlink" href="#диагностика-и-отладка" title="Permanent link">¶</a></h2>
 <h3 id="проверка-конфигурации">Проверка конфигурации<a class="headerlink" href="#проверка-конфигурации" title="Permanent link">¶</a></h3>
 <p>Используйте утилиту <code>rnsd</code> с флагом <code>--config</code> для проверки пути к файлу конфигурации:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>--config
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnsd<span class="w"> </span>--config
 </code></pre></div>
-
 <h3 id="логирование">Логирование<a class="headerlink" href="#логирование" title="Permanent link">¶</a></h3>
 <p>Включите подробное логирование для диагностики проблем:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[reticulum]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[reticulum]</span>
 <span class="na">loglevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">debug</span>
 </code></pre></div>
-
 <h3 id="статус-интерфейсов">Статус интерфейсов<a class="headerlink" href="#статус-интерфейсов" title="Permanent link">¶</a></h3>
 <p>Просмотр статуса подключённых интерфейсов:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>rnstatus
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rnstatus
 </code></pre></div>
-
 <hr>
 <h2 id="важные-предупреждения">Важные предупреждения<a class="headerlink" href="#важные-предупреждения" title="Permanent link">¶</a></h2>
 <ol>

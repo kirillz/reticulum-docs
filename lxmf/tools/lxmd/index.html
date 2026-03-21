@@ -58,7 +58,7 @@
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: light; }
+            .gslide-image img { background: rgba(0, 0, 0, 0.95); }
             .gscrollbar-fixer { padding-right: 15px; }
             .gdesc-inner { font-size: 0.75rem; }
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
@@ -1277,12 +1277,11 @@
 <h4 id="использование">Использование<a class="headerlink" href="#использование" title="Permanent link">¶</a></h4>
 <p>Запуск узла распространения:</p>
 <p><code>lxmd</code>
-Основные аргументы</p>
-<div class="codehilite"><pre><span></span><code>-c, --config — Путь к директории конфигурации.
+Основные аргументы
+</p><div class="highlight"><pre><span></span><code>-c, --config — Путь к директории конфигурации.
 --example-config — Вывести пример файла конфигурации.
 -i, --on-interface — Автоматически привязать узел к указанному интерфейсу RNS.
-</code></pre></div>
-
+</code></pre></div><p></p>
 <h4 id="принцип-работы">Принцип работы<a class="headerlink" href="#принцип-работы" title="Permanent link">¶</a></h4>
 <p>Когда пользователь Nomad Network не в сети, отправленное ему сообщение попадает на ближайший Propagation Node (если он доступен). Когда пользователь выходит в сеть, он забирает (sync) сообщения с узла.</p>
 <p>Для работы lxmd требует наличия запущенного Reticulum (<code>rnsd</code>).</p>
