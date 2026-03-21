@@ -69,6 +69,7 @@ nav:
           - Обзор: lxmf/tools/index.md
           - lxmd (Узел распространения): lxmf/tools/lxmd.md
   - Nomad Network: nomadnet/index.md
+  - Полезные ресурсы: resources/links.md
 
 plugins:
   - search
