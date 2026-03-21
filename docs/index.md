@@ -1,46 +1,71 @@
-# Добро пожаловать в Русскоязычную Документацию Reticulum
+# 🌐 Документация Reticulum Network Stack
 
-**Reticulum** — это криптографически защищенный сетевой стек для создания сетей любой топологии. Он позволяет быстро и безопасно развертывать сети на базе любого физического носителя: от LoRa и радиомодемов до WiFi и оптоволокна.
+**Reticulum** — это криптографически защищённый сетевой стек для создания сетей любой топологии на любом физическом носителе.
 
-Это русскоязычное сообщество документации. Здесь собраны переводы официальных руководств, описания консольных утилит и примеры использования.
-
----
-
-## 📚 С чего начать?
-
-Если вы новичок, рекомендуем изучать документацию в следующем порядке:
-
-### 1. [RNS (Основы)](rns/index.md){ .md-button .md-button--small }
-Поймите принцип работы стека, адресации и транспортного слоя. Это фундамент всей сети.
-
-### 2. [Словарь терминов](rns/glossary.md){ .md-button .md-button--small }
-Изучите основные понятия и терминологию Reticulum для лучшего понимания материала.
-
-### 3. [Консольные утилиты](rns/tools/index.md){ .md-button .md-button--small }
-Научитесь пользоваться инструментами диагностики и передачи файлов: `rnprobe`, `rncp`, `rnx`.
-
-### 4. [LXMF](lxmf/index.md){ .md-button .md-button--small }
-Изучите протокол обмена сообщениями, который работает поверх RNS.
-
-### 5. [Nomad Network](nomadnet/index.md){ .md-button .md-button--small }
-Установите клиент для общения в сети, настройте узлы и начинайте взаимодействие.
+[:material-github: Репозиторий документации](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
+[:material-book: Официальная документация](https://reticulum.network/docs/){ .md-button }
 
 ---
 
-## ℹ️ Что такое Reticulum?
+## 🚀 Быстрый старт
 
-> **Reticulum** — это криптографический сетевой стек для создания защищённых сетей любой топологии на любом физическом носителе (LoRa, WiFi, Ethernet, последовательные соединения и др.).
+<div class="grid cards" markdown>
 
-**Reticulum** — это набор инструментов для создания сетей, которые:
+-   ![](diagrams/rns-architecture.svg){ loading=lazy width="280" }
 
-- **Самоорганизуются** — узлы сами находят друг друга без центрального сервера
-- **Безопасны** — сквозное шифрование включено по умолчанию
-- **Универсальны** — работает на LoRa, WiFi, Serial и TCP
+    :material-router-wireless: **[RNS — основы стека](rns/index.md)**
+
+    Архитектура, адресация, маршрутизация и транспортный уровень
+
+-   ![](diagrams/stack-protocol.svg){ loading=lazy width="280" }
+
+    :material-book-open-page-variant: **[Словарь терминов](rns/glossary.md)**
+
+    Ключевые понятия для понимания работы сети
+
+-   ![](diagrams/tools-diagram.svg){ loading=lazy width="280" }
+
+    :material-console: **[Утилиты командной строки](rns/tools/index.md)**
+
+    Диагностика, передача файлов, удалённое выполнение
+
+-   ![](diagrams/lxmf-flow.svg){ loading=lazy width="280" }
+
+    :material-message: **[LXMF — сообщения](lxmf/index.md)**
+
+    Протокол обмена сообщениями поверх RNS
+
+-   ![](diagrams/nomad-network.svg){ loading=lazy width="280" }
+
+    :material-laptop: **[Nomad Network](nomadnet/index.md)**
+
+    Клиент для общения в децентрализованной сети
+
+-   ![](diagrams/hardware-interfaces.svg){ loading=lazy width="280" }
+
+    :material-chip: **[Оборудование](rns/hardware.md)**
+
+    Поддерживаемые устройства и настройки
+
+</div>
 
 ---
 
 ## 🤝 Участие в проекте
 
-Данная документация поддерживается сообществом. Если вы нашли ошибку или хотите добавить пример, заходите в репозиторий.
+Эта документация поддерживается сообществом. Вы можете помочь:
 
-[:material-github: Перейти в репозиторий](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
+- :material-bug: Сообщить об ошибке перевода
+- :material-pencil: Добавить недостающий раздел
+- :material-translate: Улучшить существующие материалы
+- :material-lightbulb: Предложить примеры использования
+
+[:material-github: Внести вклад на GitHub](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
+
+---
+
+## 📖 Дополнительные ресурсы
+
+- [Официальная документация Reticulum](https://reticulum.network/docs/)
+- [Исходный код Reticulum](https://github.com/markqvist/Reticulum)
+- [Проект Nomad Network](https://github.com/markqvist/NomadNet)

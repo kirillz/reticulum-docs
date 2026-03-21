@@ -71,14 +71,17 @@ nav:
   - Nomad Network: nomadnet/index.md
 
 plugins:
-  - search          # Обязательно возвращаем поиск при использовании своих плагинов
+  - search
   - git-revision-date-localized:
       enable_creation_date: false
       type: datetime
   - glightbox:
-      background: light
+      background: rgba(0, 0, 0, 0.95)
       shadow: true
       effect: zoom
+      caption_position: bottom
+      width: 90%
+      touchNavigation: true
 # Кастомные стили
 extra_css:
   - css/custom.css
@@ -97,7 +100,12 @@ markdown_extensions:
   - pymdownx.emoji: # Нужно для смайликов-иконок :material-...:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # Убираем надпись "Made with Material for MkDocs"
+        !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra:
   generator: false
