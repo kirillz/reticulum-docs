@@ -28,3 +28,7 @@
 [RNode Flasher for DIY devices](https://rns.moscow/flasher/)  
 
 [Сравнение нод](https://docs.google.com/spreadsheets/d/1Wx1nAqK9-SL29L_OIpaH-1g1FSrVlBEYx3L0WuJVoZU/htmlview)
+
+# Безопасность
+
+[Внимание! MeshCore](https://t.me/reticulum_network_rus/9/9290)
