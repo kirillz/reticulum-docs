@@ -1,5 +1,6 @@
 # 🌐 Документация Reticulum Network Stack
 
+
 **Reticulum** — это криптографически защищённый сетевой стек для создания сетей любой топологии на любом физическом носителе.
 
 [:material-github: Git репозиторий документации](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
@@ -60,6 +61,18 @@
 - :material-lightbulb: Предложить примеры использования
 
 [:material-github: Внести свой вклад в документы](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
+
+<!-- Announcement Banner -->
+<div id="meshcore-banner" class="announcement-banner hidden">
+  <span class="announcement-banner__icon">⚠️</span>
+  <div class="announcement-banner__content">
+    <a href="https://t.me/reticulum_network_rus/9/9290" target="_blank" rel="noopener">
+      <strong>Внимание Meshcore!</strong>
+    </a>
+  </div>
+  <button class="announcement-banner__close" type="button" aria-label="Закрыть" onclick="closeMeshcoreBanner()">×</button>
+</div>
+<!-- End Announcement Banner -->
 
 ---
 

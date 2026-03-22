@@ -87,6 +87,10 @@ plugins:
 extra_css:
   - css/custom.css
 
+# Кастомные скрипты
+extra_javascript:
+  - js/banner.js
+
 # Настройки Markdown
 markdown_extensions:
   - admonition
