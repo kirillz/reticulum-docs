@@ -2,8 +2,9 @@
 
 # Безопасность
 [⚠️ Внимание!!! MeshCore](https://t.me/reticulum_network_rus/9/9290)
+---
 
-
+### Полезное:
 [Московский сайт (список нод)](https://rns.moscow)   
 [Карта нод](https://rmap.world/)  
 [Web-флешер](https://liamcottle.github.io/rnode-flasher/)  
