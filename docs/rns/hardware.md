@@ -56,8 +56,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Встроенный GPS, дисплей, слот для аккумулятора. Подходит для мобильных и портативных устройств.
 </div>
 
----
-
 <div class="card" markdown>
 [![LilyGO T-Beam](../assets/img/boards/board_tbeam.png){ loading=lazy }](../assets/img/boards/board_tbeam.png){ class="glightbox" }
 
@@ -68,8 +66,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** LilyGO
 - **Особенности:** Встроенный GPS, OLED-дисплей, держатель аккумулятора 18650. Популярный выбор для портативных станций.
 </div>
-
----
 
 <div class="card" markdown>
 [![LilyGO T3S3](../assets/img/boards/board_t3s3.png){ loading=lazy }](../assets/img/boards/board_t3s3.png){ class="glightbox" }
@@ -82,8 +78,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Компактная плата с USB-C, подходит для стационарных и портативных решений.
 </div>
 
----
-
 <div class="card" markdown>
 [![RAK4631](../assets/img/boards/board_rak4631.png){ loading=lazy }](../assets/img/boards/board_rak4631.png){ class="glightbox" }
 
@@ -94,8 +88,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** RAK Wireless
 - **Особенности:** Низкое энергопотребление, Bluetooth 5.0, подходит для батарейных устройств.
 </div>
-
----
 
 <div class="card" markdown>
 [![OpenCom XL](../assets/img/boards/board_opencomxl.png){ loading=lazy }](../assets/img/boards/board_opencomxl.png){ class="glightbox" }
@@ -108,8 +100,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Двойной трансивер для одновременной работы на двух диапазонах, USB-C, встроенный зарядник.
 </div>
 
----
-
 <div class="card" markdown>
 [![RNode v2](../assets/img/boards/board_rnodev2.png){ loading=lazy }](../assets/img/boards/board_rnodev2.png){ class="glightbox" }
 
@@ -120,8 +110,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** unsigned.io
 - **Особенности:** Оригинальная плата RNode, оптимизирована для работы с Reticulum.
 </div>
-
----
 
 <div class="card" markdown>
 [![LilyGO LoRa32 v2.1](../assets/img/boards/board_t3v21.png){ loading=lazy }](../assets/img/boards/board_t3v21.png){ class="glightbox" }
@@ -134,8 +122,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Компактная плата с OLED-дисплеем, популярна для начинающих.
 </div>
 
----
-
 <div class="card" markdown>
 [![LilyGO LoRa32 v2.0](../assets/img/boards/board_t3v20.png){ loading=lazy }](../assets/img/boards/board_t3v20.png){ class="glightbox" }
 
@@ -146,8 +132,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** LilyGO
 - **Особенности:** Предыдущая версия с OLED-дисплеем, широко доступна.
 </div>
-
----
 
 <div class="card" markdown>
 [![LilyGO LoRa32 v1.0](../assets/img/boards/board_t3v10.png){ loading=lazy }](../assets/img/boards/board_t3v10.png){ class="glightbox" }
@@ -160,8 +144,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Первая версия серии LoRa32, базовая функциональность.
 </div>
 
----
-
 <div class="card" markdown>
 [![LilyGO T-Deck](../assets/img/boards/board_tdeck.png){ loading=lazy }](../assets/img/boards/board_tdeck.png){ class="glightbox" }
 
@@ -172,8 +154,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** LilyGO
 - **Особенности:** Встроенная клавиатура, дисплей, слот для microSD. Идеально для портативных терминалов.
 </div>
-
----
 
 <div class="card" markdown>
 [![LilyGO T-Echo](../assets/img/boards/board_techo.png){ loading=lazy }](../assets/img/boards/board_techo.png){ class="glightbox" }
@@ -186,8 +166,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Компактный форм-фактор, низкое энергопотребление, встроенный дисплей.
 </div>
 
----
-
 <div class="card" markdown>
 [![Heltec T114](../assets/img/boards/board_t114.png){ loading=lazy }](../assets/img/boards/board_t114.png){ class="glightbox" }
 
@@ -198,8 +176,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** Heltec Automation
 - **Особенности:** Низкое энергопотребление, компактный размер, подходит для носимых устройств.
 </div>
-
----
 
 <div class="card" markdown>
 [![Heltec LoRa32 v4.0](../assets/img/boards/board_heltec32v4.png){ loading=lazy }](../assets/img/boards/board_heltec32v4.png){ class="glightbox" }
@@ -212,8 +188,6 @@ RNode разработан как система, лёгкая для воспр
 - **Особенности:** Новейшая версия с улучшенной схемой питания, USB-C, OLED-дисплей.
 </div>
 
----
-
 <div class="card" markdown>
 [![Heltec LoRa32 v3.0](../assets/img/boards/board_heltec32v30.png){ loading=lazy }](../assets/img/boards/board_heltec32v30.png){ class="glightbox" }
 
@@ -224,8 +198,6 @@ RNode разработан как система, лёгкая для воспр
 - **Производитель:** Heltec Automation
 - **Особенности:** Улучшенная версия с USB-C, OLED-дисплей, встроенный зарядник аккумулятора.
 </div>
-
----
 
 <div class="card" markdown>
 [![Heltec LoRa32 v2.0](../assets/img/boards/board_heltec32v20.png){ loading=lazy }](../assets/img/boards/board_heltec32v20.png){ class="glightbox" }
@@ -281,8 +253,6 @@ rnodeconf --autoinstall
 - **Диапазон:** 5 ГГц
 - **Особенности:** Направленная антенна высокого усиления, дальность до 15+ км, пропускная способность до 400+ Мбит/с. Идеально для backbone-соединений.
 </div>
-
----
 
 <div class="card" markdown>
 [![Ubiquiti IsoStation 5AC](../assets/img/radio/radio_is5ac.png){ loading=lazy }](../assets/img/radio/radio_is5ac.png){ class="glightbox" }

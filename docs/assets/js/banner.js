@@ -3,25 +3,31 @@
   const BANNER_KEY = 'meshcore-banner-closed';
 
   function closeMeshcoreBanner() {
-    var banner = document.getElementById('meshcore-banner');
+    const banner = document.getElementById('meshcore-banner');
     if (banner) {
       banner.classList.add('hidden');
-      localStorage.setItem(BANNER_KEY, 'true');
+      try {
+        localStorage.setItem(BANNER_KEY, 'true');
+      } catch (e) {
+        // localStorage недоступен — игнорируем
+      }
     }
   }
   window.closeMeshcoreBanner = closeMeshcoreBanner;
 
   function initBanner() {
-    var banner = document.getElementById('meshcore-banner');
+    const banner = document.getElementById('meshcore-banner');
     if (banner) {
-      // Проверяем, закрыт ли баннер
-      var isClosed = localStorage.getItem(BANNER_KEY);
-      if (!isClosed) {
-        // Баннер должен быть виден - убираем класс hidden
+      try {
+        const isClosed = localStorage.getItem(BANNER_KEY);
+        if (!isClosed) {
+          banner.classList.remove('hidden');
+        } else {
+          banner.classList.add('hidden');
+        }
+      } catch (e) {
+        // localStorage недоступен — показываем баннер
         banner.classList.remove('hidden');
-      } else {
-        // Баннер закрыт - добавляем класс hidden
-        banner.classList.add('hidden');
       }
     }
   }
