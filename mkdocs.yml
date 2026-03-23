@@ -90,6 +90,7 @@ extra_css:
 # Кастомные скрипты
 extra_javascript:
   - assets/js/banner.js
+  - assets/js/svg-dark-theme.js
 
 # Настройки Markdown
 markdown_extensions:

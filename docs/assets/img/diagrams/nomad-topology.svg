@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 360" class="diagram-svg">
+  <defs>
+    <linearGradient id="nomadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00bcd4"/>
+      <stop offset="100%" style="stop-color:#006064"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="340" height="360" fill="#e0f7fa" rx="16" class="svg-bg"/>
+  
+  <!-- Title -->
+  <text x="170" y="35" text-anchor="middle" fill="#00838f" class="svg-text" font-size="14" font-weight="bold">Nomad Network</text>
+  
+  <!-- Central laptop icon (simplified) -->
+  <g transform="translate(170, 160)" filter="url(#shadow)">
+    <rect x="-45" y="-35" width="90" height="60" rx="5" fill="url(#nomadGrad)" stroke="#006064" stroke-width="2"/>
+    <rect x="-38" y="-28" width="76" height="46" rx="2" fill="#b2ebf2"/>
+    <rect x="-48" y="25" width="96" height="14" rx="3" fill="#00838f"/>
+  </g>
+  
+  <!-- Feature nodes (simpler, no overlapping labels) -->
+  <!-- Messages (top left) -->
+  <g transform="translate(60, 80)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#00bcd4" font-size="18">💬</text>
+  </g>
+  <text x="60" y="115" text-anchor="middle" fill="#006064" class="svg-label" font-size="11" font-weight="600">Сообщения</text>
+  
+  <!-- Forums (top right) -->
+  <g transform="translate(280, 80)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#00bcd4" font-size="18">📝</text>
+  </g>
+  <text x="280" y="115" text-anchor="middle" fill="#006064" class="svg-label" font-size="11" font-weight="600">Форумы</text>
+  
+  <!-- Network (bottom left) -->
+  <g transform="translate(60, 260)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#00bcd4" font-size="18">🌐</text>
+  </g>
+  <text x="60" y="295" text-anchor="middle" fill="#006064" class="svg-label" font-size="11" font-weight="600">Децентрализация</text>
+  
+  <!-- Privacy (bottom right) -->
+  <g transform="translate(280, 260)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#00bcd4" font-size="18">🔐</text>
+  </g>
+  <text x="280" y="295" text-anchor="middle" fill="#006064" class="svg-label" font-size="11" font-weight="600">Приватность</text>
+  
+  <!-- Connection lines (simpler straight lines) -->
+  <line x1="75" y1="95" x2="130" y2="135" stroke="#00bcd4" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="265" y1="95" x2="210" y2="135" stroke="#00bcd4" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="75" y1="245" x2="130" y2="185" stroke="#00bcd4" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="265" y1="245" x2="210" y2="185" stroke="#00bcd4" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+</svg>

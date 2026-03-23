@@ -11,37 +11,37 @@
 
 <div class="grid cards" markdown>
 
--   ![](assets/img/diagrams/rns-architecture.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/rns-architecture.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-router-wireless: **[RNS — основы стека](rns/index.md)**
 
     Архитектура, адресация, маршрутизация и транспортный уровень
 
--   ![](assets/img/diagrams/stack-protocol.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/stack-protocol.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-book-open-page-variant: **[Словарь терминов](rns/glossary.md)**
 
     Ключевые понятия для понимания работы сети Reticulum
 
--   ![](assets/img/diagrams/tools-diagram.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/tools-diagram.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-console: **[Утилиты командной строки](rns/tools/index.md)**
 
     Диагностика, передача файлов, удалённое выполнение
 
--   ![](assets/img/diagrams/lxmf-flow.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/lxmf-flow.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-message: **[LXMF — сообщения](lxmf/index.md)**
 
     Протокол обмена сообщениями поверх RNS
 
--   ![](assets/img/diagrams/nomad-network.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/nomad-network.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-laptop: **[Nomad Network](nomadnet/index.md)**
 
     Клиент для общения в децентрализованной сети
 
--   ![](assets/img/diagrams/hardware-interfaces.svg){ loading=lazy width="280" }
+-   ![](assets/img/diagrams/hardware-interfaces.svg){ loading=lazy width="280" class="diagram-svg" }
 
     :material-chip: **[Оборудование](rns/hardware.md)**
 
