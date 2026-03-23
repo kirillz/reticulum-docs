@@ -68,6 +68,13 @@ Nomad Network построен на трёх уровнях стека Reticulum
 - **Автообновление** — новые сообщения доставляются подписчикам автоматически
 - **Примеры использования**: новостные ленты, блоги, уведомления сервисов
 
+<div class="diagram-center">
+  <figure>
+    <img src="../assets/img/diagrams/nomad-channels.svg" alt="Channels Flow Diagram" class="diagram-svg" />
+    <figcaption>Рисунок 5 — Модель работы каналов: вещание от создателя к подписчикам через Propagation-сервер</figcaption>
+  </figure>
+</div>
+
 ---
 
 ### 🔐 Приватность и безопасность

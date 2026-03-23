@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" class="diagram-svg">
+  <defs>
+    <linearGradient id="channelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa726"/>
+      <stop offset="100%" style="stop-color:#f57c00"/>
+    </linearGradient>
+    <linearGradient id="subscriberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66bb6a"/>
+      <stop offset="100%" style="stop-color:#388e3c"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ab47bc"/>
+      <stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 Z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1100" height="480" fill="#fff3e0" rx="16" class="svg-bg"/>
+  
+  <!-- Title -->
+  <text x="550" y="40" text-anchor="middle" fill="#e65100" class="svg-text" font-size="18" font-weight="bold">Модель работы Каналов</text>
+  
+  <!-- Channel Owner (top center) -->
+  <g transform="translate(505, 70)" filter="url(#shadow)">
+    <rect x="0" y="0" width="110" height="70" rx="8" fill="url(#channelGrad)" stroke="#e65100" stroke-width="2.5"/>
+    <!-- Broadcast icon -->
+    <circle cx="55" cy="26" r="12" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+    <circle cx="55" cy="26" r="4" fill="#ffffff"/>
+    <line x1="55" y1="14" x2="55" y2="6" stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="55" y1="38" x2="55" y2="46" stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="43" y1="26" x2="33" y2="26" stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="67" y1="26" x2="77" y2="26" stroke="#ffffff" stroke-width="2.5"/>
+    <text x="55" y="58" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Вещатель</text>
+  </g>
+  
+  <!-- Propagation Server (center) -->
+  <g transform="translate(495, 220)" filter="url(#shadow)">
+    <rect x="0" y="0" width="130" height="80" rx="8" fill="url(#serverGrad)" stroke="#4a148c" stroke-width="2.5"/>
+    <!-- Antenna -->
+    <line x1="65" y1="0" x2="65" y2="-18" stroke="#ab47bc" stroke-width="3.5"/>
+    <circle cx="65" cy="-20" r="5" fill="#ab47bc"/>
+    <!-- Label -->
+    <text x="65" y="28" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Propagation</text>
+    <text x="65" y="44" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">сервер</text>
+    <text x="65" y="64" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">📡 Хранение</text>
+  </g>
+  
+  <!-- Arrow: Owner -> Server -->
+  <line x1="560" y1="140" x2="560" y2="220" stroke="#e65100" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="575" y="185" fill="#e65100" font-size="12" font-weight="600">1. Публикация</text>
+  
+  <!-- Subscribers row (bottom, well spaced) -->
+  <!-- Subscriber 1 (far left) -->
+  <g transform="translate(50, 340)" filter="url(#shadow)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="url(#subscriberGrad)" stroke="#1b5e20" stroke-width="2"/>
+    <text x="60" y="28" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">📱 Подписчик 1</text>
+    <text x="60" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Получает</text>
+  </g>
+  
+  <!-- Subscriber 2 (left-center) -->
+  <g transform="translate(280, 340)" filter="url(#shadow)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="url(#subscriberGrad)" stroke="#1b5e20" stroke-width="2"/>
+    <text x="60" y="28" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">💻 Подписчик 2</text>
+    <text x="60" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Получает</text>
+  </g>
+  
+  <!-- Subscriber 3 (right-center) -->
+  <g transform="translate(620, 340)" filter="url(#shadow)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="url(#subscriberGrad)" stroke="#1b5e20" stroke-width="2"/>
+    <text x="60" y="28" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">📟 Подписчик 3</text>
+    <text x="60" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Получает</text>
+  </g>
+  
+  <!-- Subscriber 4 (far right) -->
+  <g transform="translate(850, 340)" filter="url(#shadow)">
+    <rect x="0" y="0" width="120" height="60" rx="8" fill="url(#subscriberGrad)" stroke="#1b5e20" stroke-width="2"/>
+    <text x="60" y="28" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">🖥️ Подписчик 4</text>
+    <text x="60" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Получает</text>
+  </g>
+  
+  <!-- Arrows: Server -> Subscribers (curved, properly drawn) -->
+  <!-- To Subscriber 1 -->
+  <path d="M 495 260 C 350 280, 200 300, 110 340" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)" fill="none"/>
+  
+  <!-- To Subscriber 2 -->
+  <path d="M 495 270 C 420 290, 380 310, 340 340" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)" fill="none"/>
+  
+  <!-- To Subscriber 3 -->
+  <path d="M 625 270 C 680 290, 720 310, 680 340" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)" fill="none"/>
+  
+  <!-- To Subscriber 4 -->
+  <path d="M 625 260 C 780 280, 920 300, 910 340" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)" fill="none"/>
+  
+  <!-- Label for step 2 -->
+  <text x="550" y="315" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="600">2. Рассылка подписчикам</text>
+  
+  <!-- Legend (bottom center) -->
+  <g transform="translate(340, 425)">
+    <rect x="0" y="0" width="420" height="36" rx="6" fill="#ffffff" stroke="#e65100" stroke-width="1.5" opacity="0.95"/>
+    <text x="210" y="23" text-anchor="middle" fill="#6a1b9a" font-size="12" font-weight="600">Односторонняя связь: Вещатель → Подписчики</text>
+  </g>
+</svg>
