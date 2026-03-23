@@ -67,7 +67,7 @@
   <span class="announcement-banner__icon">⚠️</span>
   <div class="announcement-banner__content">
     <a href="https://t.me/reticulum_network_rus/9/9290" target="_blank" rel="noopener">
-      <strong>Внимание Meshcore!</strong>
+      <strong>Внимание Meshcore!(возможно фейк)</strong>
     </a>
   </div>
   <button class="announcement-banner__close" type="button" aria-label="Закрыть" onclick="closeMeshcoreBanner()">×</button>
