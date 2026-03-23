@@ -1,7 +1,7 @@
 # 🌐 Полезные ссылки (Обновляемо)
 
 # Безопасность
-⚠️ [Внимание!!! MeshCore](https://t.me/reticulum_network_rus/9/9290)  
+⚠️ [Внимание!!! MeshCore(возможно фейк)](https://t.me/reticulum_network_rus/9/9290)  
 
 ---
 
