@@ -46,7 +46,7 @@ RNode разработан как система, лёгкая для воспр
 <div class="grid hardware-grid" markdown>
 
 <div class="card" markdown>
-[![LilyGO T-Beam Supreme](images/board_tbeam_supreme.png){ loading=lazy }](images/board_tbeam_supreme.png){ class="glightbox" }
+[![LilyGO T-Beam Supreme](../assets/img/boards/board_tbeam_supreme.png){ loading=lazy }](../assets/img/boards/board_tbeam_supreme.png){ class="glightbox" }
 
 **LilyGO T-Beam Supreme**
 
@@ -59,7 +59,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO T-Beam](images/board_tbeam.png){ loading=lazy }](images/board_tbeam.png){ class="glightbox" }
+[![LilyGO T-Beam](../assets/img/boards/board_tbeam.png){ loading=lazy }](../assets/img/boards/board_tbeam.png){ class="glightbox" }
 
 **LilyGO T-Beam**
 
@@ -72,7 +72,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO T3S3](images/board_t3s3.png){ loading=lazy }](images/board_t3s3.png){ class="glightbox" }
+[![LilyGO T3S3](../assets/img/boards/board_t3s3.png){ loading=lazy }](../assets/img/boards/board_t3s3.png){ class="glightbox" }
 
 **LilyGO T3S3**
 
@@ -85,7 +85,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![RAK4631](images/board_rak4631.png){ loading=lazy }](images/board_rak4631.png){ class="glightbox" }
+[![RAK4631](../assets/img/boards/board_rak4631.png){ loading=lazy }](../assets/img/boards/board_rak4631.png){ class="glightbox" }
 
 **RAK4631-based Boards**
 
@@ -98,7 +98,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![OpenCom XL](images/board_opencomxl.png){ loading=lazy }](images/board_opencomxl.png){ class="glightbox" }
+[![OpenCom XL](../assets/img/boards/board_opencomxl.png){ loading=lazy }](../assets/img/boards/board_opencomxl.png){ class="glightbox" }
 
 **OpenCom XL**
 
@@ -111,7 +111,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![RNode v2](images/board_rnodev2.png){ loading=lazy }](images/board_rnodev2.png){ class="glightbox" }
+[![RNode v2](../assets/img/boards/board_rnodev2.png){ loading=lazy }](../assets/img/boards/board_rnodev2.png){ class="glightbox" }
 
 **Unsigned RNode v2.x**
 
@@ -124,7 +124,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO LoRa32 v2.1](images/board_t3v21.png){ loading=lazy }](images/board_t3v21.png){ class="glightbox" }
+[![LilyGO LoRa32 v2.1](../assets/img/boards/board_t3v21.png){ loading=lazy }](../assets/img/boards/board_t3v21.png){ class="glightbox" }
 
 **LilyGO LoRa32 v2.1**
 
@@ -137,7 +137,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO LoRa32 v2.0](images/board_t3v20.png){ loading=lazy }](images/board_t3v20.png){ class="glightbox" }
+[![LilyGO LoRa32 v2.0](../assets/img/boards/board_t3v20.png){ loading=lazy }](../assets/img/boards/board_t3v20.png){ class="glightbox" }
 
 **LilyGO LoRa32 v2.0**
 
@@ -150,7 +150,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO LoRa32 v1.0](images/board_t3v10.png){ loading=lazy }](images/board_t3v10.png){ class="glightbox" }
+[![LilyGO LoRa32 v1.0](../assets/img/boards/board_t3v10.png){ loading=lazy }](../assets/img/boards/board_t3v10.png){ class="glightbox" }
 
 **LilyGO LoRa32 v1.0**
 
@@ -163,7 +163,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO T-Deck](images/board_tdeck.png){ loading=lazy }](images/board_tdeck.png){ class="glightbox" }
+[![LilyGO T-Deck](../assets/img/boards/board_tdeck.png){ loading=lazy }](../assets/img/boards/board_tdeck.png){ class="glightbox" }
 
 **LilyGO T-Deck**
 
@@ -176,7 +176,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![LilyGO T-Echo](images/board_techo.png){ loading=lazy }](images/board_techo.png){ class="glightbox" }
+[![LilyGO T-Echo](../assets/img/boards/board_techo.png){ loading=lazy }](../assets/img/boards/board_techo.png){ class="glightbox" }
 
 **LilyGO T-Echo**
 
@@ -189,7 +189,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![Heltec T114](images/board_t114.png){ loading=lazy }](images/board_t114.png){ class="glightbox" }
+[![Heltec T114](../assets/img/boards/board_t114.png){ loading=lazy }](../assets/img/boards/board_t114.png){ class="glightbox" }
 
 **Heltec T114**
 
@@ -202,7 +202,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![Heltec LoRa32 v4.0](images/board_heltec32v4.png){ loading=lazy }](images/board_heltec32v4.png){ class="glightbox" }
+[![Heltec LoRa32 v4.0](../assets/img/boards/board_heltec32v4.png){ loading=lazy }](../assets/img/boards/board_heltec32v4.png){ class="glightbox" }
 
 **Heltec LoRa32 v4.0**
 
@@ -215,7 +215,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![Heltec LoRa32 v3.0](images/board_heltec32v30.png){ loading=lazy }](images/board_heltec32v30.png){ class="glightbox" }
+[![Heltec LoRa32 v3.0](../assets/img/boards/board_heltec32v30.png){ loading=lazy }](../assets/img/boards/board_heltec32v30.png){ class="glightbox" }
 
 **Heltec LoRa32 v3.0**
 
@@ -228,7 +228,7 @@ RNode разработан как система, лёгкая для воспр
 ---
 
 <div class="card" markdown>
-[![Heltec LoRa32 v2.0](images/board_heltec32v20.png){ loading=lazy }](images/board_heltec32v20.png){ class="glightbox" }
+[![Heltec LoRa32 v2.0](../assets/img/boards/board_heltec32v20.png){ loading=lazy }](../assets/img/boards/board_heltec32v20.png){ class="glightbox" }
 
 **Heltec LoRa32 v2.0**
 
@@ -273,7 +273,7 @@ rnodeconf --autoinstall
 <div class="grid hardware-grid" markdown>
 
 <div class="card" markdown>
-[![Ubiquiti RocketBase LHG 5](images/radio_rblhg5.png){ loading=lazy }](images/radio_rblhg5.png){ class="glightbox" }
+[![Ubiquiti RocketBase LHG 5](../assets/img/radio/radio_rblhg5.png){ loading=lazy }](../assets/img/radio/radio_rblhg5.png){ class="glightbox" }
 
 **Ubiquiti RocketBase LHG 5**
 
@@ -285,7 +285,7 @@ rnodeconf --autoinstall
 ---
 
 <div class="card" markdown>
-[![Ubiquiti IsoStation 5AC](images/radio_is5ac.png){ loading=lazy }](images/radio_is5ac.png){ class="glightbox" }
+[![Ubiquiti IsoStation 5AC](../assets/img/radio/radio_is5ac.png){ loading=lazy }](../assets/img/radio/radio_is5ac.png){ class="glightbox" }
 
 **Ubiquiti IsoStation 5AC**
 

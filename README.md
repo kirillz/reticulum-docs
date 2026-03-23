@@ -59,27 +59,42 @@
 reticulum-docs/
 ├── docs/                       # Исходные файлы документации
 │   ├── index.md                # Главная страница
-│   ├── css/
-│   │   └── custom.css          # Кастомные стили
+│   ├── assets/                 # Статические ресурсы
+│   │   ├── css/
+│   │   │   └── custom.css      # Кастомные стили
+│   │   ├── js/
+│   │   │   └── banner.js       # Кастомные скрипты
+│   │   └── img/
+│   │       ├── boards/         # Изображения плат (PNG)
+│   │       ├── diagrams/       # Диаграммы (SVG)
+│   │       └── radio/          # Изображения радиооборудования (PNG)
 │   ├── rns/                    # Документация Reticulum Network Stack
 │   │   ├── index.md            # Основы RNS
-│   │   └── tools/              # Утилиты RNS
-│   │       ├── index.md        # Обзор утилит
-│   │       ├── rnsd.md         # Демон RNS
-│   │       ├── rnstatus.md     # Статус
-│   │       ├── rnid.md         # Идентификаторы
-│   │       ├── rnpath.md       # Маршруты
-│   │       ├── rnprobe.md      # Диагностика
-│   │       ├── rncp.md         # Копирование файлов
-│   │       ├── rnx.md          # Удаленное выполнение
-│   │       └── rnodeconf.md    # Конфигурация RNode
+│   │   ├── tools/              # Утилиты RNS
+│   │   │   ├── index.md        # Обзор утилит
+│   │   │   ├── rnsd.md         # Демон RNS
+│   │   │   ├── rnstatus.md     # Статус
+│   │   │   ├── rnid.md         # Идентификаторы
+│   │   │   ├── rnpath.md       # Маршруты
+│   │   │   ├── rnprobe.md      # Диагностика
+│   │   │   ├── rncp.md         # Копирование файлов
+│   │   │   ├── rnx.md          # Удаленное выполнение
+│   │   │   └── rnodeconf.md    # Конфигурация RNode
+│   │   ├── blackhole.md        # Blackhole
+│   │   ├── discovery.md        # Обнаружение
+│   │   ├── glossary.md         # Словарь терминов
+│   │   ├── hardware.md         # Оборудование
+│   │   ├── improving.md        # Конфигурирование
+│   │   └── management.md       # Управление
 │   ├── lxmf/                   # Документация LXMF
 │   │   ├── index.md            # Основы LXMF
 │   │   └── tools/              # Утилиты LXMF
 │   │       └── index.md        # Обзор утилит LXMF
 │   │           └── lxmd.md     # Узел распространения LXMF
-│   └── nomadnet/               # Документация Nomad Network
-│       └── index.md            # Основы Nomad Network
+│   ├── nomadnet/               # Документация Nomad Network
+│   │   └── index.md            # Основы Nomad Network
+│   └── resources/              # Полезные ресурсы
+│       └── links.md            # Ссылки
 ├── .githooks/                  # Git-хуки
 │   └── commit-msg              # Хук для проверки сообщений коммитов
 ├── .github/
@@ -106,4 +121,4 @@ reticulum-docs/
 
 ## Лицензия
 
-Проект распространяется под лицензией GPLv3.
+Проект распространяется под лицензией [0BSD](LICENSE).

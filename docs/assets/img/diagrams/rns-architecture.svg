@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" class="diagram-svg">
+  <defs>
+    <linearGradient id="rnsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976d2"/>
+      <stop offset="100%" style="stop-color:#0d47a1"/>
+    </linearGradient>
+    <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrowUp" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,10 L10,5 L0,0 Z" fill="#7b1fa2"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="320" height="340" fill="#e3f2fd" class="svg-bg" rx="12"/>
+  
+  <!-- Applications Layer -->
+  <rect x="60" y="15" width="200" height="50" rx="8" fill="#42a5f5" stroke="#1976d2" stroke-width="2"/>
+  <text x="160" y="38" text-anchor="middle" fill="#fff" class="svg-text" font-size="13" font-weight="bold">Уровень приложений</text>
+  <text x="160" y="56" text-anchor="middle" fill="#fff" class="svg-text" font-size="10">Nomad, LXMF, Custom</text>
+  
+  <!-- Arrow Down -->
+  <line x1="160" y1="70" x2="160" y2="85" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowDown)"/>
+  
+  <!-- RNS Core -->
+  <rect x="40" y="95" width="240" height="130" rx="10" fill="url(#rnsGrad)" stroke="#1565c0" stroke-width="3"/>
+  <text x="160" y="118" text-anchor="middle" fill="#fff" class="svg-text" font-size="14" font-weight="bold">🔐 RNS Stack</text>
+  
+  <!-- RNS Features in 2x2 grid -->
+  <rect x="60" y="130" width="90" height="35" rx="6" fill="#fff" class="svg-feature-bg" stroke="#f57c00" stroke-width="2"/>
+  <text x="105" y="148" text-anchor="middle" fill="#f57c00" font-size="14">🔐</text>
+  <text x="105" y="160" text-anchor="middle" fill="#333" class="svg-feature-text" font-size="9">Криптография</text>
+  
+  <rect x="170" y="130" width="90" height="35" rx="6" fill="#fff" class="svg-feature-bg" stroke="#2196f3" stroke-width="2"/>
+  <text x="215" y="148" text-anchor="middle" fill="#2196f3" font-size="14">🎯</text>
+  <text x="215" y="160" text-anchor="middle" fill="#333" class="svg-feature-text" font-size="9">Адрес</text>
+  
+  <rect x="60" y="175" width="90" height="35" rx="6" fill="#fff" class="svg-feature-bg" stroke="#4caf50" stroke-width="2"/>
+  <text x="105" y="193" text-anchor="middle" fill="#4caf50" font-size="14">🔀</text>
+  <text x="105" y="205" text-anchor="middle" fill="#333" class="svg-feature-text" font-size="9">Маршрут</text>
+  
+  <rect x="170" y="175" width="90" height="35" rx="6" fill="#fff" class="svg-feature-bg" stroke="#9c27b0" stroke-width="2"/>
+  <text x="215" y="193" text-anchor="middle" fill="#9c27b0" font-size="14">📦</text>
+  <text x="215" y="205" text-anchor="middle" fill="#333" class="svg-feature-text" font-size="9">Транспорт</text>
+  
+  <!-- Arrow Up -->
+  <line x1="160" y1="230" x2="160" y2="245" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowUp)"/>
+  
+  <!-- Physical Layer -->
+  <rect x="60" y="255" width="200" height="70" rx="8" fill="#7b1fa2" stroke="#4a148c" stroke-width="2"/>
+  <text x="160" y="278" text-anchor="middle" fill="#fff" class="svg-text" font-size="13" font-weight="bold">Физический уровень</text>
+  
+  <!-- Physical interfaces -->
+  <text x="160" y="298" text-anchor="middle" fill="#fff" class="svg-text" font-size="10">LoRa · WiFi · Ethernet</text>
+  <text x="160" y="312" text-anchor="middle" fill="#fff" class="svg-text" font-size="10">Serial · TCP/IP · BT · Голуби :)</text>
+</svg>

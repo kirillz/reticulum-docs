@@ -85,11 +85,11 @@ plugins:
       touchNavigation: true
 # Кастомные стили
 extra_css:
-  - css/custom.css
+  - assets/css/custom.css
 
 # Кастомные скрипты
 extra_javascript:
-  - js/banner.js
+  - assets/js/banner.js
 
 # Настройки Markdown
 markdown_extensions:
