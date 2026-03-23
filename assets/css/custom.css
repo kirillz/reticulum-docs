@@ -1,5 +1,8 @@
 /* Reticulum Docs — Custom Styles */
 
+/* Global Box Sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
 /* Diagram Center */
 .diagram-center { text-align: center; margin: 1.5rem 0; }
 .diagram-center pre { display: inline-block; text-align: left; }
@@ -13,9 +16,11 @@
 .md-source-file .md-icon svg { width: 1rem !important; height: 1rem !important; }
 
 /* Grid Cards */
-.md-typeset .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-.md-typeset .grid.cards { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.md-typeset .grid.cards .card { display: flex; flex-direction: column; background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.5rem; padding: 1rem; margin: 0; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.md-typeset .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; width: 100%; }
+.md-typeset .grid.cards { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); width: 100%; }
+.md-typeset .grid.hardware-grid { display: grid; gap: 1.25rem; margin: 1.5rem 0; width: 100%; grid-template-columns: 1fr; }
+.md-typeset .grid.hardware-grid .card { display: flex; flex-direction: column; background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.5rem; padding: 1rem; margin: 0; width: 100%; height: 100%; box-sizing: border-box; transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.md-typeset .grid.cards .card { display: flex; flex-direction: column; background: var(--md-default-bg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.5rem; padding: 1rem; margin: 0; width: 100%; max-width: 100%; box-sizing: border-box; transition: box-shadow 0.2s ease, transform 0.2s ease; }
 .md-typeset .grid.cards .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); transform: translateY(-2px); }
 .md-typeset .grid.cards .card img { max-width: 100%; width: 100%; height: 180px; display: block; margin: 0 auto 0.75rem; border-radius: 0.25rem; background: var(--md-default-fg-color--lightest); padding: 0.5rem; object-fit: contain; cursor: zoom-in; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .md-typeset .grid.cards .card img:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
@@ -43,7 +48,15 @@
 .glightbox-container .gslide-inner > img:only-child { margin: auto; }
 
 /* Responsive */
-@media screen and (max-width: 768px) { .md-typeset .grid { grid-template-columns: 1fr; } }
+@media screen and (max-width: 600px) {
+  .md-typeset .grid.hardware-grid { grid-template-columns: 1fr; }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .md-typeset .grid.hardware-grid { grid-template-columns: 1fr 1fr; }
+}
+@media screen and (min-width: 769px) {
+  .md-typeset .grid.hardware-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media screen and (min-width: 1920px) {
   .md-grid { max-width: 1680px; }
   .md-typeset .grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
