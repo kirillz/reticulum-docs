@@ -62,7 +62,7 @@
 
 [:material-github: Внести свой вклад в документы](https://github.com/kirillz/reticulum-docs){ .md-button .md-button--primary }
 
-<!-- Announcement Banner -->
+<!-- Announcement Banner
 <div id="meshcore-banner" class="announcement-banner hidden">
   <span class="announcement-banner__icon">⚠️</span>
   <div class="announcement-banner__content">
@@ -72,7 +72,7 @@
   </div>
   <button class="announcement-banner__close" type="button" aria-label="Закрыть" onclick="closeMeshcoreBanner()">×</button>
 </div>
-<!-- End Announcement Banner -->
+ End Announcement Banner -->
 
 ---
 
