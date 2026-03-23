@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" class="diagram-svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Bold.woff2') format('woff2');
+        font-weight: 700;
+      }
+      .svg-text { font-family: 'Roboto Mono', monospace; }
+    </style>
+    <linearGradient id="routeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="routeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+    <filter id="shadow4" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+    </filter>
+    <!-- Smaller arrowhead markers -->
+    <marker id="arrowhead3" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 Z" fill="#667eea"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="720" height="560" fill="#ede7f6" rx="16" class="svg-bg"/>
+  
+  <!-- Title -->
+  <text x="360" y="45" text-anchor="middle" fill="#4a148c" class="svg-text" font-size="18" font-weight="bold">Маршрутизация сообщений</text>
+  
+  <!-- Source Node - repositioned with better spacing -->
+  <g transform="translate(30, 100)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="140" height="90" rx="12" fill="url(#routeGrad1)" stroke="#4a148c" stroke-width="2.5"/>
+    <text x="70" y="40" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Источник</text>
+    <text x="70" y="62" text-anchor="middle" fill="#e1bee7" font-size="12">Узел A</text>
+    <text x="70" y="80" text-anchor="middle" fill="#d1c4e9" font-size="11">📤 Отправка</text>
+  </g>
+  
+  <!-- Intermediate Node 1 - repositioned with better spacing -->
+  <g transform="translate(260, 50)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="120" height="70" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">Узел B</text>
+    <text x="60" y="55" text-anchor="middle" fill="#764ba2" font-size="10">🔄 Ретрансляция</text>
+  </g>
+  
+  <!-- Intermediate Node 2 - repositioned with better spacing -->
+  <g transform="translate(260, 170)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="120" height="70" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">Узел C</text>
+    <text x="60" y="55" text-anchor="middle" fill="#764ba2" font-size="10">🔄 Ретрансляция</text>
+  </g>
+  
+  <!-- Intermediate Node 3 - repositioned with better spacing -->
+  <g transform="translate(260, 290)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="120" height="70" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="60" y="35" text-anchor="middle" fill="#667eea" font-size="12" font-weight="bold">Узел D</text>
+    <text x="60" y="55" text-anchor="middle" fill="#764ba2" font-size="10">🔄 Ретрансляция</text>
+  </g>
+  
+  <!-- Destination Node - repositioned with better spacing -->
+  <g transform="translate(520, 170)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="140" height="90" rx="12" fill="url(#routeGrad2)" stroke="#880e4f" stroke-width="2.5"/>
+    <text x="70" y="40" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Получатель</text>
+    <text x="70" y="62" text-anchor="middle" fill="#f8bbd9" font-size="12">Узел E</text>
+    <text x="70" y="80" text-anchor="middle" fill="#f48fb1" font-size="11">📥 Получение</text>
+  </g>
+  
+  <!-- Message packet - repositioned -->
+  <g transform="translate(195, 145)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="50" height="35" rx="6" fill="#667eea" stroke="#4a148c" stroke-width="2"/>
+    <text x="25" y="24" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">📦</text>
+  </g>
+  
+  <!-- Route arrows - smooth curves with better spacing -->
+  <!-- A to B - curved path -->
+  <path d="M 170 125 Q 210 90 260 85" stroke="#667eea" stroke-width="2.5" fill="none" marker-end="url(#arrowhead3)"/>
+  <!-- B to C - curved path -->
+  <path d="M 320 120 Q 320 145 320 170" stroke="#667eea" stroke-width="2.5" fill="none" marker-end="url(#arrowhead3)"/>
+  <!-- C to E - curved path -->
+  <path d="M 380 205 Q 450 205 520 205" stroke="#667eea" stroke-width="2.5" fill="none" marker-end="url(#arrowhead3)"/>
+  
+  <!-- Alternative route (dashed) - smoother curves -->
+  <!-- A to D - curved path -->
+  <path d="M 170 170 Q 210 230 260 280" stroke="#764ba2" stroke-width="2" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowhead3)"/>
+  <!-- D to E - curved path -->
+  <path d="M 380 325 Q 450 280 520 250" stroke="#764ba2" stroke-width="2" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowhead3)"/>
+  
+  <!-- Legend -->
+  <g transform="translate(40, 420)">
+    <rect x="0" y="0" width="280" height="80" rx="10" fill="#ffffff" stroke="#4a148c" stroke-width="2"/>
+    <text x="140" y="25" text-anchor="middle" fill="#4a148c" font-size="13" font-weight="bold">Легенда</text>
+    <!-- Primary route -->
+    <line x1="30" y1="48" x2="70" y2="48" stroke="#667eea" stroke-width="3"/>
+    <text x="85" y="52" text-anchor="left" fill="#4a148c" font-size="11">Основной маршрут</text>
+    <!-- Alternative route -->
+    <line x1="30" y1="70" x2="70" y2="70" stroke="#764ba2" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="85" y="74" text-anchor="left" fill="#4a148c" font-size="11">Альтернативный</text>
+  </g>
+  
+  <!-- Stats box -->
+  <g transform="translate(360, 420)">
+    <rect x="0" y="0" width="320" height="80" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="160" y="25" text-anchor="middle" fill="#667eea" font-size="13" font-weight="bold">Характеристики</text>
+    <text x="160" y="50" text-anchor="middle" fill="#4a148c" font-size="11">⏱️ Адаптивная задержка</text>
+    <text x="160" y="70" text-anchor="middle" fill="#764ba2" font-size="11">✅ Гарантия доставки</text>
+  </g>
+</svg>

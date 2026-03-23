@@ -1,5 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" class="diagram-svg">
   <defs>
+    <style>
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Bold.woff2') format('woff2');
+        font-weight: 700;
+      }
+      .svg-text { font-family: 'Roboto Mono', monospace; }
+    </style>
     <linearGradient id="rootGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1976d2"/>
       <stop offset="100%" style="stop-color:#0d47a1"/>
@@ -14,41 +32,41 @@
   <rect width="500" height="400" fill="#e3f2fd" class="svg-bg" rx="12"/>
   
   <!-- Title -->
-  <text x="250" y="35" text-anchor="middle" fill="#0d47a1" class="svg-text" font-size="18" font-weight="bold" font-family="Roboto, Arial, sans-serif">🎯 Сценарии использования Reticulum</text>
+  <text x="250" y="35" text-anchor="middle" fill="#0d47a1" class="svg-text" font-size="18" font-weight="bold">🎯 Сценарии использования Reticulum</text>
   
   <!-- Central node -->
   <circle cx="250" cy="200" r="50" fill="url(#rootGrad)" stroke="#0d47a1" stroke-width="3"/>
-  <text x="250" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="14" font-weight="bold" font-family="Roboto, Arial, sans-serif">Reticulum</text>
-  <text x="250" y="215" text-anchor="middle" fill="#bbdefb" class="svg-text" font-size="11" font-family="Roboto, Arial, sans-serif">Network Stack</text>
+  <text x="250" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="14" font-weight="bold">Reticulum</text>
+  <text x="250" y="215" text-anchor="middle" fill="#bbdefb" class="svg-text" font-size="11">Network Stack</text>
   
   <!-- Branch 1: Частная связь (top-left) -->
   <line x1="215" y1="165" x2="100" y2="80" stroke="#1976d2" stroke-width="2" class="svg-line"/>
   <ellipse cx="70" cy="55" rx="65" ry="35" fill="url(#branchGrad)" stroke="#1565c0" stroke-width="2"/>
-  <text x="70" y="50" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold" font-family="Roboto, Arial, sans-serif">Частная связь</text>
-  <text x="70" y="68" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9" font-family="Roboto, Arial, sans-serif">Мессенджеры • Файлы • Email</text>
+  <text x="70" y="50" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold">Частная связь</text>
+  <text x="70" y="68" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9">Мессенджеры • Файлы • Email</text>
   
   <!-- Branch 2: IoT и сенсоры (top-right) -->
   <line x1="285" y1="165" x2="400" y2="80" stroke="#1976d2" stroke-width="2" class="svg-line"/>
   <ellipse cx="430" cy="55" rx="65" ry="35" fill="url(#branchGrad)" stroke="#1565c0" stroke-width="2"/>
-  <text x="430" y="50" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold" font-family="Roboto, Arial, sans-serif">IoT и сенсоры</text>
-  <text x="430" y="68" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9" font-family="Roboto, Arial, sans-serif">Умный дом • Мониторинг</text>
+  <text x="430" y="50" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold">IoT и сенсоры</text>
+  <text x="430" y="68" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9">Умный дом • Мониторинг</text>
   
   <!-- Branch 3: Критическая инфраструктура (left) -->
   <line x1="200" y1="200" x2="80" y2="200" stroke="#1976d2" stroke-width="2" class="svg-line"/>
   <ellipse cx="55" cy="200" rx="70" ry="35" fill="url(#branchGrad)" stroke="#1565c0" stroke-width="2"/>
-  <text x="55" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold" font-family="Roboto, Arial, sans-serif">Критическая</text>
-  <text x="55" y="212" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9" font-family="Roboto, Arial, sans-serif">Резервная связь • Emergency</text>
+  <text x="55" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold">Критическая</text>
+  <text x="55" y="212" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9">Резервная связь • Emergency</text>
   
   <!-- Branch 4: Исследования (right) -->
   <line x1="300" y1="200" x2="420" y2="200" stroke="#1976d2" stroke-width="2" class="svg-line"/>
   <ellipse cx="455" cy="200" rx="60" ry="35" fill="url(#branchGrad)" stroke="#1565c0" stroke-width="2"/>
-  <text x="455" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold" font-family="Roboto, Arial, sans-serif">Исследования</text>
-  <text x="455" y="212" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9" font-family="Roboto, Arial, sans-serif">Эксперименты • Образование</text>
+  <text x="455" y="195" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold">Исследования</text>
+  <text x="455" y="212" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9">Эксперименты • Образование</text>
   
   <!-- Branch 5: Децентрализация (bottom-left) -->
   <line x1="215" y1="235" x2="100" y2="320" stroke="#1976d2" stroke-width="2" class="svg-line"/>
   <ellipse cx="75" cy="345" rx="65" ry="35" fill="url(#branchGrad)" stroke="#1565c0" stroke-width="2"/>
-  <text x="75" y="340" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold" font-family="Roboto, Arial, sans-serif">Децентрализация</text>
-  <text x="75" y="358" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9" font-family="Roboto, Arial, sans-serif">P2P • Mesh-сети</text>
+  <text x="75" y="340" text-anchor="middle" fill="#fff" class="svg-text" font-size="12" font-weight="bold">Децентрализация</text>
+  <text x="75" y="358" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="9">P2P • Mesh-сети</text>
   
 </svg>

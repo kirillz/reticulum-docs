@@ -1,5 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 400" class="diagram-svg">
   <defs>
+    <style>
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Bold.woff2') format('woff2');
+        font-weight: 700;
+      }
+      .svg-text { font-family: 'Roboto Mono', monospace; }
+    </style>
     <linearGradient id="daemonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#4caf50"/>
       <stop offset="100%" style="stop-color:#2e7d32"/>
@@ -30,7 +48,7 @@
   <rect width="420" height="400" fill="#f3e5f5" class="svg-bg" rx="12"/>
   
   <!-- Title -->
-  <text x="210" y="35" text-anchor="middle" fill="#6a1b9a" class="svg-text" font-size="18" font-weight="bold" font-family="Roboto, Arial, sans-serif">🛠️ Утилиты командной строки RNS</text>
+  <text x="210" y="35" text-anchor="middle" fill="#6a1b9a" class="svg-text" font-size="18" font-weight="bold">🛠️ Утилиты командной строки RNS</text>
   
   <!-- Terminal window -->
   <g transform="translate(210, 210)">
@@ -43,54 +61,54 @@
     <!-- Terminal content -->
     <rect x="-100" y="-40" width="200" height="100" rx="4" fill="#1c2528"/>
     <!-- Command lines -->
-    <text x="-90" y="-20" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace">$ rnsd —daemon</text>
-    <text x="-90" y="-4" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace">$ rnstatus —info</text>
-    <text x="-90" y="12" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace">$ rnpath /dest</text>
-    <text x="-90" y="28" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace">$ rnid —gen</text>
-    <text x="-90" y="44" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace">$ rncp file.txt</text>
-    <text x="-90" y="60" fill="#00e676" class="svg-text" font-size="11" font-family="Roboto Mono, monospace" opacity="0.6">$ _</text>
+    <text x="-90" y="-20" fill="#00e676" class="svg-text" font-size="11">$ rnsd —daemon</text>
+    <text x="-90" y="-4" fill="#00e676" class="svg-text" font-size="11">$ rnstatus —info</text>
+    <text x="-90" y="12" fill="#00e676" class="svg-text" font-size="11">$ rnpath /dest</text>
+    <text x="-90" y="28" fill="#00e676" class="svg-text" font-size="11">$ rnid —gen</text>
+    <text x="-90" y="44" fill="#00e676" class="svg-text" font-size="11">$ rncp file.txt</text>
+    <text x="-90" y="60" fill="#00e676" class="svg-text" font-size="11" opacity="0.6">$ _</text>
   </g>
   
   <!-- rnsd - Daemon -->
   <g transform="translate(90, 90)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#daemonGrad)" stroke="#1b5e20" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rnsd</text>
-    <text x="0" y="22" text-anchor="middle" fill="#e8f5e9" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">Демон</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rnsd</text>
+    <text x="0" y="22" text-anchor="middle" fill="#e8f5e9" class="svg-text" font-size="12">Демон</text>
   </g>
   
   <!-- rnstatus - Status -->
   <g transform="translate(210, 90)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#statusGrad)" stroke="#0d47a1" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rnstatus</text>
-    <text x="0" y="22" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">Статус</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rnstatus</text>
+    <text x="0" y="22" text-anchor="middle" fill="#e3f2fd" class="svg-text" font-size="12">Статус</text>
   </g>
   
   <!-- rnpath - Path -->
   <g transform="translate(330, 90)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#pathGrad)" stroke="#006064" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rnpath</text>
-    <text x="0" y="22" text-anchor="middle" fill="#e0f7fa" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">Маршрут</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rnpath</text>
+    <text x="0" y="22" text-anchor="middle" fill="#e0f7fa" class="svg-text" font-size="12">Маршрут</text>
   </g>
   
   <!-- rnid - Identity -->
   <g transform="translate(90, 330)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#idGrad)" stroke="#4a148c" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rnid</text>
-    <text x="0" y="22" text-anchor="middle" fill="#f3e5f5" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">ID</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rnid</text>
+    <text x="0" y="22" text-anchor="middle" fill="#f3e5f5" class="svg-text" font-size="12">ID</text>
   </g>
   
   <!-- rncp - File copy -->
   <g transform="translate(210, 330)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#fileGrad)" stroke="#bf360c" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rncp</text>
-    <text x="0" y="22" text-anchor="middle" fill="#ffebee" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">Копирование</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rncp</text>
+    <text x="0" y="22" text-anchor="middle" fill="#ffebee" class="svg-text" font-size="12">Копирование</text>
   </g>
   
   <!-- rnx/rnsh - Remote -->
   <g transform="translate(330, 330)">
     <rect x="-60" y="-25" width="120" height="50" rx="8" fill="url(#remoteGrad)" stroke="#880e4f" stroke-width="2"/>
-    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold" font-family="Roboto, Arial, sans-serif">rnx / rnsh</text>
-    <text x="0" y="22" text-anchor="middle" fill="#fce4ec" class="svg-text" font-size="12" font-family="Roboto, Arial, sans-serif">Remote</text>
+    <text x="0" y="2" text-anchor="middle" fill="#ffffff" class="svg-text" font-size="15" font-weight="bold">rnx / rnsh</text>
+    <text x="0" y="22" text-anchor="middle" fill="#fce4ec" class="svg-text" font-size="12">Remote</text>
   </g>
   
   <!-- Connection lines to terminal -->

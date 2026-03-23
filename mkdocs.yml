@@ -9,7 +9,7 @@ theme:
   language: ru
   include_homepage_in_sidebar: false
   font:
-    code: Roboto Mono
+    code: false
   shortcuts:
     help: 191    # ?
     next: 78     # n
