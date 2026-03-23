@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" class="diagram-svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Bold.woff2') format('woff2');
+        font-weight: 700;
+      }
+      .svg-text { font-family: 'Roboto Mono', monospace; }
+    </style>
+    <linearGradient id="rnsGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="rnsGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+    <filter id="shadow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrowhead2" markerWidth="14" markerHeight="12" refX="12" refY="6" orient="auto">
+      <path d="M 0 0 L 14 6 L 0 12 Z" fill="#667eea"/>
+    </marker>
+    <marker id="arrowhead2-rev" markerWidth="14" markerHeight="12" refX="12" refY="6" orient="auto">
+      <path d="M 0 0 L 14 6 L 0 12 Z" fill="#764ba2"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="640" height="480" fill="#f3e5f5" rx="16" class="svg-bg"/>
+  
+  <!-- Title -->
+  <text x="320" y="45" text-anchor="middle" fill="#4a148c" class="svg-text" font-size="18" font-weight="bold">Сквозное шифрование RNS</text>
+  
+  <!-- Sender Node -->
+  <g transform="translate(30, 90)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="150" height="110" rx="12" fill="url(#rnsGrad1)" stroke="#4a148c" stroke-width="2"/>
+    <text x="75" y="40" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">Узел A</text>
+    <text x="75" y="62" text-anchor="middle" fill="#e1bee7" font-size="12">Отправитель</text>
+    <!-- Key icon -->
+    <rect x="60" y="78" width="30" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+    <text x="75" y="95" text-anchor="middle" fill="#667eea" font-size="11" font-weight="bold">🔑</text>
+  </g>
+  
+  <!-- Encryption Process -->
+  <g transform="translate(260, 100)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="100" height="90" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2.5"/>
+    <text x="50" y="35" text-anchor="middle" fill="#667eea" font-size="28" font-weight="bold">🔐</text>
+    <text x="50" y="60" text-anchor="middle" fill="#4a148c" font-size="12" font-weight="bold">Шифрование</text>
+    <text x="50" y="78" text-anchor="middle" fill="#764ba2" font-size="10">Curve25519</text>
+  </g>
+  
+  <!-- Receiver Node -->
+  <g transform="translate(460, 90)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="150" height="110" rx="12" fill="url(#rnsGrad2)" stroke="#880e4f" stroke-width="2"/>
+    <text x="75" y="40" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">Узел B</text>
+    <text x="75" y="62" text-anchor="middle" fill="#f8bbd9" font-size="12">Получатель</text>
+    <!-- Key icon -->
+    <rect x="60" y="78" width="30" height="22" rx="4" fill="#ffffff" opacity="0.9"/>
+    <text x="75" y="95" text-anchor="middle" fill="#c2185b" font-size="11" font-weight="bold">🔑</text>
+  </g>
+  
+  <!-- Arrows between nodes -->
+  <line x1="180" y1="145" x2="260" y2="145" stroke="#667eea" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  <line x1="360" y1="145" x2="460" y2="145" stroke="#764ba2" stroke-width="3" marker-end="url(#arrowhead2-rev)"/>
+  
+  <!-- Message flow labels -->
+  <text x="220" y="125" text-anchor="middle" fill="#4a148c" font-size="12" font-weight="bold">Открытый</text>
+  <text x="410" y="125" text-anchor="middle" fill="#4a148c" font-size="12" font-weight="bold">Зашифрованный</text>
+  
+  <!-- Encrypted message in the middle -->
+  <g transform="translate(280, 240)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="80" height="50" rx="8" fill="#667eea" stroke="#4a148c" stroke-width="2"/>
+    <text x="40" y="32" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">📦</text>
+  </g>
+  
+  <!-- Crypto algorithms at bottom -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="150" height="60" rx="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#667eea" font-size="13" font-weight="bold">Curve25519</text>
+    <text x="75" y="45" text-anchor="middle" fill="#764ba2" font-size="11">Обмен ключами</text>
+  </g>
+  
+  <g transform="translate(245, 340)">
+    <rect x="0" y="0" width="150" height="60" rx="10" fill="#ffffff" stroke="#764ba2" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#764ba2" font-size="13" font-weight="bold">AES-256</text>
+    <text x="75" y="45" text-anchor="middle" fill="#4a148c" font-size="11">Шифрование данных</text>
+  </g>
+  
+  <g transform="translate(440, 340)">
+    <rect x="0" y="0" width="150" height="60" rx="10" fill="#ffffff" stroke="#c2185b" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#c2185b" font-size="13" font-weight="bold">SHA-256</text>
+    <text x="75" y="45" text-anchor="middle" fill="#880e4f" font-size="11">Хеширование</text>
+  </g>
+</svg>

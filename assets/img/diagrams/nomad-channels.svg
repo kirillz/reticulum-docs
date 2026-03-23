@@ -1,5 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" class="diagram-svg">
   <defs>
+    <style>
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Medium.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src: url('../../fonts/RobotoMono-Bold.woff2') format('woff2');
+        font-weight: 700;
+      }
+      .svg-text { font-family: 'Roboto Mono', monospace; }
+    </style>
     <linearGradient id="channelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ffa726"/>
       <stop offset="100%" style="stop-color:#f57c00"/>
