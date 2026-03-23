@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" class="diagram-svg">
+  <defs>
+    <linearGradient id="propGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ab47bc"/>
+      <stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="100%" style="stop-color:#0288d1"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M 0 0 L 10 4 L 0 8 Z" fill="#6a1b9a"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="220" fill="#f3e5f5" rx="16" class="svg-bg"/>
+  
+  <!-- Alice (Sender) - Left -->
+  <g transform="translate(30, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="90" height="60" rx="8" fill="url(#clientGrad)" stroke="#01579b" stroke-width="2"/>
+    <text x="45" y="28" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">📱 Alice</text>
+    <text x="45" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Отправитель</text>
+  </g>
+  
+  <!-- Propagation Server (center) -->
+  <g transform="translate(305, 70)" filter="url(#shadow)">
+    <rect x="0" y="0" width="90" height="80" rx="8" fill="url(#propGrad)" stroke="#4a148c" stroke-width="2.5"/>
+    <!-- Antenna -->
+    <line x1="45" y1="0" x2="45" y2="-18" stroke="#ab47bc" stroke-width="3"/>
+    <circle cx="45" cy="-20" r="5" fill="#ab47bc"/>
+    <path d="M 38 -26 Q 45 -36 52 -26" stroke="#ab47bc" stroke-width="2" fill="none" opacity="0.7"/>
+    <!-- Label -->
+    <text x="45" y="35" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Prop.</text>
+    <text x="45" y="52" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">сервер</text>
+    <text x="45" y="68" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.8">🔀</text>
+  </g>
+  
+  <!-- Bob (Receiver) - Right -->
+  <g transform="translate(580, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="90" height="60" rx="8" fill="url(#clientGrad)" stroke="#01579b" stroke-width="2"/>
+    <text x="45" y="28" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">💻 Bob</text>
+    <text x="45" y="48" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Получатель</text>
+  </g>
+  
+  <!-- Step 1: Alice -> Server -->
+  <line x1="120" y1="110" x2="305" y2="110" stroke="#6a1b9a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="212" y="100" text-anchor="middle" fill="#6a1b9a" font-size="11" font-weight="600">1. Отправка</text>
+  
+  <!-- Step 2: Server -> Bob -->
+  <line x1="395" y1="110" x2="580" y2="110" stroke="#6a1b9a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="487" y="100" text-anchor="middle" fill="#6a1b9a" font-size="11" font-weight="600">2. Доставка</text>
+  
+  <!-- Step 3: Acknowledgment (curved arrow at bottom) -->
+  <path d="M 580 145 Q 350 185 120 145" stroke="#6a1b9a" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow)" opacity="0.7"/>
+  <text x="350" y="180" text-anchor="middle" fill="#6a1b9a" font-size="11" font-weight="600">3. Подтверждение</text>
+</svg>
