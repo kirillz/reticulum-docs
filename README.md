@@ -122,3 +122,4 @@ reticulum-docs/
 ## Лицензия
 
 Проект распространяется под лицензией [0BSD](LICENSE).
+найти меня: https://revive-it.ru
